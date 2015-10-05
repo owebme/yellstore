@@ -1,0 +1,83 @@
+.b-product__favorite {
+	position:absolute;
+	top:0;
+	right:0;
+	width:55px;
+	height:55px;
+	overflow:hidden;
+	background:transparent;
+	@include transition(background 0.08s ease-out);
+	z-index:1;	
+}
+.b-product__favorite span {
+	display:block;
+	position:absolute;
+	top:0;
+	right:0;
+	width:77px;
+	height:77px;
+	cursor:pointer;	
+	@include transition(transform 0.08s ease-out);
+}
+.b-product__favorite i {
+	display:block;
+	position:absolute;
+	top:-38px;
+	right:-38px;	
+	width:100%;
+	height:100%;
+	@include transform(rotateZ(-45deg));	
+}
+.b-favorite__add:hover i {
+	background:rgba(0,0,0,.08);
+}
+.b-product__favorite em {
+	display:block;
+	position:absolute;
+	bottom:54px;
+	left:54px;
+	font-size:15px;
+	z-index:1;
+}
+.b-favorite__add em {
+	color:#bfbfbf;
+}
+.b-favorite__add:hover em {
+	color:#a2a2a2;
+}
+.b-favorite__remove em {
+	color:#fff;
+}
+.b-product__favorite .b-favorite__add {
+	@include transform(rotate3d(1, 1, 0, 0deg));
+	z-index:2;
+}
+.b-product__favorite .b-favorite__remove {
+	top:-28px;
+	right:-28px;	
+	@include transform(rotate3d(1, 1, 0, 0deg));
+	z-index:1;
+}
+.b-favorite__remove i {
+	background:#cd5018;
+}
+.b-favorite__remove em {
+	@include transform(rotateZ(55deg));	
+	left:55px;
+	bottom:54px;
+}
+.b-favorite__remove:hover i {
+	background:#dd622a;
+}
+.b-product__favorite__add .b-favorite__add {
+	@include transform(rotate3d(1, 1, 0, 180deg));
+}
+.b-product__favorite__add .b-favorite__remove {
+	top:-22px;
+	right:-22px;
+	@include transform(rotate3d(1, 1, 0, -180deg));
+	z-index:3;
+}
+.b-product__favorite__add {
+	background:#f7f7f7;
+}

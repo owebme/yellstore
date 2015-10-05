@@ -1,0 +1,113 @@
+.breadcrumbs {
+	position:relative;
+	top:-1px;
+	font-size:0;
+	height:28px;
+}
+.breadcrumbs--center {
+	text-align:center;
+}
+.breadcrumbs--left {
+	text-align:left;
+}
+.breadcrumbs--right {
+	text-align:right;
+}
+.breadcrumbs__container {
+	position:relative;
+    display:inline-block;
+	vertical-align:top;	
+	height:28px;
+	width:100%;
+	overflow:hidden;
+}
+.breadcrumbs__section {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	opacity:0;
+	transition:all 0.45s ease-in-out;
+	@include transform(translateY(-45px));
+}
+.breadcrumbs__section--active {
+	opacity:1;
+	transition:all 0.45s 0.2s cubic-bezier(.215,.61,.355,1);
+	@include transform(translateY(0px));
+}
+.breadcrumbs__section__result {
+	color:#777;
+	font:15.5px/28px $openSans;
+}
+.breadcrumbs__section__result strong {
+	color:$nightGray_dark;
+	font-size:16.5px;
+	font-family:$museo;
+	font-weight:bold;
+}
+.breadcrumbs__item,
+.breadcrumbs__item__home {
+	opacity:1;
+    display:inline-block;
+    position:relative;
+	white-space:nowrap;
+	vertical-align:top;
+	padding:7px 25px 7px 22px;
+	transition:all 0.4s;
+}
+.breadcrumbs__item--hide {
+	opacity:0;
+	@include transform(translateY(-30px));
+	transition:all 0.3s ease-in-out;
+}
+.breadcrumbs__item__link,
+.breadcrumbs__item__title {
+	color:#bbb;
+	font:14px/15px $arial;
+    display:inline-block;
+    margin-right:-10px;
+    position:relative;
+    text-decoration:none;
+    vertical-align:top;	
+	@include transition(color 0.1s ease);
+}
+.breadcrumbs__item__link:before {
+	content:"";
+	position:absolute;
+	bottom:-4px;
+	left:50%;
+	width:0;
+	height:1px;
+	background:rgba($ruby,.3);
+	@include transition(all 0.15s cubic-bezier(.215,.61,.355,1));
+}
+.breadcrumbs__item__link:hover {
+	color:$ruby;
+}
+.breadcrumbs__item__link:hover:before {
+	left:-1.5%;
+	width:103%;
+}
+.breadcrumbs__item__title {
+	color:$nightGray_dark;
+	font:16.5px/15px $openSans;
+	top:-1px;
+	cursor:default;
+}
+.breadcrumbs__item:before {
+    content:"";
+	position:absolute;
+	top:0;
+	left:-1px;
+    width:10px;
+	height:29px;
+	background:url(/images/ui-next.svg) no-repeat center left;
+	background-size:cover;
+}
+.breadcrumbs__item:first-child {
+	padding-left:20px;
+}
+.breadcrumbs__item:first-child:before {
+	display:none;
+}

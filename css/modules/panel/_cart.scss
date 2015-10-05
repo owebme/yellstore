@@ -1,0 +1,197 @@
+.YS__m-cart {
+	position:fixed;
+	top:0;
+	left:-101%;
+	width:100%;
+	height:100%;
+	opacity:0;
+	z-index:1001;
+	overflow:hidden;
+	transition: opacity 0.35s cubic-bezier(.645,.045,.355,1) 0s, left 0s 0.35s;
+	perspective:1000px;
+	transform-style:preserve-3d;	
+}
+.YS__m-cart__container {
+	perspective:1000px;
+	transform-style:preserve-3d;
+	transform:translate3d(0px, 0px, -90px);
+	transition:transform 0.4s cubic-bezier(0.57, 0.06, 0.05, 0.95) 0s;
+}
+.YS__m-cart__close {
+	position:fixed;
+	top:55px;
+	right:45px;
+}
+.YS__m-cart__close .YS__element_menu__close::after,
+.YS__m-cart__close .YS__element_menu__close::before {
+	opacity:0.85;
+}
+.YS__m-cart__wrapper {
+	position:absolute;
+	top:0;
+	left:50%;
+	margin:52px 0 0 -35%;
+	width:70%;
+	perspective:1000px;
+	transform-style:preserve-3d;
+	min-height:100%;
+	padding-bottom:380px;
+}
+.YS__m-cart__item {
+	border-bottom:1px solid rgba(255,255,255,.2);
+	opacity:0.95;
+	cursor:default;
+	max-height: 250px;
+	transition: all 450ms cubic-bezier(0.57, 0.06, 0.05, 0.95), background 0.2s cubic-bezier(.215,.61,.355,1);
+}
+.YS__m-cart__item--remove {
+    backface-visibility: hidden;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: rotateX(-92deg);
+}
+.YS__m-cart__item:hover {
+	background:rgba(255,255,255,.1);
+}
+.YS__m-cart__item:first-child {
+	border-top:none;
+}
+.YS__m-cart__item__container {
+	display:table;
+	width:100%;
+	padding:28px 30px;
+}
+.YS__m-cart__item__cell {
+	display:table-cell;
+	vertical-align:middle;
+	padding:0 15px;
+	color:#d2d2d2;
+	@include transition(color 0.2s cubic-bezier(.215,.61,.355,1));
+}
+.YS__m-cart__item__container,
+.YS__m-cart__item__cell {
+	cursor: url(/images/cursors/openhand.cur), move;
+}
+.i-scrolling-grab .YS__m-cart__item__container,
+.i-scrolling-grab .YS__m-cart__item__cell {
+	cursor: url(/images/cursors/closedhand.cur), move;
+}
+.YS__m-cart__item__cell__foto {
+	width:96px;
+	cursor:default;
+}
+.YS__m-cart__item__cell__foto img {
+	opacity:0.85;
+	width:96px;
+	border-radius:4px;
+	@include transition(opacity 0.2s cubic-bezier(.215,.61,.355,1));
+}
+.YS__m-cart__item:hover .YS__m-cart__item__cell {
+	color:#fff;
+}
+.YS__m-cart__item:hover img {
+	opacity:1;
+}
+.YS__m-cart__item:hover .YS__m-cart__item__count {
+	border-color:rgba(255,255,255,.3);
+}
+.YS__m-cart__item__cell__desc {
+	width:100%;
+	padding-left:45px;
+}
+.YS__m-cart__item__cell__title {
+	font-family:$lato;
+	font-weight:bold;
+	padding-bottom:2px;
+}
+.YS__m-cart__item__cell__name {
+	font-family:$museo;
+	padding-bottom:5px;
+}
+.YS__m-cart__item__cell__price {
+	font-family:$lato;
+	font-weight:bold;
+}
+.YS__m-cart__item__cell__count,
+.YS__m-cart__item__cell__remove {
+	text-align:center;
+	cursor:default;
+	padding:0 25px;
+}
+.YS__m-cart__item__cell__count {
+	border-left:1px dashed rgba(255, 255, 255, 0.35);
+	padding-left:60px;
+}
+.YS__m-cart__item__count__wrapper {
+	position:relative;	
+	@include unselectable();
+}
+.YS__m-cart__item__count {
+	width:56px;
+	height:54px;
+	border:none;
+	border-top:2px solid rgba(255, 255, 255, 0.33);
+	border-bottom:2px solid rgba(255, 255, 255, 0.33);
+	color:#f2f2f2;
+	font-size:20px;
+	font-family:$lato;
+	text-align:center;
+	margin:0 auto;
+	padding:12px 0;
+	border-radius:11px;
+	background:none;
+	cursor:default;
+	@include transition(all 0.2s cubic-bezier(.215,.61,.355,1));
+	@include unselectable();
+}
+.YS__m-cart__item__cell__count:hover .YS__m-cart__item__count {
+	color:#fff;
+	border-color:rgba(255,255,255,.5);
+	height:58px;
+}
+.YS__m-cart__item__count__minus,
+.YS__m-cart__item__count__plus  {
+	position:absolute;
+	top:50%;
+	width:12px;
+	height:12px;
+	margin-top:-16px;
+	font-family:$arial;
+	font-weight:bold;
+	font-size:25px;
+	font-style:normal;
+	cursor:pointer;
+	opacity:0.75;
+	transition:opacity 0.2s cubic-bezier(.215,.61,.355,1);
+}
+.YS__m-cart__item__count__minus:hover,
+.YS__m-cart__item__count__plus:hover  {
+	opacity:1;
+}
+.YS__m-cart__item__count__minus {
+	right:-25px;
+	margin-top:-19px;
+}
+.YS__m-cart__item__count__plus {
+	left:-27px;
+}
+.YS__m-cart__string {
+	display:tabel-cell;
+	color:#f2f2f2;
+	border-bottom:1px solid rgba(255,255,255,.2);
+	vertical-align:middle;
+	width:100%;
+	padding:30px 45px;
+	text-align:right;
+}
+.YS__m-cart__string__title {
+	float:left;
+}
+.YS__m-cart__string__value {
+	display:inline-block;
+}
+.YS__m-cart__string__total {
+	display:inline-block;
+	font:bold 20px $lato;
+}

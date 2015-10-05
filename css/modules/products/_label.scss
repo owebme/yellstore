@@ -1,0 +1,137 @@
+.b-product__label__group {
+	position:absolute;	
+	width:50px;
+}
+.b-product__label {
+	position:relative;
+	color:#fff;
+	text-transform:uppercase;
+	font:13.5px/11px $lato;
+	display:inline-block;
+	width:auto;
+	height:auto;
+	margin-bottom:10px;
+	white-space:nowrap;
+	z-index:1;
+}
+.b-product__label strong {
+	font:bold 12.5px/11px $lato;
+}
+.b-product__label em {
+	display:inline-block;
+	font-style:normal;
+	@include transform(skewX(-12deg));
+}
+.b-product__label__group__right {
+	top:74px;
+	right:-12px;	
+}
+.b-product__label__group__right .b-product__label {
+	padding:11px 15px 12px 6px;
+	border-radius:0 5px 0 0;
+}
+.b-product__label__group__left {
+	top:25px;
+	left:-12px;
+}
+.b-product__label__group__left .b-product__label {
+	padding:11px 10px 12px 15px;
+	border-radius:5px 0 0 0;
+}
+.b-product__label,
+.b-product__label:after {
+	box-shadow:0 2px 0 rgba(0,0,0,.1);
+}
+.b-product__label:after{
+	display:block;
+	position:absolute;
+	left:-17px;
+	top:0;
+	content:"";
+	border-width:17px 0px 17px 17px;
+	border-style:solid;
+	border-left-color:transparent !important;
+}
+.b-product__label__group__left .b-product__label:after{
+	left:auto;
+	right:-17px;
+	transform: scale(-1, 1);
+}
+.b-product__label:before {
+	display:block;
+	position:absolute;
+	right:0px;
+	bottom:-12px;
+	content:"";
+	border-width:13px 13px 0 0;
+	border-style:solid;
+	border-right-color:transparent !important;
+}
+.b-product__label__group__left .b-product__label:before{
+	right:auto;
+	left:0px;
+	transform: scale(-1, 1);
+}
+.b-product__label--red {
+	background-color:#ff6060;
+}
+.b-product__label--red:after {
+	border-color:#ff6060;
+}
+.b-product__label--red:before {
+	border-color:#c0392b;
+}
+.b-product__label--vinous {
+	background-color:#e27c7c;
+}
+.b-product__label--vinous:after {
+	border-color:#e27c7c;
+}
+.b-product__label--vinous:before {
+	border-color:#c0392b;
+}
+.b-product__label--orange {
+	background-color:#f48a43;
+}
+.b-product__label--orange:after {
+	border-color:#f48a43;
+}
+.b-product__label--orange:before {
+	border-color:#d35400;
+}
+.b-product__label--green {
+	background-color:#2ecc71;
+}
+.b-product__label--green:after {
+	border-color:#2ecc71;
+}
+.b-product__label--green:before {
+	border-color:#27ae60;
+}
+.b-product__label--herbal {
+	background-color:#62b959;
+}
+.b-product__label--herbal:after {
+	border-color:#62b959;
+}
+.b-product__label--herbal:before {
+	border-color:#27ae60;
+}
+.b-product__label--blue {
+	background-color:$grayBlue;
+}
+.b-product__label--blue:after {
+	border-color:$grayBlue;
+}
+.b-product__label--blue:before {
+	border-color:#5381ac;
+}
+.b-product__label--black {
+	background-color:#6a6a6a;
+}
+.b-product__label--black:after {
+	border-color:#6a6a6a;
+}
+.b-product__label--black:before {
+	border-color:#3a3a3a;
+}

@@ -1,0 +1,185 @@
+.gains__container {
+	display:table;
+	width:100%;
+	margin:26px 0 22px;
+}
+.gain__item {
+	position:relative;
+	display:table-cell;
+	height:46px;
+	font:14px/19px $arial;
+	vertical-align:middle;
+	padding-right:10px;
+	cursor:default;
+}
+.gains__column1 .gain__item {
+	width:100%;
+}
+.gains__column2 .gain__item {
+	width:50%;
+}
+.gains__column3 .gain__item {
+	width:33.33%;
+}
+.gains__column4 .gain__item {
+	width:25%;
+}
+.gains__column5 .gain__item {
+	width:20%;
+}
+.gain__item:last-child {
+	padding-right:0px;
+}
+.gain__icon__text {
+	display:table-cell;
+	vertical-align:middle;
+	height:35px;
+	color:#333;
+}
+.gain__comments {
+	opacity:0;
+	position:absolute;
+	top:100%;
+	left:-999em;
+	width:228px;
+	padding-top:20px;
+	margin:-14px 0 0 -102px;
+	@include transform(translateY(10px));
+	-webkit-transition:-webkit-transform 0.15s cubic-bezier(0.57, 0.06, 0.05, 0.95), opacity 0.15s cubic-bezier(0.57, 0.06, 0.05, 0.95), left 0s 0.15s;
+	transition:transform 0.15s cubic-bezier(0.57, 0.06, 0.05, 0.95), opacity 0.15s cubic-bezier(0.57, 0.06, 0.05, 0.95), left 0s 0.15s;
+	z-index:10;
+}
+.gain__comments__text {
+	position:relative;
+	background:#fff;
+	font:13px/18px $arial;
+	padding:13px 12px 10px;
+	border:1px solid #d2d2d2;	
+	box-shadow:0 10px 25px -6px rgba(0, 0, 0, 0.4);
+	-webkit-transition:padding 0s 0.15s, border 0s 0.15s;
+	transition:padding 0s 0.15s, border 0s 0.15s;
+	border-radius:5px;
+}
+.gain__item:hover .gain__comments {
+	opacity:1;
+	left:50%;
+	@include transform(translateY(0));
+	-webkit-transition:-webkit-transform 0.35s cubic-bezier(0.57, 0.06, 0.05, 0.95), opacity 0.35s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+	transition:transform 0.35s cubic-bezier(0.57, 0.06, 0.05, 0.95), opacity 0.35s cubic-bezier(0.57, 0.06, 0.05, 0.95);	
+}
+.gain__comments__text:before,
+.gain__comments__text:after {
+	opacity:0;
+	@include transition(opacity 0s 0.15s);
+}
+.gain__item:hover .gain__comments__text:before,
+.gain__item:hover .gain__comments__text:after {
+	opacity:1;
+	@include transition(opacity 0.35s cubic-bezier(0.57, 0.06, 0.05, 0.95));
+}
+.gain__comments__text:before {
+	content: "";
+	position:absolute;
+	left: 50%;
+	top: -11px;
+	border-bottom: 11px solid #d2d2d2;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    margin-left: -7px;
+}
+.gain__comments__text:after {
+	content: "";
+	position:absolute;
+	left: 50%;
+	top: -10px;
+	border-bottom: 10px solid #fff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    margin-left: -5px;
+}
+.gain__link:before {
+	content:"";
+	clear:both;
+}
+.gain__link {
+	position:relative;
+	display:block;
+	color:#6a82a9;
+	text-decoration:underline;
+	@include transition(color 0.2s);
+}
+.gain__link:hover {
+	color:#ff8500;
+}
+.gain__icon {
+	position:relative;
+	display:inline-block;
+	float:left;
+	width:46px;
+	height:46px;
+	border:1px solid $grayBlue;
+	border-radius:50%;
+	vertical-align:top;
+	margin-right:15px;
+}
+.gain__icon:before {
+	content:"";
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:30px;
+	height:30px;
+	margin:-15px 0 0 -15px;
+	background-image:url(/images/gains_icons.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.gain__icon__one:before {
+	background-position:-8px 0;
+}
+.gain__icon__two:before {
+	background-position:-40px -1px;
+}
+.gain__icon__three:before {
+	background-position:-77px -1px;
+}
+.gain__icon__four:before {
+	background-position:-115px -1px;
+}
+.gain__icon__five:before {
+	background-position:-152px -2px;
+}
+
+@media screen and (max-width: 1024px) {
+	.gains__container {
+		width:103%;
+		margin-left:-2% !important;
+		margin-right:-2% !important;
+	}
+	.gain__item {
+		padding:0 7px;
+		text-align:center;
+	}
+	.gain__icon {
+		float:none;
+		margin:0 0 6px 0;
+	}
+	.gain__comments {
+		display:none;
+	}
+}
+@media screen and (min-width: 1400px) {
+	.gains__container {
+		margin-left:15px;
+	}
+	.gain__item {
+		padding-right:15px;
+	}
+	.gain__icon {
+		width:52px;
+		height:52px;
+	}	
+	.gain__icon__text {
+		height:40px;
+	}
+}

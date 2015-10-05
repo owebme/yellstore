@@ -1,0 +1,59 @@
+@font-face {
+	font-family:'Open Sans';
+	src:url('/css/base/fonts/open-sans-light.eot');
+	src:url('/css/base/fonts/open-sans-light.eot?#iefix') format('embedded-opentype'),
+	url('/css/base/fonts/open-sans-light.woff2') format('woff2'),
+	url('/css/base/fonts/open-sans-light.woff') format('woff'),
+	url('/css/base/fonts/open-sans-light.ttf') format('truetype'),
+	url('/css/base/fonts/open-sans-light.svg#open-sans-light') format('svg');
+	font-weight:400;
+	font-style:normal;
+}
+@font-face {
+	font-family: 'Lato';
+	src: url('/css/base/fonts/Lato-Regular.eot');
+	src: local('O'), url('/css/base/fonts/Lato-Regular.woff') format('woff'), url('/css/base/fonts/Lato-Regular.ttf') format('truetype'), url('/css/base/fonts/Lato-Regular.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Lato';
+	src: url('/css/base/fonts/Lato-Bold.eot');
+	src: local('O'), url('/css/base/fonts/Lato-Bold.woff') format('woff'), url('/css/base/fonts/Lato-Bold.ttf') format('truetype'), url('/css/base/fonts/Lato-Bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face{
+    font-family: 'Segoe UI';
+    src:url('/css/base/fonts/Segoe-UI.eot');
+    src:url('/css/base/fonts/Segoe-UI.eot?#iefix') format('embedded-opentype'),
+           url('/css/base/fonts/Segoe-UI.woff') format('woff'),
+           url('/css/base/fonts/Segoe-UI.ttf') format('truetype'),
+           url('/css/base/fonts/Segoe-UI.svg#web') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'Museo';
+  src: url('/css/base/fonts/museosanscyrl-100-webfont.woff') format('woff'), url('/css/base/fonts/museosanscyrl-100-webfont.ttf') format('truetype'), url('/css/base/fonts/museosanscyrl-100-webfont.svg#museo_sans_cyrl100') format('svg');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Museo';
+  src: url('/css/base/fonts/museosanscyrl-300-webfont.woff') format('woff'), url('/css/base/fonts/museosanscyrl-300-webfont.ttf') format('truetype'), url('/css/base/fonts/museosanscyrl-300-webfont.svg#museo_sans_cyrl300') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Museo';
+  src: url('/css/base/fonts/museosanscyrl-500-webfont.woff') format('woff'), url('/css/base/fonts/museosanscyrl-500-webfont.ttf') format('truetype'), url('/css/base/fonts/museosanscyrl-500-webfont.svg#museo_sans_cyrl500') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Museo';
+  src: url('/css/base/fonts/museosanscyrl-700-webfont.woff') format('woff'), url('/css/base/fonts/museosanscyrl-700-webfont.ttf') format('truetype'), url('/css/base/fonts/museosanscyrl-700-webfont.svg#museo_sans_cyrl700') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}

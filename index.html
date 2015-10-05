@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>YellStore beta 0.4</title>
+	<!-- Meta -->
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
+	<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="format-detection" content="telephone=no" />
+	<meta name="google" content="notranslate" />
+	<!-- CSS -->
+	<link href="/css/base/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/css/style.min.css" rel="stylesheet" />
+</head>
+<body class="state__preloading">
+
+	<!-- Page -->
+	<div class="page" id="root" data-mode="index" data-item="" data-version="0.4">
+
+		<!-- Preloader -->
+		<div class="YS__ui-preloader">
+			<i class="YS__ui-spinner"><svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58"><path fill-rule="evenodd" clip-rule="evenodd" fill="#9e45bf" d="M40.174 4.469c-3.41-1.556-7.189-2.446-11.183-2.446-14.913 0-27.001 12.089-27.001 27.001 0 14.913 12.089 27.002 27.001 27.002 14.914 0 27.001-12.089 27.001-27.002 0-.862-.049-1.713-.129-2.555l1.975-.186c.084.896.139 1.803.139 2.721 0 16.02-12.979 29.006-28.989 29.006-16.009.001-28.988-12.986-28.988-29.005s12.979-29.005 28.988-29.005c4.295 0 8.358.959 12.024 2.637l-.838 1.832z"/></svg></i>
+		</div> 
+		<!--/Preloader -->
+		
+		<!--<div class="YS__element__teaser YS__element__teaser--pink">
+			<div class="YS__element__teaser__container"><strong>БЕСПЛАТНАЯ ДОСТАВКА</strong> до 28 сентября 2015! Код акции 93333</div>
+		</div>-->
+
+		<!-- Wrapper -->
+		<div class="page__wrapper">
+			<header>
+				<div class="header__container">
+					<a href="/"><img src="/images/logo.gif" class="header__logo"></a>
+					<div class="header__left__menu">
+						<a href="/" class="header__home__link">Главная</a>
+						<div class="header__gender__menu">
+							<a href="/woman/" class="header__gender__menu__item header__gender__menu__item--active">Женщинам</a>
+							<a href="/man/" class="header__gender__menu__item">Мужчинам</a>
+							<a href="/child/" class="header__gender__menu__item">Детям</a>
+						</div>
+					</div>
+					<div class="header__right__menu">
+						<a href="#" class="header__auth__button">Войти</a>
+						<a href="#" class="header__cart__button">Корзина</a>
+					</div>
+				</div>
+				<div class="header__menu">
+					<div class="header__menu__parents">
+						<div class="header__menu__parents__container" id="header__menu__parents__container--level1">
+							<ul class="header__menu__parents__list">
+								<li class="header__menu__parents__item" data-id="1"><a href="#" class="header__menu__parents__link">Новинки</a></li>
+								<li class="header__menu__parents__item" data-id="2"><a href="#" class="header__menu__parents__link">Стиль жизни</a></li>
+								<li class="header__menu__parents__item" data-id="3"><a href="#" class="header__menu__parents__link">Одежда</a></li>
+								<li class="header__menu__parents__item" data-id="4"><a href="#" class="header__menu__parents__link">Обувь</a></li>
+								<li class="header__menu__parents__item" data-id="5"><a href="#" class="header__menu__parents__link">Аксессуары</a></li>
+								<li class="header__menu__parents__item" data-id="6"><a href="#" class="header__menu__parents__link">Бренды</a></li>
+								<li class="header__menu__parents__item" data-id="7"><a href="#" class="header__menu__parents__link">Премиум</a></li>
+								<li class="header__menu__parents__item" data-id="8"><a href="#" class="header__menu__parents__link">Спорт</a></li>
+								<li class="header__menu__parents__item" data-id="9"><a href="#" class="header__menu__parents__link">Красота</a></li>
+								<li class="header__menu__parents__item" data-id="10"><a href="#" class="header__menu__parents__link header__menu__parents__link--red">Распродажа %</a></li>
+							</ul>
+							<ul class="header__menu__parents__list">
+								<li class="header__menu__parents__item"><a href="#" class="header__menu__parents__link">Новинки</a></li>
+								<li class="header__menu__parents__item"><a href="#" class="header__menu__parents__link">Стиль жизни</a></li>
+								<li class="header__menu__parents__item"><a href="#" class="header__menu__parents__link">Одежда</a></li>
+								<li class="header__menu__parents__item"><a href="#" class="header__menu__parents__link">Обувь</a></li>
+								<li class="header__menu__parents__item"><a href="#" class="header__menu__parents__link">Аксессуары</a></li>
+								<li class="header__menu__parents__item"><a href="#" class="header__menu__parents__link">Бренды</a></li>
+								<li class="header__menu__parents__item"><a href="#" class="header__menu__parents__link">Премиум</a></li>
+								<li class="header__menu__parents__item"><a href="#" class="header__menu__parents__link">Спорт</a></li>
+								<li class="header__menu__parents__item"><a href="#" class="header__menu__parents__link">Красота</a></li>
+								<li class="header__menu__parents__item"><a href="#" class="header__menu__parents__link header__menu__parents__link--red">Распродажа %</a></li>
+							</ul>
+							<ul class="header__menu__parents__list">
+								<li class="header__menu__parents__item"><a href="#" class="header__menu__parents__link">Новинки</a></li>
+								<li class="header__menu__parents__item"><a href="#" class="header__menu__parents__link">Девочкам</a></li>
+								<li class="header__menu__parents__item"><a href="#" class="header__menu__parents__link">Мальчикам</a></li>
+								<li class="header__menu__parents__item"><a href="#" class="header__menu__parents__link header__menu__parents__link--red">Распродажа %</a></li>
+							</ul>	
+						</div>
+					</div>
+					<div class="header__menu__dropdown">
+						<div class="header__menu__dropdown__wrapper" data-name="Новинки" data-id="1">
+							<div class="header__menu__dropdown__container">
+								<div class="header__menu__dropdown__title">Новинки</div>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Одежда</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Обувь</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Аксессуары</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Все категории</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Премиум</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Спорт</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Красота</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="header__menu__dropdown__wrapper" data-name="Стиль жизни" data-id="2">
+							<div class="header__menu__dropdown__container">
+								<div class="header__menu__dropdown__title">Стиль жизни</div>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Мода</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Стиль</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Жизнь</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Красота</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Бренды</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Словарь</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Мужчинам</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Lookbook</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Подарки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Базовый гардероб</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Деним</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Платья </a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Определите ваш стиль</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Проект «Я лечу»</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="header__menu__dropdown__wrapper" data-name="Женская одежда" data-id="3">
+							<div class="header__menu__dropdown__container">
+								<div class="header__menu__dropdown__title">Женская одежда</div>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Платья</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Верхняя одежда</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Футболки и поло</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Брюки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Блузы и рубашки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Юбки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Джинсы</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Джемперы и кардиганы</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Пиджаки и костюмы</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Толстовки и олимпийки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Топы и майки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Нижнее белье</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Комплекты</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Большие размеры</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Все категории</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">LOST INK.</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Mango</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Dorothy Perkins</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">LAMANIA</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Nike</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Topshop</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Incity</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">River Island</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">s.Oliver</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Savage</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Baon</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Tommy Hilfiger</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Love Republic</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">People</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Levi's&reg;</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Все бренды</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="header__menu__dropdown__wrapper" data-name="Женская обувь" data-id="4">
+							<div class="header__menu__dropdown__container">
+								<div class="header__menu__dropdown__title">Женская обувь</div>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Туфли</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Кроссовки и кеды</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Ботильоны</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Ботинки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Слипоны</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Балетки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Мокасины</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Эспадрильи</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Сапоги</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Резиновая обувь</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Босоножки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Сандалии</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Сабо</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Шлепанцы и акваобувь</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Все категории</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">LOST INK.</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Dorothy Perkins</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Vitacci</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">LAMANIA</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Tamaris</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Keddo</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Calipso</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Lacoste</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Aldo</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Topshop</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Schutz</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Nike</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Vagabond</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Все бренды</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="header__menu__dropdown__wrapper" data-name="Женские аксессуары" data-id="5">
+							<div class="header__menu__dropdown__container">
+								<div class="header__menu__dropdown__title">Женские аксессуары</div>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Сумки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Рюкзаки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Головные уборы</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Платки и шарфы</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Часы</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Украшения</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Зонты</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Перчатки</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Ремни и пояса</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Кошельки и косметички</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Очки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Все категории</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">River Island</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Mango</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Ray Ban</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Topshop</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">David Jones</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Le camp</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Guess</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Dorothy Perkins</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Eleganzza</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">LOST INK.</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Moronero</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Vitacci</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Parfois</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Canoe</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Все бренды</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="header__menu__dropdown__wrapper" data-name="Женские бренды" data-id="6">
+							<div class="header__menu__dropdown__container">
+								<div class="header__menu__dropdown__title">Женские бренды</div>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">adidas</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">adL - adilisik</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Aldo</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Asics</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Baon</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Befree</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Betsy</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Brave Soul</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Calipso</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Concept Club</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Dorothy Perkins</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Grand Style</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Inario</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Incity</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Jennyfer</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Keddo</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Lacoste</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">LAMANIA</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Levi's&reg;</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">LOST INK.</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Love Republic</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Mango</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Nike</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">People</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Puma</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">River Island</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">s.Oliver</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Savage</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Sela</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Sinta</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">T.Taccardi for Kari</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Tamaris</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="header__menu__dropdown__wrapper" data-name="Премиум для женщин" data-id="7">
+							<div class="header__menu__dropdown__container">
+								<div class="header__menu__dropdown__title">Премиум для женщин</div>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Платья</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Верхняя одежда</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Брюки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Футболки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Джинсы</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Юбки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Блузы и рубашки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Все категории</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Туфли</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Кеды</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Кроссовки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Балетки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Мокасины</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Ботинки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Ботильоны</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Все категории</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Сумки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Портмоне</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Часы</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Ремни</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Очки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Платки и шарфы</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Головные уборы</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Все категории</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Red Valentino</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Furla</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Pinko</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Iceberg</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Escada Sport</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Just Cavalli</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">L'Agent by Agent Provocateur</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="header__menu__dropdown__wrapper" data-name="Спорт для женщин" data-id="8">
+							<div class="header__menu__dropdown__container">
+								<div class="header__menu__dropdown__title">Спорт для женщин</div>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Брюки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Футболки и поло</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Топы и майки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Толстовки и джемперы</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Шорты</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Спортивные костюмы</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Купальники</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Все категории</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Кроссовки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Кеды</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Балетки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Сандалии</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Сланцы и шлепанцы</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Ботинки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Мокасины и Эспадрильи</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Все категории</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Сумки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Рюкзаки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Головные уборы</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Кошельки и косметички</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Очки</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Часы и электроника</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Экипировка</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Все категории</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Бег</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Спортивный стиль</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Фитнес</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Йога и танцы</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Трекинг и туризм</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Плавание и пляж</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Единоборства</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Все виды</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="header__menu__dropdown__wrapper" data-name="Красота" data-id="9">
+							<div class="header__menu__dropdown__container">
+								<div class="header__menu__dropdown__title">Красота</div>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Парфюмерия</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Макияж для лица</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Макияж для глаз</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Макияж для губ</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Для ногтей</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Уход за лицом</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Уход за телом</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Уход за волосами</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Косметические приборы</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Аксессуары</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Все категории</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">L'Oreal Paris</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Maybelline New York</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Garnier</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Essie</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Philips</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Tangle Teezer</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Gezatone</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Holika Holika</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Anastasia Beverly Hills</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Christina Fitzgerald</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">The Skin House</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Lancome</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="header__menu__dropdown__wrapper" data-name="Распродажа %" data-id="10">
+							<div class="header__menu__dropdown__container">
+								<div class="header__menu__dropdown__title">Распродажа %</div>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Одежда</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Обувь</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Аксессуары</a></li>
+								</ul>
+								<ul class="header__menu__dropdown__list">
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Премиум</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Спорт</a></li>
+									<li class="header__menu__dropdown__item"><a href="#" class="header__menu__dropdown__link">Лучшие акции</a></li>
+								</ul>
+							</div>
+						</div>				
+					</div>				
+				</div>
+			</header>		
+			<div class="page__content">
+		
+			</div>
+		</div>
+		<!--/Wrapper -->
+		
+		
+		<!-- Sort Panel -->
+		<script id="sort-panel" type="text/x-handlebars-template">
+		<div class="sort__panel">
+			<form>
+				<div class="YS__element__select__group YS__element__select__group--right">
+					<div class="YS__element__select">
+						<span class="YS__element__select__value">По популярности</span>
+						<i class="YS__element__select__icon"></i>
+						<div class="YS__element__select__dropdown">
+							<div class="YS__element__select__dropdown__container">
+								<div class="YS__element__select__dropdown__item" data-value="1">По популярности</div>
+								<div class="YS__element__select__dropdown__item" data-value="2">По возрастанию цены</div>
+								<div class="YS__element__select__dropdown__item" data-value="3">По убыванию цены</div>
+								<div class="YS__element__select__dropdown__item" data-value="4">По новинкам</div>
+								<div class="YS__element__select__dropdown__item" data-value="5">По скидкам</div>
+							</div>
+						</div>
+						<select class="YS__select" name="sortBy">
+							<option value="1">По популярности</option>
+							<option value="2">По возрастанию цены</option>
+							<option value="3">По убыванию цены</option>
+							<option value="4">По новинкам</option>
+							<option value="5">По скидкам</option>
+						</select>
+					</div>
+					<div class="YS__element__select__views">
+						<div class="YS__element__select__view__sort YS__element__select__view__sort--active" data-view="view1">
+							<i class="YS__element__select__view__sort1_el1"></i>
+							<i class="YS__element__select__view__sort1_el2"></i>
+							<i class="YS__element__select__view__sort1_el3"></i>
+						</div>
+						<div class="YS__element__select__view__sort" data-view="view2">
+							<i class="YS__element__select__view__sort2_el1"></i>
+							<i class="YS__element__select__view__sort2_el2"></i>
+							<i class="YS__element__select__view__sort2_el3"></i>
+							<i class="YS__element__select__view__sort2_el4"></i>
+						</div>						
+					</div>
+				</div>
+			</form>
+			<div class="breadcrumbs breadcrumbs--left">
+				<div class="breadcrumbs__container">
+					<div class="breadcrumbs__section breadcrumbs__section__path breadcrumbs__section--active">
+						<div class="breadcrumbs__item__home" itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
+							<a class="breadcrumbs__item__home__link breadcrumbs__item__link" href="/" itemprop="url"><span itemprop="title">Главная</span></a>
+						</div>
+						<div class="breadcrumbs__item" itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
+							<a class="breadcrumbs__item__link" href="/c/woman/" itemprop="url"><span itemprop="title">Женщинам</span></a>
+						</div>
+						<div class="breadcrumbs__item">
+							<span class="breadcrumbs__item__title">Женская одежда</span>
+						</div>
+					</div>
+					<div class="breadcrumbs__section breadcrumbs__section__result">
+					</div>
+				</div>
+			</div>
+		</div>
+		</script>
+		<!--/Sort Panel -->
+		
+		
+		<!-- Filter Panel -->
+		<script id="filter-panel" type="text/x-handlebars-template">
+		<div class="YS__panel">
+			<div class="YS__panel__container">
+				<div class="YS__panel__filter__label">Фильтр:</div>
+				<div class="YS__panel__filter">
+					<form class="YS__panel__filter__container">
+						<div class="YS__filter">
+							<select name="material" data-title="Материал" data-mode="select">
+								<option value="1">Акрил</option>
+								<option value="2">Вискоза</option>
+								<option value="3">Другое волокно</option>
+								<option value="4">Искусственная кожа</option>
+								<option value="5">Лайкра</option>
+								<option value="6">Лен</option>
+								<option value="7">Полиамид</option>
+								<option value="8">Полимер</option>
+								<option value="9">Полиэстер</option>
+							</select>
+						</div>
+						<div class="YS__filter">
+							<select name="color" data-title="Цвет" data-mode="select">
+								<option value="1" data-color="#f0d2ab">бежевый</option>
+								<option value="2" data-color="#fff">белый</option>
+								<option value="3" data-color="#eee">бирюзовый</option>
+								<option value="4" data-color="#9b2d30">бордовый</option>
+								<option value="5" data-color="#eee">бронзовый</option>
+								<option value="6" data-color="#75a4e1">голубой</option>
+								<option value="7" data-color="#eee">горчичный</option>
+								<option value="8" data-color="#fff12d">желтый</option>
+								<option value="9" data-color="#81c322">зеленый</option>
+								<option value="9" data-color="#5367ff">синий</option>
+								<option value="9" data-color="#a04cff">фиолетовый</option>
+							</select>
+						</div>
+						<div class="YS__filter">
+							<select name="size" data-title="Размер" data-mode="multi">
+								<option value="1">40</option>
+								<option value="2">42</option>
+								<option value="3">44</option>
+								<option value="4">46</option>
+								<option value="5">48</option>
+								<option value="6">50</option>
+								<option value="7">52</option>
+								<option value="8">54</option>
+								<option value="9">56</option>
+							</select>
+						</div>
+						<div class="YS__filter">
+							<select name="brand" data-title="Бренд" data-mode="multi">
+								<option value="1">Adzhedo</option>
+								<option value="2">Alcott</option>
+								<option value="3">Amplebox</option>
+								<option value="4">Armani Jeans</option>
+								<option value="5">Ash</option>
+								<option value="6">Asics</option>
+								<option value="7">Aurora Firenze</option>
+								<option value="8">AX Paris</option>
+								<option value="9">Baon</option>
+							</select>
+						</div>
+						<div class="YS__filter">
+							<select name="season" data-title="Сезон" data-mode="multi">
+								<option value="1">Демисезон</option>
+								<option value="2">Зима</option>
+								<option value="3">Лето</option>
+								<option value="4">Мульти</option>
+							</select>
+						</div>
+						<div class="YS__filter">
+							<select name="style" data-title="Стиль" data-mode="multi">
+								<option value="1">Выход в свет</option>
+								<option value="2">Деловой</option>
+								<option value="3">Повседневный</option>
+								<option value="4">Романтический</option>
+								<option value="5">Спортивный</option>
+								<option value="6">Ультрамодный</option>
+							</select>
+						</div>
+						<div class="YS__filter">
+							<div data-title="Цена" data-name="price" data-mode="range" data-min="200" data-max="17500" data-step="100"></div>
+						</div>
+					</form>
+				</div>
+				<div class="YS__panel__phone YS__panel__divider">
+					<i class="YS__panel__phone__icon"></i>
+				</div>		
+				<div class="YS__panel__search">
+					<i class="YS__panel__search__icon"></i>
+				</div>
+				<div class="YS__panel__menu">
+					<div class="YS__panel__menu__container">
+						<div class="YS__panel__menu__item">Платья и сарафаны</div>
+						<div class="YS__panel__menu__icon">
+							<i class="YS__panel__menu__icon__line YS__panel__menu__icon__line_1"></i>
+							<i class="YS__panel__menu__icon__line YS__panel__menu__icon__line_2"></i>
+							<i class="YS__panel__menu__icon__line YS__panel__menu__icon__line_3"></i>
+						</div>
+					</div>
+				</div>
+				<div class="YS__panel__cart">
+					<i class="YS__panel__cart__icon fa fa-shopping-cart"></i>
+					<span class="YS__text-hidden">Корзина товаров</span>
+					<span class="YS__panel__cart__count">0</span>
+				</div>
+			</div>
+		</div>	
+		</script>
+		<!--/Filter Panel -->		
+		
+			
+		<!-- Cloud Links -->
+		<script id="cloud-links" type="text/x-handlebars-template">
+		<div id="cloud__links">
+			<a href="/">Верхняя одежда</a>
+			<a href="/">Пальто</a>
+			<a href="/">Куртки</a>
+			<a href="/">Пуховики</a>
+			<a href="/">Плащи</a>
+			<a href="/">Головные уборы</a>
+			<a href="/">Шарфы и платки</a>
+		</div>
+		</script>
+		<!--/Cloud Links -->
+		
+		
+		<!-- Menu -->
+		<script id="panel-menu" type="text/x-handlebars-template">
+		<div id="menu__tree">
+			<ul>
+				<li><a href="#">Верхняя одежда</a>
+					<ul>
+						<li><a href="#">Куртки</a>
+							<ul>
+								<li><a href="#">Головные уборы</a>
+									<ul>
+										<li><a href="#">Костюмы</a></li>
+										<li><a href="#">Пиджаки</a></li>
+										<li><a href="#">Платья</a></li>
+										<li><a href="#">Свитеры и кофты</a></li>
+										<li><a href="#">Толстовки</a></li>
+										<li><a href="#">Футболки и топы</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Шарфы и платки</a></li>
+								<li><a href="#">Одежда для спорта</a></li>
+								<li><a href="#">Блузки и кофточки</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Головные уборы</a>
+							<ul>
+								<li><a href="#">Костюмы</a></li>
+								<li><a href="#">Пиджаки</a></li>
+								<li><a href="#">Платья</a></li>
+								<li><a href="#">Свитеры и кофты</a></li>
+								<li><a href="#">Толстовки</a></li>
+								<li><a href="#">Футболки и топы</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Шарфы и платки</a></li>
+						<li><a href="#">Одежда для спорта</a></li>
+						<li><a href="#">Блузки и кофточки</a></li>
+						<li><a href="#">Брюки</a></li>
+						<li><a href="#">Джинсы</a></li>
+						<li><a href="#">Жилеты</a></li>
+						<li><a href="#">Комбинезоны</a></li>
+						<li><a href="#">Костюмы</a></li>
+						<li><a href="#">Пиджаки</a></li>
+						<li><a href="#">Платья</a></li>
+						<li><a href="#">Свитеры и кофты</a></li>
+						<li><a href="#">Толстовки</a></li>
+						<li><a href="#">Футболки и топы</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Головные уборы</a>
+					<ul>
+						<li><a href="#">Костюмы</a></li>
+						<li><a href="#">Пиджаки</a></li>
+						<li><a href="#">Платья</a></li>
+						<li><a href="#">Свитеры и кофты</a></li>
+						<li><a href="#">Толстовки</a></li>
+						<li><a href="#">Футболки и топы</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Шарфы и платки</a></li>
+				<li><a href="#">Одежда для спорта</a></li>
+				<li><a href="#">Блузки и кофточки</a></li>
+				<li><a href="#">Брюки</a></li>
+				<li><a href="#">Джинсы</a></li>
+				<li><a href="#">Жилеты</a></li>
+				<li><a href="#">Комбинезоны</a></li>
+				<li><a href="#">Костюмы</a></li>
+				<li><a href="#">Пиджаки</a></li>
+				<li><a href="#">Платья</a></li>
+				<li><a href="#">Свитеры и кофты</a></li>
+				<li><a href="#">Толстовки</a></li>
+				<li><a href="#">Футболки и топы</a></li>
+			</ul>
+		</div>
+		</script>
+		<!--/Menu -->
+		
+	</div>
+	<!--/Page -->
+	
+	
+	<!-- Action Spinner -->
+	<script id="spinner-template" type="text/x-handlebars-template">
+		<i class="YS__ui-spinner"><svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58"><path fill-rule="evenodd" clip-rule="evenodd" fill="#9e45bf" d="M40.174 4.469c-3.41-1.556-7.189-2.446-11.183-2.446-14.913 0-27.001 12.089-27.001 27.001 0 14.913 12.089 27.002 27.001 27.002 14.914 0 27.001-12.089 27.001-27.002 0-.862-.049-1.713-.129-2.555l1.975-.186c.084.896.139 1.803.139 2.721 0 16.02-12.979 29.006-28.989 29.006-16.009.001-28.988-12.986-28.988-29.005s12.979-29.005 28.988-29.005c4.295 0 8.358.959 12.024 2.637l-.838 1.832z"/></svg></i>
+	</script>
+	<!--/Action Spinner -->
+	
+	<!-- Action Loading White -->
+	<script id="loading-template" type="text/x-handlebars-template">
+		<div class="YS__ui-loader"><i class="YS__ui-spinner"><svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58"><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M40.174 4.469c-3.41-1.556-7.189-2.446-11.183-2.446-14.913 0-27.001 12.089-27.001 27.001 0 14.913 12.089 27.002 27.001 27.002 14.914 0 27.001-12.089 27.001-27.002 0-.862-.049-1.713-.129-2.555l1.975-.186c.084.896.139 1.803.139 2.721 0 16.02-12.979 29.006-28.989 29.006-16.009.001-28.988-12.986-28.988-29.005s12.979-29.005 28.988-29.005c4.295 0 8.358.959 12.024 2.637l-.838 1.832z"/></svg></i></div>
+	</script>
+	<!--/Action Loading White -->
+	
+
+	<!-- Modal Search -->
+	<script id="m-search-products" type="text/x-handlebars-template">
+		<div class="YS__m-search">
+			<form class="YS__m-search__container">
+				<div class="YS__m-search__line">
+					<i class="YS__m-search__icon"></i>
+				</div>
+				<div class="YS__m-search__line">
+					<input class="YS__m-search__value" type="text" value="" placeholder="Введите артикул или название товара">
+				</div>
+				<div class="YS__m-search__line YS__m-search__button__container">
+					<input class="YS__m-search__button" type="submit" value="">
+					<div class="YS__m-search__close_container">
+						<div class="YS__m-search__close YS__element_menu YS__element_menu--close">
+							<div class="YS__element_menu__line YS__element_menu__line_1"></div>
+							<div class="YS__element_menu__line YS__element_menu__line_2"></div>
+							<div class="YS__element_menu__line YS__element_menu__line_3"></div>
+							<div class="YS__element_menu__close"><div class="YS__element_menu__close_bg"></div></div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</script>
+	<!--/Modal Search -->
+	
+	
+	<!-- Products -->
+	<script id="products-template" type="text/x-handlebars-template">
+		<section class="products__section"{{#if view}} id="{{view}}"{{/if}}>
+			<div class="product__sizer"></div>
+			{{#each product}}
+			<div class="product__item product__item--loadable product__item--zoom" data-item="{{ id }}">
+				<div class="product__item__wrapper">
+					<img class="product__item__image" src="/images/blank.gif" data-lazy="{{ ../path }}{{#if gender}}/{{ gender }}{{/if}}/small/{{ img2 }}_small.jpg" data-rollover="{{ ../path }}{{#if gender}}/{{ gender }}{{/if}}/small/{{ img3 }}_small.jpg" />
+					<a href="/p/{{ id }}/{{ alias }}" data-item="{{ id }}" data-name="{{ title }}" class="product__quick-look"><i class="product__quick-look__icon"></i>Быстрый просмотр</a>
+				</div>
+				<div class="product__desc">
+					<h3 class="product__desc__title">{{ title }}</h3>
+					<span class="product__desc__brand">{{ brand }}</span>
+					<span class="product__desc__price">{{#if price_old}}<span class="product__desc__price_old">{{ price_old }} Р</span>{{/if}}{{ price }} Р</span>
+				</div>
+				<div class="b-product__favorite">
+					<span class="b-favorite__add"><em class="fa fa-star"></em><i></i></span>
+					<span class="b-favorite__remove"><em class="fa fa-star"></em><i></i></span>
+				</div>				
+			</div>
+			{{/each}}
+		</section>
+	</script>		
+	<!--/Products -->
+	
+	
+	<!-- Product Preview -->
+	<script id="product-template" type="text/x-handlebars-template">
+	<div class="product__preview" data-item="{{ id }}">
+		<div class="product__preview__scroller YS__scroller__container">
+			<div class="product__preview__wrapper">
+				<div class="product__preview__container">
+					<div class="product__preview__column">
+						<div class="product__preview__images">
+							<div class="product__preview__addimages">
+								<div class="product__preview__addimages__item product__preview__addimages__item--active image__preloading" style="background-image:url({{ path }}{{#if gender}}/{{ gender }}{{/if}}/lite/{{ img1 }}_lite.jpg)"></div>
+								<div class="product__preview__addimages__item image__preloading" style="background-image:url({{ path }}{{#if gender}}/{{ gender }}{{/if}}/lite/{{ img2 }}_lite.jpg)"></div>							
+								<div class="product__preview__addimages__item image__preloading" style="background-image:url({{ path }}{{#if gender}}/{{ gender }}{{/if}}/lite/{{ img3 }}_lite.jpg)"></div>
+								<div class="product__preview__addimages__item image__preloading" style="background-image:url({{ path }}{{#if gender}}/{{ gender }}{{/if}}/lite/{{ img4 }}_lite.jpg)"></div>
+							</div>
+							<div class="product__preview__slideshow">
+								<div class="product__preview__slideshow__container">
+									<div class="product__preview__slideshow__item">
+										<img class="product__preview__slideshow__image image__preloading" src="{{ path }}{{#if gender}}/{{ gender }}{{/if}}/{{ img1 }}.jpg">
+									</div>								
+									<div class="product__preview__slideshow__item">
+										<img class="product__preview__slideshow__image image__preloading" src="{{ path }}{{#if gender}}/{{ gender }}{{/if}}/{{ img2 }}.jpg">
+									</div>
+									<div class="product__preview__slideshow__item">
+										<img class="product__preview__slideshow__image" src="{{ path }}{{#if gender}}/{{ gender }}{{/if}}/{{ img3 }}.jpg">
+									</div>
+									<div class="product__preview__slideshow__item">
+										<img class="product__preview__slideshow__image" src="{{ path }}{{#if gender}}/{{ gender }}{{/if}}/{{ img4 }}.jpg">
+									</div>
+								</div>
+								<div class="b-product__label__group b-product__label__group__left">
+									<div class="b-product__label b-product__label--vinous"><em>&ndash;25%</em></div>
+									<!--<div class="b-product__label b-product__label--blue"><strong><em>sale %</em></strong></div>-->
+								</div>
+								<div class="YS__element__plus product__preview__image__zoom">+</div>
+							</div>
+						</div>
+						<div class="product__preview__layout__bottom">
+							<div class="gains__container gains__column5">
+								<div class="gain__item">
+									<div class="gain__icon gain__icon__one"></div>
+									<div class="gain__icon__text">Бесплатная доставка</div>
+									<div class="gain__comments">
+										<div class="gain__comments__text">Мы бесплатно доставляем ваш заказ в любой город России. Мы предлагаем несколько способов доставки, среди которых всегда есть бесплатная.</div>
+									</div>
+								</div>
+								<div class="gain__item">
+									<div class="gain__icon gain__icon__two"></div>
+									<div class="gain__icon__text">Подлинные товары</div>
+									<div class="gain__comments">
+										<div class="gain__comments__text">Не бойтесь подделок, вас ждут подлинные бренды, подтвержденные сертификатами.</div>
+									</div>
+								</div>
+								<div class="gain__item">
+									<div class="gain__icon gain__icon__three"></div>
+									<div class="gain__icon__text">Возможность примерки</div>
+									<div class="gain__comments">
+										<div class="gain__comments__text">Вы оплачиваете только то, что вам подошло. Остальные вещи вы можете отдать курьеру или вернуть позже по почте.<a href="/page/section1" class="gain__link YS__open__page_link">Подробнее</a></div>
+									</div>
+								</div>
+								<div class="gain__item">
+									<div class="gain__icon gain__icon__four"></div>
+									<div class="gain__icon__text">Накопительная скидка</div>
+									<div class="gain__comments">
+										<div class="gain__comments__text">Промо-код — это специальный буквенно-цифровой код, который дает вам определенную скидку при покупке товаров на сайте.</div>
+									</div>
+								</div>
+								<div class="gain__item">
+									<div class="gain__icon gain__icon__five"></div>
+									<div class="gain__icon__text">Удобство оплаты</div>
+									<div class="gain__comments">
+										<div class="gain__comments__text">Оплатить заказ можно при получении или предоплатой на сайте. Способы оплаты: наличные, банковские карты, PayPal.</div>
+									</div>
+								</div>								
+							</div>
+							<div class="product__preview__products">
+								<h3>Рекомендуемые товары</h3>
+								<div class="product__preview__products__container product__preview__products_four">
+									{{#each product_recomend}}
+									<div class="product__preview__product product__preview__product--ratings product__preview__product--sizes_colors product__preview__product--zoom">
+										<div class="product__preview__product__container">
+											<div class="product__preview__product__image product__preview__product__recomend" data-item="{{ id }}" data-name="{{ title }}">
+												<img src="{{ ../path }}{{#if gender}}/{{ gender }}{{/if}}/small/{{ img2 }}_small.jpg">
+											</div>
+											<div class="product__preview__product__buy" title="Отложить в корзину"><span class="product__preview__product__buy__button">В корзину</span></div>
+										</div>
+										<div class="product__preview__product__ratings">
+											<div class="product__preview__product__ratings__box">
+												<div class="product__preview__product__ratings__rate" style="width: 50%;"></div>
+											</div>
+										</div>										
+										<div class="product__preview__product__desc">
+											<div class="product__preview__product__title">{{ title }}</div>
+											<span class="product__preview__product__brand">{{ brand }}</span>
+											<span class="product__preview__product__price">{{#if price_old}}<span class="product__preview__product__price_old">{{ price_old }} Р</span>{{/if}}{{ price }} Р</span>
+										</div>
+										<div class="b-product__favorite">
+											<span class="b-favorite__add"><em class="fa fa-star"></em><i></i></span>
+											<span class="b-favorite__remove"><em class="fa fa-star"></em><i></i></span>
+										</div>			
+										<div class="product__preview__product__sizes product__preview__product__sizes--blue">
+											<span class="product__preview__product__sizes__item">42</span>
+											<span class="product__preview__product__sizes__item">44</span>
+											<span class="product__preview__product__sizes__item">46</span>
+										</div>
+										<div class="product__preview__product__colors">
+											<span class="product__preview__product__colors__item" style="background:#f0d2ab"></span>
+											<span class="product__preview__product__colors__item" style="background:#a04cff"></span>
+											<span class="product__preview__product__colors__item" style="background:#9b2d30"></span>
+											<span class="product__preview__product__colors__item" style="background:#75a4e1"></span>
+											<span class="product__preview__product__colors__item" style="background:#fff12d"></span>
+										</div>
+									</div>
+									{{/each}}
+								</div>
+							</div>
+							<div class="product__preview__banner product__preview__banner--effect1">
+								<img class="product__preview__banner__image" src="/images/banners/banner.jpg">
+							</div>
+							<div class="product__preview__products">
+								<h3>Другие товары из категории</h3>
+								<div class="product__preview__products__container product__preview__products_three">
+									{{#each product_more}}
+									<div class="product__preview__product product__preview__product--ratings product__preview__product--zoom">
+										<div class="product__preview__product__container">
+											<div class="product__preview__product__slider">
+												<div class="product__preview__product__slider__item">
+													<img class="product__preview__product__slider__image image__preloading" src="{{ ../path }}{{#if gender}}/{{ gender }}{{/if}}/small/{{ img2 }}_small.jpg">
+												</div>
+												<div class="product__preview__product__slider__item">
+													<img class="product__preview__product__slider__image" src="{{ ../path }}{{#if gender}}/{{ gender }}{{/if}}/small/{{ img3 }}_small.jpg">
+												</div>
+												<div class="product__preview__product__slider__item">
+													<img class="product__preview__product__slider__image" src="{{ ../path }}{{#if gender}}/{{ gender }}{{/if}}/small/{{ img4 }}_small.jpg">
+												</div>
+											</div>
+											<div class="product__preview__product__labels">
+												<!--<span class="product__preview__product__label product__preview__product__label--red">-25%</span>-->
+											</div>
+											<a href="/p/{{ id }}/{{ alias }}" data-item="{{ id }}" data-name="{{ title }}" class="product__quick-look"><i class="product__quick-look__icon"></i>Быстрый просмотр</a>
+											<div class="product__preview__product__buy" title="Отложить в корзину"><span class="product__preview__product__buy__button">В корзину</span></div>
+										</div>
+										<div class="product__preview__product__ratings">
+											<div class="product__preview__product__ratings__box">
+												<div class="product__preview__product__ratings__rate" style="width: 50%;"></div>
+											</div>
+										</div>
+										<div class="product__preview__product__desc">
+											<div class="product__preview__product__title">{{ title }}</div>
+											<span class="product__preview__product__brand">{{ brand }}</span>
+											<span class="product__preview__product__price">{{#if price_old}}<span class="product__preview__product__price_old">{{ price_old }} Р</span>{{/if}}{{ price }} Р</span>
+										</div>
+										<div class="b-product__favorite">
+											<span class="b-favorite__add"><em class="fa fa-star"></em><i></i></span>
+											<span class="b-favorite__remove"><em class="fa fa-star"></em><i></i></span>
+										</div>
+										<div class="product__preview__product__sizes">
+											<span class="product__preview__product__sizes__item">42</span>
+											<span class="product__preview__product__sizes__item">44</span>
+											<span class="product__preview__product__sizes__item">46</span>
+										</div>
+										<div class="product__preview__product__colors">
+											<span class="product__preview__product__colors__item" style="background:#f0d2ab"></span>
+											<span class="product__preview__product__colors__item" style="background:#a04cff"></span>
+											<span class="product__preview__product__colors__item" style="background:#9b2d30"></span>
+											<span class="product__preview__product__colors__item" style="background:#75a4e1"></span>
+											<span class="product__preview__product__colors__item" style="background:#fff12d"></span>
+										</div>										 
+									</div>
+									{{/each}}
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="product__preview__desc">
+						<div class="product__preview__desc__container">
+							<div class="product__preview__desc__social">
+								<div class="product__preview__desc__social__item" data-social="fb">
+									<i class="product__preview__desc__social__icon fa fa-facebook"></i>
+								</div>
+								<div class="product__preview__desc__social__item" data-social="vk">
+									<i class="product__preview__desc__social__icon fa fa-vk"></i>
+								</div>
+								<div class="product__preview__desc__social__item" data-social="tw">
+									<i class="product__preview__desc__social__icon fa fa-twitter"></i>
+								</div>
+								<div class="product__preview__desc__social__item" data-social="dk">
+									<i class="product__preview__desc__social__icon fa fa-odnoklassniki"></i>
+								</div>								
+							</div>						
+							<div class="product__preview__desc__header">
+								<span class="product__preview__desc__code">A{{ id }}</span>
+								<h2 class="product__preview__desc__title">{{ title }}</h2>
+								<span class="product__preview__desc__brand">{{ brand }}</span>
+								<div class="product__preview__desc__price__container">
+									<div class="product__preview__desc__price">
+										{{ price }} <span>Р</span>
+										<em class="product__preview__desc__price__text">Цена со скидкой</em>
+									</div>
+									{{#if price_old}}
+										<div class="product__preview__desc__price_old">
+											<div class="product__preview__desc__price_old__block">
+												{{ price_old }} <span>Р</span>
+											</div>
+											<em class="product__preview__desc__price__text">Вы экономите <strong>25%</strong></em>
+										</div>
+									{{/if}}
+								</div>
+							</div>
+							<div class="product__preview__desc__select__container">
+								<div class="product__preview__desc__select">
+									<div class="product__preview__desc__select__label">
+										<div class="product__preview__desc__select__string">Цвет:</div>
+									</div>
+									<select class="product__preview__desc__select__item">
+										<option value="1" data-color="#f0d2ab">бежевый</option>
+										<option value="2" data-color="#fff">белый</option>
+										<option value="3" data-color="#eee">бирюзовый</option>
+										<option value="4" data-color="#9b2d30">бордовый</option>
+										<option value="5" data-color="#eee">бронзовый</option>
+										<option value="6" data-color="#75a4e1">голубой</option>
+										<option value="7" data-color="#eee">горчичный</option>
+										<option value="8" data-color="#fff12d">желтый</option>
+										<option value="9" data-color="#81c322">зеленый</option>
+										<option value="9" data-color="#5367ff">синий</option>
+										<option value="9" data-color="#a04cff">фиолетовый</option>
+									</select>
+								</div>
+								<div class="product__preview__desc__select">
+									<div class="product__preview__desc__select__label">
+										<div class="product__preview__desc__select__string">Размер:</div>
+									</div>
+									<select class="product__preview__desc__select__item">
+										<option value="1">40</option>
+										<option value="2">42</option>
+										<option value="3">44</option>
+										<option value="4">46</option>
+										<option value="5">48</option>
+										<option value="6">50</option>
+										<option value="7">52</option>
+										<option value="8">54</option>
+										<option value="9">56</option>
+									</select>
+								</div>
+								<a href="#" class="product__preview__desc__link product__preview__desc__link__sizes">Таблица размеров</a>
+							</div>
+							<div class="product__preview__desc__favorite">
+								<i class="product__preview__desc__favorite__item fa fa-star"></i>
+								<span class="product__preview__desc__favorite__label">Добавить в избранные</span>
+							</div>							
+							<div class="product__preview__desc__button__container">
+								<button class="YS__element__btn YS__element__btn--cart">Отложить в корзину</button>
+							</div>
+							<div class="product__preview__desc__text__container product__preview__desc__about">
+								<h3>Описание товара</h3>
+								<div class="product__preview__desc__text">Эта модель подчеркнет Ваш изысканный вкус и стиль. Мини пальто из ткани синего цвета, интересного кроя с застежкой на одну пуговицу. Воротник изделия – широкая шаль. Рукава, расклешенные к низу. Карманы боковые.</div>
+								<table>
+									<tr><th>Артикул</th><td>136</td></tr>
+									<tr><th>Бренд</th><td>Anna Chapman</td></tr>
+									<tr><th>Состав</th><td>63% полиэстер,32% вискоза,5% эластан</td></tr>
+									<tr><th>Длина женского пальто </th><td>Средней длины </td></tr>
+									<tr><th>Силуэт женского пальто </th><td>Свободные</td></tr>
+									<tr><th>Длина рукавов женского пальто </th><td>С длинными рукавами</td></tr>
+									<tr><th>Цвет</th><td>Голубой</td></tr>
+									<tr><th>Страна</th><td>Россия</td></tr>   								
+								</table>									
+							</div>
+							<div class="product__preview__desc__text__container">
+								<h4>Описание бренда</h4>
+								<div class="product__preview__desc__text">Миссия бренда ANNA CHAPMAN – обращение к истокам российской культуры и дальнейшее развитие в сегменте Made in Russia («сделано в России»). Особый акцент марка делает на создании стильных образов, в основе которых лежат традиции русского костюма, адаптированные под вкусы современного покупателя. Разработка моделей и их производство происходит только на родине марки. Одежда рассчитана на женщин разного возраста и комплекции. Интеллектуальная мода — это бренд ANNA CHAPMAN. Эксклюзивные принты, вдохновленные русской культурой, высококачественные ткани и самые актуальные цвета и фасоны.</div>
+							</div>
+							<div class="product__preview__desc__text__container product__preview__desc__text--big">
+								<h3>Примерка</h3>
+								<div class="product__preview__desc__text">Чтобы лучше понять, в каком цвете и размере данная вещь подойдет Вам наиболее оптимально, закажите несколько вариантов. Во время примерки Вы сможете решить, что именно стоит приобрести – курьер подождет Вас. При этом оплатить потребуется только те вещи, которые подошли. Кроме того, Вы всегда можете бесплатно отказаться от всего заказа.</div>
+							</div>
+							<div class="product__preview__desc__text__container product__preview__desc__text--big">
+								<h3>Доставка</h3>
+								<div class="product__preview__desc__text">Если Вы оформите свой заказ до 12 часов дня, мы привезем его на следующий день, если позже – через двое суток.В качестве адреса можно указать любое место, где Вам будет удобно примерить выбранные вещи.По Москве и области доставка осуществляется бесплатно. Мы пользуемся услугами надежной курьерской службы Pony Express.</div>
+							</div>
+							<div class="product__preview__desc__text__container product__preview__desc__text--big">
+								<h3>Оплата</h3>
+								<div class="product__preview__desc__text">Прежде чем оплатить товар, примерьте заказанные вещи и решите, что именно хотите купить. Товар, от которого Вы захотите отказаться, оплачивать не потребуется. Вы можете рассчитаться наличным и безналичным способом (операция выполняется при помощи терминала для перевода средств с банковских карт). После оплаты курьер передаст Вам товарный и кассовый чеки.</div>
+							</div>
+							<div class="product__preview__banner product__preview__banner--effect2">
+								<img class="product__preview__banner__image" src="/images/banners/tiz-s_sale_GE.55EFFAD5.jpg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</script>	
+	<!--/Product Preview -->
+	
+	
+	<!-- Products Modal -->
+	<script id="m-products" type="text/x-handlebars-template">
+		<div class="YS__m-products">
+			<div class="YS__m-products__container">
+				{{#each products}}
+				<div class="YS__m-products__item" data-item="{{ id }}">
+					<img src="{{ ../path }}{{#if gender}}/{{ gender }}{{/if}}/lite/{{ img }}_lite.jpg" class="YS__m-products__item__image">
+					{{#if price}}<span class="YS__m-products__item__price">{{ price }} р</span>{{/if}}
+				</div>
+				{{/each}}
+			</div>
+			<div class="YS__element_menu YS__element_menu--close YS__m-products__close"><div class="YS__element_menu__close"><div class="YS__element_menu__close_bg"></div></div></div>
+			<div class="YS__m-products__title">{{ title }}</div>
+		</div>
+	</script>	
+	<!--/Products Modal -->
+	
+	
+	<!-- Product Faq -->
+	<script id="m-product-faq" type="text/x-handlebars-template">
+		<div class="YS__modal">
+			<div class="YS__modal__wrapper">
+				<div class="YS__modal__container YS__scroller__container">
+					<div class="YS__modal__content">
+						<div class="YS__modal__phone__call"><i class="fa fa-phone YS__modal__phone__call__icon"></i><span class="YS__modal__phone__call__text">Заказать звонок</span></div>
+						<div class="YS__modal__faq__title">Ответы на ваши вопросы<span class="YS__modal__faq__title__desc">Телефон по работе с клиентами: +7 (495) 134-00-40</span></div>
+						<div class="YS__modal__faq__item">
+							<div class="YS__modal__faq__item__que">Хочу примерить одежду перед покупкой, как это сделать?</div>
+							<div class="YS__modal__faq__item__text">Чтобы лучше понять, в каком цвете и размере данная вещь подойдет Вам наиболее оптимально, закажите несколько вариантов. Во время примерки Вы сможете решить, что именно стоит приобрести – курьер подождет Вас. При этом оплатить потребуется только те вещи, которые подошли. Кроме того, Вы всегда можете бесплатно отказаться от всего заказа.</div>
+						</div>
+						<div class="YS__modal__faq__item">
+							<div class="YS__modal__faq__item__que">Какие варианты и условия доставки?</div>
+							<div class="YS__modal__faq__item__text">Если Вы оформите свой заказ до 12 часов дня, мы привезем его на следующий день, если позже – через двое суток.В качестве адреса можно указать любое место, где Вам будет удобно примерить выбранные вещи.По Москве и области доставка осуществляется бесплатно. Мы пользуемся услугами надежной курьерской службы Pony Express.</div>
+						</div>						
+						<div class="YS__modal__faq__item">
+							<div class="YS__modal__faq__item__que">Как оплатить, какие способы оплаты принимаете?</div>
+							<div class="YS__modal__faq__item__text">Прежде чем оплатить товар, примерьте заказанные вещи и решите, что именно хотите купить. Товар, от которого Вы захотите отказаться, оплачивать не потребуется. Вы можете рассчитаться наличным и безналичным способом (операция выполняется при помощи терминала для перевода средств с банковских карт). После оплаты курьер передаст Вам товарный и кассовый чеки.</div>
+						</div>
+						<div class="YS__modal__faq__item">
+							<div class="YS__modal__faq__item__que">Как оформить заказ?</div>
+							<div class="YS__modal__faq__item__text">Добавьте понравившиеся вещи из каталога в корзину (вы можете сортировать их по размеру, цвету, цене и бренду). Для оформления заказа необходимо указать свое имя, адрес эл. почты и телефон — в течение 10 минут с вами свяжется оператор.</div>
+						</div>
+						<div class="YS__modal__faq__item">
+							<div class="YS__modal__faq__item__que">Мне нужно вернуть товар, что с возвратом?</div>
+							<div class="YS__modal__faq__item__text">Наш интернет-магазин одежды позволяет вернуть товар в течение 14 дней с момента покупки, абсолютно бесплатно. Вернуть товары можно как с курьером до оплаты заказа, так и по почте или в одном из пунктов выдачи заказов в Москве.</div>
+						</div>				
+					</div>
+				</div>
+			</div>
+			<div class="YS__element_menu YS__element_menu--close YS__modal__close"><div class="YS__element_menu__close"><div class="YS__element_menu__close_bg"></div></div></div>
+			<img class="YS__modal__logotype" src="/images/logo.png">
+		</div>
+	</script>	
+	<!--/Product Faq -->
+	
+	
+	<!-- Cart -->
+	<script id="m-cart" type="text/x-handlebars-template">
+		<div class="YS__m-cart YS__scroller">
+			<div class="YS__m-cart__wrapper YS__scroller__container">
+				<div class="YS__m-cart__container">
+					<div class="YS__m-cart__item">
+						<div class="YS__m-cart__item__container">
+							<div class="YS__m-cart__item__cell YS__m-cart__item__cell__foto">
+								<img src="{{ path }}/136_2.jpg">
+							</div>
+							<div class="YS__m-cart__item__cell YS__m-cart__item__cell__desc">
+								<div class="YS__m-cart__item__cell__title">Пальто</div>
+								<div class="YS__m-cart__item__cell__name">Anna Chapman</div>
+								<div class="YS__m-cart__item__cell__price">12 599 Р</div>
+							</div>
+							<div class="YS__m-cart__item__cell YS__m-cart__item__cell__count">
+								<div class="YS__m-cart__item__count__wrapper">
+									<i class="YS__m-cart__item__count__plus">+</i>
+									<input class="YS__m-cart__item__count" value="1" readonly="readonly">
+									<i class="YS__m-cart__item__count__minus">&ndash;</i>
+								</div>
+							</div>
+							<div class="YS__m-cart__item__cell YS__m-cart__item__cell__remove">
+								<div class="YS__element_menu YS__element_menu--close YS__element_menu-md">
+									<div class="YS__element_menu__close"><div class="YS__element_menu__close_bg"></div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="YS__m-cart__item">
+						<div class="YS__m-cart__item__container">
+							<div class="YS__m-cart__item__cell YS__m-cart__item__cell__foto">
+								<img src="{{ path }}/1377_2.jpg">
+							</div>
+							<div class="YS__m-cart__item__cell YS__m-cart__item__cell__desc">
+								<div class="YS__m-cart__item__cell__title">Платье</div>
+								<div class="YS__m-cart__item__cell__name">Indigira</div>
+								<div class="YS__m-cart__item__cell__price">3 999 Р</div>
+							</div>
+							<div class="YS__m-cart__item__cell YS__m-cart__item__cell__count">
+								<div class="YS__m-cart__item__count__wrapper">
+									<i class="YS__m-cart__item__count__plus">+</i>
+									<input class="YS__m-cart__item__count" value="1" readonly="readonly">
+									<i class="YS__m-cart__item__count__minus">&ndash;</i>
+								</div>
+							</div>
+							<div class="YS__m-cart__item__cell YS__m-cart__item__cell__remove">
+								<div class="YS__element_menu YS__element_menu--close YS__element_menu-md">
+									<div class="YS__element_menu__close"><div class="YS__element_menu__close_bg"></div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="YS__m-cart__item">
+						<div class="YS__m-cart__item__container">
+							<div class="YS__m-cart__item__cell YS__m-cart__item__cell__foto">
+								<img src="{{ path }}/1047_2.jpg">
+							</div>
+							<div class="YS__m-cart__item__cell YS__m-cart__item__cell__desc">
+								<div class="YS__m-cart__item__cell__title">Куртка</div>
+								<div class="YS__m-cart__item__cell__name">Remix</div>
+								<div class="YS__m-cart__item__cell__price">996 Р</div>
+							</div>
+							<div class="YS__m-cart__item__cell YS__m-cart__item__cell__count">
+								<div class="YS__m-cart__item__count__wrapper">
+									<i class="YS__m-cart__item__count__plus">+</i>
+									<input class="YS__m-cart__item__count" value="1" readonly="readonly">
+									<i class="YS__m-cart__item__count__minus">&ndash;</i>
+								</div>
+							</div>				
+							<div class="YS__m-cart__item__cell YS__m-cart__item__cell__remove">
+								<div class="YS__element_menu YS__element_menu--close YS__element_menu-md">
+									<div class="YS__element_menu__close"><div class="YS__element_menu__close_bg"></div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="YS__m-cart__string">
+						<div class="YS__m-cart__string__title">Сумма заказа</div>
+						<div class="YS__m-cart__string__total">= 14 999 р</div>
+					</div>						
+					<!--<div class="YS__m-cart__string YS__m-cart__string__select">
+						<div class="YS__m-cart__string__title">Вариант доставки</div>
+						<div class="YS__m-cart__string__value">
+							<div class="YS__element__select YS__element__select--white">
+								<select class="YS__element__select_item" name="delivery">
+									<option value="1">Самовывоз</option>
+									<option value="2">Курьером к дому</option>
+									<option value="3">Экспресс доставка</option>
+								</select>
+							</div>
+						</div>
+					</div>					
+					<div class="YS__m-cart__string YS__m-cart__string__select">
+						<div class="YS__m-cart__string__title">Способ оплаты</div>
+						<div class="YS__m-cart__string__value">
+							<div class="YS__element__select YS__element__select--white">
+								<select class="YS__element__select_item" name="delivery">
+									<option value="1">Наличными курьеру</option>
+									<option value="2">Пластиковой картой</option>
+									<option value="3">Через терминал Qiwi</option>
+									<option value="4">Яндекс деньги</option>
+								</select>
+							</div>
+						</div>
+					</div>-->
+				</div>
+			</div>
+			<div class="YS__element_menu YS__element_menu--close YS__m-cart__close">
+				<div class="YS__element_menu__close"><div class="YS__element_menu__close_bg"></div></div>
+			</div>			
+		</div>
+	</script>
+	<!--/Cart -->	
+	
+	
+	<!-- Pages -->
+	<script id="m-pages" type="text/x-handlebars-template">
+	<div class="YS__page">
+		<div class="YS__page__section">
+			<div class="YS__page__inner">
+				<div class="YS__page__inner__wrapper YS__scroller__container">
+					<div class="YS__page__header">
+						<div class="YS__page__title"></div>
+					</div>
+					<div class="YS__page__content">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</script>
+	<!--/Pages -->
+	
+	
+	<!-- UI Help -->
+	<script id="ui-help-template" type="text/x-handlebars-template">
+		<div class="YS__help">
+			<div class="YS__help__content">
+				<div class="YS__help__area"><i class="YS__help__icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="795" viewBox="0 0 32 795"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.05 30.77l7.784 10.417c2.08 2.561 5.679 3.837 9.708 3.837 7.57 0 10.435-14.143 10.435-17.075l.013-15.454c0-1.95-1.59-3.531-3.54-3.531-.526 0-1.021.123-1.47.329v-1.798c0-1.95-1.58-3.531-3.53-3.531-.534 0-1.035.128-1.488.34-.102-1.859-1.627-3.34-3.512-3.34-1.949 0-3.53 1.581-3.53 3.531v1.798c-.448-.207-.943-.33-1.47-.33-1.949 0-3.53 1.581-3.53 3.531v16.14l-2.615-2.306c-.695-.901-1.74-1.374-2.797-1.374-.754 0-1.513.24-2.155.736-1.543 1.191-1.829 3.408-.638 4.951l2.335 3.129zm-1.059-5.479c.052-.405.259-.767.583-1.017.341-.264.695-.319.933-.319.479 0 .922.218 1.214.596l.03.039 2.615 2.306c.388.478.962.739 1.553.739.224 0 .45-.037.669-.115.798-.283 1.362-1.038 1.362-1.884v-16.141c0-.844.655-1.531 1.499-1.531.21 0 .423.049.635.146.266.122.551.183.835.183l.045-.006v15.23c.615-.476 1.284-.882 2-1.207v-15.897l.018-.12-.032-1.798c0-.844.655-1.531 1.499-1.531.805 0 1.47.637 1.515 1.449v17.065c.379-.043.762-.071 1.152-.071.286 0 .567.02.848.043v-15.147c.287 0 .576-.062.844-.188.215-.101.431-.151.642-.151.844 0 1.499.687 1.499 1.531l-.031 1.798.016.107.031 12.772c.713.295 1.381.674 2 1.118v-12l.016.002c.283 0 .568-.06.834-.182.212-.098.426-.147.636-.147.844 0 1.499.687 1.499 1.531l.019 15.454c0 2.879-2.809 15.044-8.425 15.044-3.584 0-6.557-1.098-8.155-3.066l-7.634-10.217-2.486-3.328c-.221-.285-.331-.685-.278-1.09zm1.059 55.479l7.784 10.417c2.08 2.561 5.679 3.837 9.708 3.837 7.57 0 10.435-14.143 10.435-17.075l.013-14.454c0-1.95-1.59-3.531-3.54-3.531-.526 0-1.021.123-1.47.329v-1.798c0-1.95-1.58-3.531-3.53-3.531-.534 0-1.035.127-1.488.339-.102-1.859-1.627-3.34-3.512-3.34-1.949 0-3.53 1.581-3.53 3.531v1.798c-.448-.207-.943-.329-1.47-.329-1.949 0-3.53 1.581-3.53 3.531v15.14l-2.615-2.306c-.695-.901-1.74-1.374-2.797-1.374-.754 0-1.513.24-2.155.736-1.543 1.191-1.829 3.408-.638 4.951l2.335 3.129zm-1.059-5.479c.052-.405.259-.767.583-1.017.341-.264.695-.319.933-.319.479 0 .922.218 1.214.596l.03.039 2.615 2.306c.388.478.962.739 1.553.739.224 0 .45-.037.669-.115.798-.283 1.362-1.038 1.362-1.884v-15.14c0-.844.655-1.531 1.499-1.531.21 0 .423.049.635.146.266.122.551.183.835.183l.045-.006v14.23c.615-.476 1.284-.882 2-1.207v-14.898l.018-.12-.031-1.798c0-.844.655-1.531 1.499-1.531.805 0 1.47.637 1.515 1.449v16.065c.379-.043.762-.071 1.152-.071.286 0 .567.02.848.043v-14.147c.287 0 .576-.062.844-.188.215-.101.431-.151.642-.151.844 0 1.499.687 1.499 1.531l-.031 1.798.016.107.031 11.772c.713.295 1.381.674 2 1.118v-11l.016.002c.283 0 .568-.06.834-.182.212-.098.426-.147.636-.147.844 0 1.499.687 1.499 1.531l.019 14.454c0 2.879-2.809 15.044-8.425 15.044-3.584 0-6.557-1.098-8.155-3.066l-7.634-10.217-2.486-3.328c-.222-.285-.332-.685-.279-1.09zm1.488 55.907c2.989 4 7.355 9.989 7.355 9.989 2.08 2.561 5.679 3.837 9.708 3.837 7.57 0 10.435-14.143 10.435-17.075l.013-14.025c0-1.95-1.59-3.531-3.54-3.531-.526 0-1.021.123-1.47.329v-1.798c0-1.95-1.58-3.531-3.53-3.531-.534 0-1.035.128-1.488.34-.102-1.859-1.627-3.34-3.512-3.34-1.949 0-3.53 1.581-3.53 3.531v1.798c-.448-.206-.943-.329-1.47-.329-1.949 0-3.53 1.581-3.53 3.531v14.711l-2.188-1.877c-.695-.901-1.74-1.374-2.796-1.374-.754 0-1.513.24-2.155.736-1.543 1.191-1.83 3.408-.638 4.951l2.336 3.127zm-1.06-5.479c.052-.405.259-.767.583-1.017.341-.264.695-.319.933-.319.479 0 .922.218 1.214.596l.03.039 2.187 1.877c.388.478.962.739 1.553.739.224 0 .45-.037.669-.115.798-.283 1.362-1.038 1.362-1.884v-14.711c0-.844.655-1.531 1.499-1.531.21 0 .423.049.635.146.266.122.551.183.835.183l.045-.006v13.802c.615-.476 1.284-.882 2-1.207v-14.468l.018-.12-.031-1.798c0-.844.655-1.531 1.499-1.531.805 0 1.47.637 1.515 1.449v15.636c.379-.043.762-.071 1.152-.071.286 0 .567.02.848.043v-13.718c.287 0 .576-.062.844-.188.215-.101.431-.151.642-.151.844 0 1.499.687 1.499 1.531l-.031 1.798.016.107.031 11.343c.713.295 1.381.674 2 1.118v-10.571l.016.002c.283 0 .568-.06.834-.182.212-.098.426-.147.636-.147.844 0 1.499.687 1.499 1.531l.019 14.025c0 2.879-2.809 15.044-8.425 15.044-3.584 0-6.557-1.098-8.155-3.066 0 0-4.209-5.778-7.206-9.789l-2.486-3.328c-.222-.285-.331-.685-.279-1.091zm1.346 55.765c2.988 4 7.069 9.703 7.069 9.703 2.08 2.561 5.679 3.837 9.708 3.837 7.57 0 10.435-14.143 10.435-17.075l.013-13.454c0-1.95-1.59-3.531-3.54-3.531-.526 0-1.021.123-1.47.329v-1.798c0-1.95-1.58-3.531-3.53-3.531-.534 0-1.035.128-1.488.34-.102-1.859-1.627-3.34-3.512-3.34-1.949 0-3.53 1.581-3.53 3.531v1.798c-.448-.207-.943-.33-1.47-.33-1.949 0-3.53 1.581-3.53 3.531v14.14l-1.901-1.592c-.695-.901-1.74-1.374-2.796-1.374-.754 0-1.513.24-2.155.736-1.543 1.191-1.829 3.408-.638 4.951-.002.001.981 1.317 2.335 3.129zm-1.06-5.479c.052-.405.259-.767.583-1.017.341-.264.696-.319.933-.319.479 0 .921.218 1.213.596l.03.039 2.187 1.877c.562.407.677.454 1.268.454.224 0 .45-.037.669-.115.798-.283 1.362-1.038 1.362-1.884v-14.14c0-.844.655-1.531 1.499-1.531.21 0 .423.049.635.146.266.122.551.183.835.183l.045-.006v13.23c.615-.476 1.284-.882 2-1.207v-13.896l.018-.12-.031-1.798c0-.844.655-1.531 1.499-1.531.805 0 1.47.637 1.515 1.449v15.065c.379-.043.762-.071 1.152-.071.286 0 .567.02.848.043v-13.146c.287 0 .576-.062.844-.188.215-.101.431-.151.642-.151.844 0 1.499.687 1.499 1.531l-.031 1.798.016.107.031 10.772c.713.295 1.381.674 2 1.118v-10l.016.002c.283 0 .568-.06.834-.182.212-.098.426-.147.636-.147.844 0 1.499.687 1.499 1.531l.019 13.454c0 2.879-2.809 15.044-8.425 15.044-3.584 0-6.557-1.098-8.155-3.066 0 0-3.923-5.492-6.92-9.503l-2.486-3.328c-.222-.287-.332-.688-.279-1.093zm1.488 56.193c2.989 4 6.641 8.989 6.641 8.989 2.08 2.561 5.679 3.837 9.708 3.837 7.57 0 10.435-14.143 10.435-17.075l.013-12.454c0-1.95-1.59-3.531-3.54-3.531-.526 0-1.021.123-1.47.329v-1.798c0-1.95-1.58-3.531-3.53-3.531-.534 0-1.035.127-1.488.339-.102-1.859-1.627-3.34-3.512-3.34-1.949 0-3.53 1.581-3.53 3.531v1.798c-.448-.207-.943-.329-1.47-.329-1.949 0-3.53 1.581-3.53 3.531v13.14l-1.473-.877c-.695-.901-1.74-1.374-2.797-1.374-.754 0-1.513.24-2.155.736-1.543 1.191-1.829 3.408-.638 4.951l2.336 3.128zm-1.059-5.479c.052-.405.259-.767.583-1.017.341-.264.695-.319.933-.319.479 0 .922.218 1.214.596l.03.039 1.919 1.263c.656.366.516.353 1.106.353.224 0 .45-.037.669-.115.798-.283 1.362-1.038 1.362-1.884v-13.14c0-.844.655-1.531 1.499-1.531.21 0 .423.049.635.146.266.122.551.183.835.183l.045-.006v12.23c.615-.476 1.284-.882 2-1.207v-12.896l.018-.12-.031-1.798c0-.844.655-1.531 1.499-1.531.805 0 1.47.637 1.515 1.449v14.065c.379-.043.762-.071 1.152-.071.286 0 .567.02.848.043v-12.146c.287 0 .576-.062.844-.188.215-.101.431-.151.642-.151.844 0 1.499.687 1.499 1.531l-.031 1.798.016.107.031 9.772c.713.295 1.381.674 2 1.118v-9l.016.002c.283 0 .568-.06.834-.182.212-.098.426-.147.636-.147.844 0 1.499.687 1.499 1.531l.019 12.454c0 2.879-2.809 15.044-8.425 15.044-3.584 0-6.557-1.098-8.155-3.066 0 0-3.495-4.778-6.491-8.789l-2.486-3.328c-.223-.286-.332-.686-.279-1.092zm24.336 539.132c-.526 0-1.021.279-1.47.485-.122-.731-.992-2.255-3.53-2.204-1.008.014-1.035.499-1.484.713v-.169l-.034.011c-.154-.932-1.699-1.617-3.481-1.617-1.949 0-3.498 1.664-3.53 2.792v-.14c-.179-.356-.523-.833-1.47-.829-1.949 0-3.53 1.581-3.53 3.531l.028 7.691c-.148-.002-2.016.18-2.658.676-1.543 1.191-1.829 5.471-.638 7.014l5.183 7.389c2.08 2.561 5.679 3.837 9.708 3.837 7.57 0 10.425-14.144 10.425-17.075l.011-8.543c0-1.95-1.58-3.562-3.53-3.562zm-6.908 27.148c-3.583 0-6.556-1.098-8.155-3.066l-5.089-7.139c-.218-.285-.328-.686-.275-1.091.052-.405.093-2.816.417-3.066.383-.718.219-.499.9-.816.521-.113 1.715.081 1.934.003.798-.283.677-.648.677-1.495v-7.904c0-.845.655-1.562 1.499-1.562.21 0 .423.049.635.146.266.122.551.558.835.558l.046.012v4.404c.614-.477 1.283-.883 2-1.207v-3.126l.017-.188-.031-.829c0-.844.655-1.531 1.499-1.531.806 0 1.471.637 1.515 1.449l.001.007v3.541c.378-.043.762-.07 1.151-.07.286 0 .567.02.849.043v-3.258c.309-.292.575-.404.844-.529.215-.101.431-.151.641-.151.805 0 1.431.627 1.488 1.417l.027 3.087c.713.296 1.38 1.3 2 1.743v-4.197l.015-.002c.284 0 .568-.06.834-.182.213-.098.427-.147.636-.147.844 0 1.499.719 1.499 1.562l.019 8.542c-.003 2.877-2.81 15.042-8.428 15.042zm-9.708-51.806c2.08 2.561 5.679 3.837 9.708 3.837 7.57 0 10.425-14.144 10.425-17.075l.013-8.971c0-1.95-1.58-3.562-3.53-3.562-.526 0-1.021.279-1.47.485l-.056.126c-.122-.73-.937-2.381-3.475-2.33-.948.047-1.072.411-1.488.715-.064-.877-1.627-1.777-3.512-1.777-1.949 0-3.498 1.664-3.53 2.792v-.14c-.179-.356-.523-.833-1.47-.829-1.949 0-3.53 1.581-3.53 3.531l.028 8.12c-.148-.002-.02.066.045.077-.493-.052-2.488.103-3.131.599-1.543 1.191-1.829 5.471-.638 7.014l5.611 7.388zm-4.24-9.49c.053-.405.094-2.816.418-3.066.381-.718.219-.499.898-.816.521-.113 2.145.081 2.363.003.798-.283.677-.648.677-1.495v-8.333c0-.844.655-1.562 1.499-1.562.21 0 .423.049.635.146.266.122.646.171.835.558l.046.012v5.261c.614-.476 1.283-.882 2-1.206v-3.983l.017-.188-.031-.829c0-.844.655-1.531 1.499-1.531.806 0 1.471.637 1.515 1.449l.001.007v4.398c.378-.043.762-.07 1.151-.07.286 0 .567.02.849.043v-4.113c.288-.004.575-.406.844-.531.215-.101.431-.151.641-.151.802 0 1.427.623 1.487 1.409l.028 3.952c.713.296 1.38 1.3 2 1.743v-5.055l.015-.002c.284 0 .568-.06.834-.182.213-.098.427-.147.636-.147.844 0 1.499.719 1.499 1.562l.019 8.971c0 2.879-2.808 15.044-8.425 15.044-3.583 0-6.556-1.098-8.155-3.066l-5.518-7.139c-.22-.287-.329-.688-.277-1.093zm-1.921-449.255c2.989 4 6.141 8.739 6.141 8.739 2.08 2.561 5.679 3.837 9.708 3.837 7.57 0 10.435-14.143 10.435-17.075l.013-11.037c0-1.95-1.59-3.531-3.54-3.531-.526 0-1.021.123-1.47.329v-1.798c0-1.95-1.58-3.531-3.53-3.531-.534 0-1.035.128-1.488.34-.102-1.86-1.627-3.34-3.512-3.34-1.949 0-3.53 1.581-3.53 3.531v1.381c-.448-.206-.943-.329-1.47-.329-1.949 0-3.53 1.581-3.53 3.531v12.14l-.973-.627c-.695-.901-1.74-1.374-2.797-1.374-.754 0-1.513.24-2.155.736-1.543 1.191-1.829 3.408-.638 4.951l2.336 3.127zm-1.059-5.479c.052-.405.259-.767.583-1.017.341-.264.695-.319.933-.319.479 0 .922.218 1.214.596l.03.039 1.388 1.044c.397.49 1.096.322 1.138.322.224 0 .45-.037.669-.115.798-.283 1.362-1.038 1.362-1.884v-12.14c0-.844.655-1.531 1.499-1.531.21 0 .423.049.635.146.266.122.551.183.835.183l.045.007v11.217c.615-.476 1.284-.882 2-1.207v-11.48l.018-.12-.031-1.798c0-.844.655-1.531 1.499-1.531.805 0 1.47.636 1.515 1.449v12.648c.379-.043.762-.071 1.152-.071.286 0 .567.02.848.043v-10.73c.287 0 .576-.062.844-.188.215-.101.431-.151.642-.151.844 0 1.499.687 1.499 1.531l-.031 1.798.016.107.031 8.355c.713.295 1.381.674 2 1.118v-7.583l.016.002c.283 0 .568-.06.834-.182.212-.098.426-.147.636-.147.844 0 1.499.687 1.499 1.531l.019 11.037c0 2.879-2.809 15.044-8.425 15.044-3.584 0-6.557-1.098-8.155-3.066 0 0-2.995-4.528-5.991-8.539l-2.486-3.328c-.224-.284-.333-.684-.28-1.09zm1.059 55.896c2.989 4 6.141 8.322 6.141 8.322 2.08 2.561 5.679 3.837 9.708 3.837 7.57 0 10.435-14.143 10.435-17.075l.013-10.537c0-1.95-1.59-3.531-3.54-3.531-.526 0-1.021.123-1.47.329v-.881c0-1.95-1.58-3.531-3.53-3.531-.534 0-1.035.128-1.488.34-.102-1.859-1.627-3.34-3.512-3.34-1.949 0-3.53 1.581-3.53 3.531v1.381c-.448-.206-.943-.329-1.47-.329-1.949 0-3.53 1.581-3.53 3.531v10.723l-.723-.461c-.695-.901-1.74-1.374-2.797-1.374-.754 0-1.513.24-2.155.736-1.543 1.191-1.829 3.408-.638 4.951-.001 0 .733 1.566 2.086 3.378zm-.809-5.729c.052-.405.259-.767.583-1.017.341-.264.695-.319.933-.319.479 0 .922.218 1.214.596l.03.039 1.2.847c.484.353.484.353 1.075.353.224 0 .45-.037.669-.115.798-.283 1.362-1.038 1.362-1.884v-10.723c0-.844.655-1.531 1.499-1.531.21 0 .423.049.635.146.266.122.551.183.835.183l.045.007v9.8c.615-.476 1.284-.882 2-1.207v-10.063l.018-.12-.031-1.798c0-.844.655-1.531 1.499-1.531.805 0 1.47.637 1.515 1.449v11.231c.379-.043.762-.071 1.152-.071.286 0 .567.02.848.043v-9.313c.287 0 .576-.062.844-.188.215-.101.431-.151.642-.151.844 0 1.499.687 1.499 1.531l-.031.881.018.121.029 7.842c.713.295 1.381.674 2 1.118v-7.083l.016.002c.283 0 .568-.06.834-.182.212-.098.426-.147.636-.147.844 0 1.499.687 1.499 1.531l.019 10.537c0 2.879-2.809 15.044-8.425 15.044-3.584 0-6.557-1.098-8.155-3.066 0 0-2.995-4.111-5.991-8.122-1.43-1.914-2.236-3.578-2.236-3.578-.223-.287-.332-.687-.279-1.092zm1.309 56.604c2.989 4 5.641 7.531 5.641 7.531 2.08 2.561 5.679 3.837 9.708 3.837 7.57 0 10.435-14.144 10.435-17.075l.013-10.538c0-1.95-1.59-3.531-3.54-3.531-.526 0-1.021.81-1.47 1.016v-.881c0-1.95-1.58-3.531-3.53-3.531-.534 0-1.035.503-1.488.715-.102-1.859-1.627-3.34-3.512-3.34-1.949 0-3.53 1.581-3.53 3.531v1.006c-.448-.206-.943-.329-1.47-.329-1.949 0-3.53 1.581-3.53 3.531v10.036l-.223.331c-.695-.901-1.74-1.374-2.797-1.374-.754 0-1.513.24-2.155.736-1.543 1.191-1.829 3.408-.638 4.951-.001 0 .733 1.566 2.086 3.378zm-.809-5.729c.052-.405.259-.767.583-1.017.341-.264.695-.319.933-.319.479 0 .922.218 1.214.596l.03.039.638.253c.547.155.547.155 1.138.155.224 0 .45-.037.669-.115.798-.283 1.362-1.038 1.362-1.885v-10.036c0-.844.655-1.531 1.499-1.531.21 0 .423.049.635.146.266.122.551.183.835.183l.045.007v9.112c.615-.476 1.284-.882 2-1.207v-9.376l.018-.12-.031-1.423c0-.844.655-1.531 1.499-1.531.805 0 1.47.637 1.515 1.449v10.169c.379-.043.762-.071 1.152-.071.286 0 .567.02.848.043v-8.625c.287 0 .576-.062.844-.188.215-.101.431-.151.642-.151.844 0 1.499.687 1.499 1.531l-.031.881.016.192.031 7.083c.713.295 1.381.674 2 1.118v-7.083l.016.002c.283 0 .568-.06.834-.182.212-.098.426-.147.636-.147.844 0 1.499.687 1.499 1.531l.019 10.538c0 2.879-2.809 15.044-8.425 15.044-3.584 0-6.557-1.098-8.155-3.066 0 0-2.495-3.32-5.491-7.331-1.43-1.914-2.236-3.578-2.236-3.578-.224-.285-.333-.685-.28-1.09zm1.184 56.042c2.989 4 5.266 7.218 5.266 7.218 2.08 2.561 5.679 3.837 9.708 3.837 7.57 0 10.435-14.144 10.435-17.075l.013-10.537c0-1.95-1.59-3.531-3.54-3.531-1.074-.026-1.021.623-1.47.829v-.882c0-1.95-1.58-2.656-3.53-2.656-.918-.067-1.035.503-1.488.715-.102-1.859-1.627-3.34-3.512-3.34-1.949 0-3.53 1.581-3.53 3.531v1.007c-.448-.206-.943-.642-1.47-.642-1.949 0-3.53 1.394-3.53 3.344v9.848l-.223.331c-.371-.458-1.115-.749-2.172-.749-.754 0-1.513.24-2.155.736-1.543 1.191-1.829 3.408-.638 4.951-.001-.001.483 1.253 1.836 3.065zm-.559-5.417c.052-.405.259-.767.583-1.017.341-.264.695-.319.933-.319.479 0 .801-.02 1.476.45.969.219 2.02-.303 1.588-.147.798-.283 1.362-1.038 1.362-1.885v-9.848c0-.845.655-1.344 1.499-1.344.21 0 .423.049.635.146.266.122.551.495.835.495l.045.007v8.425c.615-.476 1.284-.882 2-1.207v-8.688l.018-.12-.031-1.423c0-.844.655-1.531 1.499-1.531.805 0 1.47.637 1.515 1.449v9.481c.379-.043.762-.07 1.152-.07.286 0 .567.019.848.043v-7.938c.287-.001.576-.062.844-.188.215-.101.431-.151.642-.151.844 0 1.499.688 1.499 1.531l-.031.882.018.171.029 6.416c.713.296 1.381.675 2 1.118v-7.27l.016.002c.283 0 .474.017.739-.105.213-.098.521-.036.73-.036.844 0 1.499.687 1.499 1.531l.019 10.537c0 2.879-2.809 15.044-8.425 15.044-3.584 0-6.557-1.098-8.155-3.066 0 0-2.12-3.008-5.116-7.018-1.43-1.914-1.986-3.266-1.986-3.266-.223-.286-.332-.686-.279-1.091zm22.44 35.578c-.526 0-1.021.623-1.47.829v.118c0-1.95-1.58-2.656-3.53-2.656-.534 0-1.035.503-1.488.715-.102-1.859-1.627-3.34-3.512-3.34-1.949 0-3.53 1.581-3.53 3.531v.007c-.448-.206-.943-.642-1.47-.642-1.949 0-3.53 1.394-3.53 3.344v9.598l-.013.563c-.371-.458-.991-.648-2.048-.648-.754 0-1.513.24-2.156.736-1.543 1.191-1.829 3.408-.638 4.951 0 0 .15.921 1.503 2.732 2.989 4 5.266 7.218 5.266 7.218 2.08 2.561 5.679 3.837 9.708 3.837 7.57 0 10.435-14.144 10.435-17.075l.013-10.287c0-1.95-1.59-3.531-3.54-3.531zm-6.907 28.862c-3.584 0-6.557-1.098-8.155-3.066 0 0-1.786-2.674-4.782-6.685-1.431-1.914-1.987-3.266-1.987-3.266-.219-.284-.328-.685-.275-1.091.052-.405.259-.767.583-1.017.341-.264.695-.319.933-.319.479 0 .869.014 1.423.461.835.271 1.068.179 1.562-.125s1.106-1.404 1.106-2.251v-9.598c0-.845.655-1.344 1.499-1.344.21 0 .423-.034.635.062.266.122.551.579.835.579l.045.018v7.581c.615-.476 1.284-.882 2-1.207v-6.855l.018-.12-.031-1.423c0-.844.655-1.531 1.499-1.531.805 0 1.47.637 1.515 1.449v7.647c.379-.043.762-.07 1.152-.07.286 0 .567.02.848.043v-6.104c.287-.001.576-.062.844-.188.215-.101.431-.151.642-.151.844 0 1.499.688 1.499 1.531l-.031.882.019.181.028 4.573c.713.295 1.381.674 2 1.117v-5.436l.016.002c.283 0 .548-.745.813-.867.212-.098.446-.274.656-.274.844 0 1.499.687 1.499 1.531l.019 10.287c-.002 2.879-2.811 15.044-8.427 15.044zm-14.974 41.06c2.989 4 5.266 7.218 5.266 7.218 2.08 2.561 5.679 3.837 9.708 3.837 7.57 0 10.435-14.144 10.435-17.075l.013-10.287c0-1.95-1.59-3.531-3.54-3.531-.526 0-1.021.623-1.47.829v.119c0-1.95-1.58-2.656-3.53-2.656-.534 0-1.035.503-1.488.715-.102-1.859-1.627-3.34-3.512-3.34-1.949 0-3.53 1.581-3.53 3.531v.006c-.448-.206-.943-.642-1.47-.642-1.949 0-3.53 1.394-3.53 3.344v9.598l-.231.668c-.371-.458-.772-.752-1.829-.752-.754 0-1.513.24-2.156.736-1.543 1.191-1.829 3.408-.638 4.951-.001-.001.149.919 1.502 2.731zm-.226-5.083c.052-.405.259-.767.583-1.017.341-.264.695-.319.933-.319.479 0 .922.218 1.213.596.647.406 1.673-.069 1.991-.531s.888-1.134.888-1.98v-9.598c0-.844.655-1.344 1.499-1.344.21 0 .423.216.635.313.266.122.551.328.835.328l.045.018v7.581c.615-.476 1.284-.882 2-1.207v-6.854l.018-.12-.031-1.423c0-.845.655-1.531 1.499-1.531.805 0 1.47.637 1.515 1.448v7.648c.379-.043.762-.07 1.152-.07.286 0 .567.019.848.042v-6.104c.287-.001.576-.062.844-.188.215-.101.431-.151.642-.151.844 0 1.499.687 1.499 1.531l-.031.881.018.177.029 4.577c.713.296 1.381.675 2 1.118v-5.437l.016.002c.283 0 .454-.701.72-.823.212-.098.54-.318.75-.318.844 0 1.499.688 1.499 1.531l.019 10.287c0 2.879-2.809 15.044-8.425 15.044-3.584 0-6.557-1.098-8.155-3.066 0 0-1.786-2.674-4.782-6.685-1.431-1.914-1.987-3.265-1.987-3.265-.222-.286-.331-.686-.279-1.091zm.502 55.103c1.006 1.886 4.99 7.197 4.99 7.197 2.08 2.561 5.679 3.837 9.708 3.837 7.57 0 10.435-14.144 10.435-17.075l.013-10.287c0-1.95-1.59-3.531-3.54-3.531-.526 0-1.021.623-1.47.829v.119c0-1.95-1.58-2.656-3.53-2.656-.534 0-1.035 1.336-1.488 1.548-.102-1.859-1.627-3.34-3.512-3.34-1.949 0-3.485 1.266-3.53 2.704-.448-.206-.943-.642-1.47-.642-1.949 0-3.53 1.394-3.53 3.344v9.598l-.044.543c-.371-.458-.627-.627-1.684-.627-.755 0-1.513.24-2.155.736-1.543 1.191-1.829 3.408-.638 4.951-.001 0 .439.867 1.445 2.752zm-.169-5.103c.052-.405.259-.767.583-1.017.341-.264.695-.319.933-.319.479 0 .649.103 1.121.471.656.344 1.044.191 1.75-.406s.888-1.134.888-1.98v-9.598c0-.844.655-1.344 1.499-1.344.21 0 .423.216.635.313.266.122.697.39.835 1.161l.045.018v6.415c.615-.476 1.284-.882 2-1.207v-5.688l.018-.12-.031-1.423c0-.844.655-1.531 1.499-1.531.805 0 1.47.637 1.515 1.449v6.481c.379-.044.762-.071 1.152-.071.286 0 .567.02.848.043l-.002-4.938c.288-.002.577-.896.846-1.021.215-.101.431-.151.642-.151.844 0 1.499.687 1.499 1.531l-.031.881.018.174.029 4.247c.713.295 1.381.674 2 1.117v-5.103l.016.002c.283 0 .401-.643.667-.765.212-.098.593-.377.803-.377.844 0 1.499.688 1.499 1.531l.019 10.287c0 2.879-2.809 15.044-8.425 15.044-3.584 0-6.557-1.098-8.155-3.066 0 0-1.786-2.674-4.782-6.685-1.431-1.914-1.653-3.265-1.653-3.265-.223-.285-.332-.685-.28-1.09zm1.287 106.592c2.363 3.27 3.872 5.709 3.872 5.709 2.08 2.561 5.679 3.837 9.708 3.837 7.57 0 10.403-14.144 10.403-17.075l.013-9.37c0-1.95-1.559-3.531-3.509-3.531-.929.016-1.021.623-1.47.829v.118c0-1.95-1.58-2.656-3.53-2.656-1.095.037-1.214 1.146-1.488 1.549-.102-1.859-1.627-3.34-3.512-3.34-1.949 0-3.485 1.057-3.53 2.531v.173c-.448-.206-.943-.642-1.47-.642-1.949 0-3.53 1.394-3.53 3.344v8.681l-.065.303c-.371-.458-.896-.39-1.376-.387-.754 0-1.513.24-2.156.736-1.368 1.057-1.748 2.919-.986 4.403.097.189.167.47.331.81.241.501 1.944 3.491 2.295 3.978zm-.418-7.609c.342-.264.695-.319.934-.319.479 0 .724.074 1.168.387 1.223-.114.943.009 1.375-.354.381-.32.929-1.103.929-1.949v-8.681c0-.845.655-1.344 1.499-1.344.21 0 .61.231.822.328.396.312.362.602.648 1.146l.045.018v4.415c.615-.477 1.284-.883 2-1.207v-3.688l.018-.12-.031-1.423c0-.845.655-1.531 1.499-1.531.805 0 1.47.637 1.515 1.448v4.481c.379-.043.762-.07 1.152-.07.286 0 .567.02.848.043v-2.938c.287-.006.576-.896.844-1.021.215-.101.431-.151.642-.151.844 0 1.499.688 1.499 1.531l-.009.261-.027-.008.009.519-.004.11.007.069.04 2.351c.713.296 1.381.675 2 1.118l-.01-3.098c.179-.118.244-.444.7-.786.319-.173.585-.358.795-.358.844 0 1.499.687 1.499 1.531l.019 9.37c0 2.879-2.809 15.044-8.425 15.044-3.584 0-6.557-1.098-8.155-3.066 0 0-1.501-2.674-4.497-6.685-1.43-1.914-1.464-2.59-1.632-3.17s-.349-.78-.296-1.186c.049-.406.256-.767.58-1.017zm20.905-63.552c-.526 0-1.021.623-1.47.829v.119c0-1.95-1.58-2.656-3.53-2.656-.845.077-1.167 1.201-1.488 1.548-.102-1.859-1.627-3.34-3.512-3.34-1.949 0-3.485.974-3.53 2.531v.173c-.448-.206-.943-.642-1.47-.642-1.949 0-3.53 1.394-3.53 3.344v9.41s-.044.637-.223.331-.511-.413-1.13-.415c-.755 0-1.513.24-2.155.736-1.543 1.191-1.829 3.408-.638 4.951 0 0 .998 2.288 1.373 2.825 2.877 4.127 2.877 4.132 4.688 7.124 2.08 2.561 5.679 3.837 9.708 3.837 7.57 0 10.435-14.144 10.435-17.075l.013-10.1c-.001-1.949-1.591-3.53-3.541-3.53zm-6.907 28.675c-3.584 0-6.557-1.098-8.155-3.066 0 0-1.411-2.674-4.407-6.685-1.431-1.914-1.416-2.483-1.653-3.265s-.329-.686-.276-1.091.26-.767.584-1.017c.341-.264.695-.319.933-.319.479 0 .289.047.809.371s1.11-.047 1.688-.4.888-1.04.888-1.887v-9.41c0-.844.655-1.344 1.499-1.344.21 0 .568.126.78.224.231.106.486.722.735 1.146v5.601c.615-.476 1.284-.882 2-1.207v-4.751l.018-.12-.031-1.423c0-.844.655-1.531 1.499-1.531.805 0 1.47.637 1.515 1.449v5.544c.379-.044.762-.071 1.152-.071.286 0 .567.02.848.043v-4.001c.287-.006.576-.895.844-1.021.215-.101.431-.151.642-.151.844 0 1.499.687 1.499 1.531l-.031.881.018.174.029 3.31c.713.295 1.381.674 2 1.117v-4.165l.016.002c.283 0 .552-.778.817-.9.213-.098.442-.241.652-.241.844 0 1.499.688 1.499 1.531l.019 10.1c-.005 2.877-2.814 15.042-8.43 15.042z"/></svg></i></div>
+				<div class="YS__help__text YS__help__text_horizontal"></div>
+				<div class="YS__help__text YS__help__text_vertical"></div>
+				<div class="YS__help__keyboard">
+					<div class="YS__help__keyboard__content">
+						<i class="YS__help__keyboard__bg"><svg xmlns="http://www.w3.org/2000/svg"  width="65" height="44" viewBox="0 0 65 44">
+	<path class="YS__help__keyboard__button YS__help__keyboard__button_down" fill-rule="evenodd" clip-rule="evenodd" fill="#5F3FFF" d="M38.004,44H26.997C23.694,44,21,41.305,21,37.992V27.008 C21,23.694,23.694,21,26.997,21h11.007C41.314,21,44,23.694,44,27.008v10.984C44,41.305,41.314,44,38.004,44z M38.004,42 c2.201,0,3.998-1.796,3.998-4.008V27.008c0-2.213-1.797-4.008-3.998-4.008H26.997c-2.211,0-3.998,1.788-3.998,4v11 c0,2.212,1.787,4,3.998,4H38.004z M35.229,30l-2.797,6.566L29.635,30H35.229z"/><path class="YS__help__keyboard__button YS__help__keyboard__button_left" fill-rule="evenodd" clip-rule="evenodd" fill="#5F3FFF" d="M0,38.004V26.997C0,23.694,2.695,21,6.008,21h10.985 C20.306,21,23,23.694,23,26.997v11.007C23,41.314,20.306,44,16.993,44H6.008C2.695,44,0,41.314,0,38.004z M2,38.004 c0,2.201,1.796,3.998,4.008,3.998h10.985c2.212,0,4.008-1.797,4.008-3.998V26.997c0-2.211-1.789-3.998-4-3.998H6 c-2.212,0-4,1.787-4,3.998V38.004z M14,35.229l-6.566-2.797L14,29.635V35.229z"/><path class="YS__help__keyboard__button YS__help__keyboard__button_top" fill-rule="evenodd" clip-rule="evenodd" fill="#5F3FFF" d="M44,6.008v10.984C44,20.306,41.314,23,38.004,23H26.997 C23.694,23,21,20.306,21,16.992V6.008C21,2.695,23.694,0,26.997,0h11.007C41.314,0,44,2.695,44,6.008z M26.997,2 c-2.211,0-3.998,1.788-3.998,4v11c0,2.212,1.787,4,3.998,4h11.007c2.201,0,3.998-1.795,3.998-4.008V6.008 C42.002,3.796,40.205,2,38.004,2H26.997z M29.635,14l2.797-6.566L35.229,14H29.635z"/><path class="YS__help__keyboard__button YS__help__keyboard__button_right" fill-rule="evenodd" clip-rule="evenodd" fill="#5F3FFF" d="M58.992,44H48.008C44.694,44,42,41.314,42,38.004V26.997 C42,23.694,44.694,21,48.008,21h10.984C62.305,21,65,23.694,65,26.997v11.007C65,41.314,62.305,44,58.992,44z M63,26.997 c0-2.211-1.788-3.998-4-3.998H48c-2.212,0-4,1.787-4,3.998v11.007c0,2.201,1.795,3.998,4.008,3.998h10.984 c2.212,0,4.008-1.797,4.008-3.998V26.997z M51,29.635l6.566,2.797L51,35.229V29.635z"/></svg></i>
+						<i class="YS__help__keyboard__overlay"><svg xmlns="http://www.w3.org/2000/svg"  width="65" height="44" viewBox="0 0 65 44">
+	<path class="YS__help__keyboard__button YS__help__keyboard__button_down" fill-rule="evenodd" clip-rule="evenodd" fill="#5F3FFF" d="M38.004,44H26.997C23.694,44,21,41.305,21,37.992V27.008 C21,23.694,23.694,21,26.997,21h11.007C41.314,21,44,23.694,44,27.008v10.984C44,41.305,41.314,44,38.004,44z M38.004,42 c2.201,0,3.998-1.796,3.998-4.008V27.008c0-2.213-1.797-4.008-3.998-4.008H26.997c-2.211,0-3.998,1.788-3.998,4v11 c0,2.212,1.787,4,3.998,4H38.004z M35.229,30l-2.797,6.566L29.635,30H35.229z"/><path class="YS__help__keyboard__button YS__help__keyboard__button_left" fill-rule="evenodd" clip-rule="evenodd" fill="#5F3FFF" d="M0,38.004V26.997C0,23.694,2.695,21,6.008,21h10.985 C20.306,21,23,23.694,23,26.997v11.007C23,41.314,20.306,44,16.993,44H6.008C2.695,44,0,41.314,0,38.004z M2,38.004 c0,2.201,1.796,3.998,4.008,3.998h10.985c2.212,0,4.008-1.797,4.008-3.998V26.997c0-2.211-1.789-3.998-4-3.998H6 c-2.212,0-4,1.787-4,3.998V38.004z M14,35.229l-6.566-2.797L14,29.635V35.229z"/><path class="YS__help__keyboard__button YS__help__keyboard__button_top" fill-rule="evenodd" clip-rule="evenodd" fill="#5F3FFF" d="M44,6.008v10.984C44,20.306,41.314,23,38.004,23H26.997 C23.694,23,21,20.306,21,16.992V6.008C21,2.695,23.694,0,26.997,0h11.007C41.314,0,44,2.695,44,6.008z M26.997,2 c-2.211,0-3.998,1.788-3.998,4v11c0,2.212,1.787,4,3.998,4h11.007c2.201,0,3.998-1.795,3.998-4.008V6.008 C42.002,3.796,40.205,2,38.004,2H26.997z M29.635,14l2.797-6.566L35.229,14H29.635z"/><path class="YS__help__keyboard__button YS__help__keyboard__button_right" fill-rule="evenodd" clip-rule="evenodd" fill="#5F3FFF" d="M58.992,44H48.008C44.694,44,42,41.314,42,38.004V26.997 C42,23.694,44.694,21,48.008,21h10.984C62.305,21,65,23.694,65,26.997v11.007C65,41.314,62.305,44,58.992,44z M63,26.997 c0-2.211-1.788-3.998-4-3.998H48c-2.212,0-4,1.787-4,3.998v11.007c0,2.201,1.795,3.998,4.008,3.998h10.984 c2.212,0,4.008-1.797,4.008-3.998V26.997z M51,29.635l6.566,2.797L51,35.229V29.635z"/></svg></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</script>
+	<!--/UI Help -->
+	
+	
+	<!-- Server Error -->
+	<script id="server-error" type="text/x-handlebars-template">
+	<div class="server__error">
+		<div class="server__error__screen">
+			<div class="server__error__type">Ошибка {{ error }}</div>
+			<div class="server__error__title">Cтраница не найдена</div>
+			<div class="server__error__text">Кто-то ошибся адресом, но вы не отчаивайтесь, перейдите на <a href="/">главную страницу</a>.</div>
+		</div>
+	</div>
+	</script>
+	<!--/Server Error -->
+	
+	
+<script src="/js/libs/jquery.min.js"></script>
+<script src="/js/libs/libs.min.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/modules.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/template.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/settings.js"></script>
+<script src="/js/views/header/menu.js"></script>
+<script src="/js/views/panel/menu.js"></script>
+<script src="/js/views/panel/links.js"></script>
+<script src="/js/views/panel/search.js"></script>
+<script src="/js/views/panel/filter.js"></script>
+<script src="/js/views/panel/cart.js"></script>
+<script src="/js/views/panel/phone.js"></script>
+<script src="/js/views/panel/panel.js"></script>
+<script src="/js/models/product.js"></script>
+<script src="/js/models/products.js"></script>
+<script src="/js/views/products/sorting.js"></script>
+<script src="/js/views/products/breadcrumbs.js"></script>
+<script src="/js/views/products/favorite.js"></script>
+<script src="/js/views/products/productQuick.js"></script>
+<script src="/js/views/products/products.js"></script>
+<script src="/js/views/products/productsModal.js"></script>
+<script src="/js/views/pages/pagesModal.js"></script>
+<script src="/js/views/pages/popup.js"></script>
+<script>
+	site.template.productUpdate = "27/09/2015 7:57:08";
+	site.template.productsUpdate = "27/09/2015 7:57:08";
+	site.template.productsModalUpdate = "27/09/2015 7:57:08";
+	site.template.productsSortingUpdate = "27/09/2015 7:57:08";
+	site.template.panelUpdate = "27/09/2015 7:57:08";
+	site.template.panelMenuUpdate = "27/09/2015 7:57:08";
+	site.template.loadingUpdate = "27/09/2015 7:57:08";
+	site.template.spinnerUpdate = "27/09/2015 7:57:08";
+	site.template.searchUpdate = "27/09/2015 7:57:08";
+	
+</script>
+<script src="/js/init.js"></script>
+	
+</body>
+</html>
