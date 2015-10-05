@@ -1,0 +1,22 @@
+.sort__panel {
+	position:relative;
+	height:28px;
+	width:100%;
+	max-width:1300px;
+	margin:0 auto 10px;
+	padding:0 12px;
+}
+.sort__panel .YS__element__select__group--right {
+	margin-right:32px;
+}
+.sort__panel .YS__element__select__group--left {
+	margin-left:12px;
+}
+.sort__panel .breadcrumbs--right {
+	margin-right:15px;
+}
+@media screen and (max-width: 1024px) {
+	.YS__element__select__views {
+		display:none !important;
+	}
+}

@@ -1,0 +1,144 @@
+.YS__scroller {
+	position: relative;
+	width:100%;
+	height:100%;
+	overflow: hidden;
+}
+.YS__scroller__container {
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
+.d-mobile .YS__scroller__container {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+.iScrollVerticalScrollbar {
+	z-index:2;
+}
+.product__preview--blur .iScrollVerticalScrollbar {
+	opacity:0;
+}
+.product__preview .iScrollVerticalScrollbar,
+.YS__m-faq .iScrollVerticalScrollbar {
+	background:rgba(#fffbee,.3);
+}
+.iScrollVerticalScrollbar:hover,
+.iScrollVerticalScrollbar.i-scrolling {
+	width:10px
+}
+.iScrollIndicator {
+	position:absolute;
+	width:100%;
+	left:0;
+	top:0;
+	cursor:-webkit-grab;
+	cursor:-ms-grab;
+	cursor:-o-grab;
+	cursor:grab;
+	background:silver;
+	border-radius:50px;
+}
+.product__preview .iScrollIndicator,
+.YS__m-faq .product__preview .iScrollIndicator {
+	background:rgba(#f7f2e2,.5);
+}
+.iScrollIndicator:active {
+	cursor:-webkit-grabbing;
+	cursor:-ms-grabbing;
+	cursor:-o-grabbing;
+	cursor:grabbing;
+}
+.iScrollIndicator:before {
+	position:absolute;
+	top:-20px;
+	bottom:-20px;
+	right:0;
+	width:20px;
+	content:'';
+}
+.i-scrolling .i-interactive:after {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	z-index:200;
+	content:'';
+}
+.ui-scroll,
+.iScrollVerticalScrollbar {
+	position:absolute;
+	right:0;
+	top:0;
+	height:100%;
+	width:4px;
+	-webkit-transition:width .175s;
+	transition:width .175s;
+	overflow:visible !important;
+}
+.ui-scroll:hover,
+.ui-scroll.i-scrolling {
+	width:12px;
+}
+.ui-scroll__bar,
+.ui-scroll__handle__inner {
+	-webkit-transition:background-color .6s;
+	transition:background-color .6s;
+}
+.ui-scroll__bar {
+	height:100%;
+	background:#fff;
+	opacity:.1;
+	content:'';
+}
+.ui-scroll__bar,
+.ui-scroll__handle {
+	position:absolute;
+	width:100%;
+	left:0;
+	top:0;
+}
+.ui-scroll__handle {
+	cursor:-webkit-grab;
+	cursor:-ms-grab;
+	cursor:-o-grab;
+	cursor:grab;
+}
+.ui-scroll__handle:active {
+	cursor:-webkit-grabbing;
+	cursor:-ms-grabbing;
+	cursor:-o-grabbing;
+	cursor:grabbing;
+}
+.ui-scroll:before,
+.ui-scroll__handle:before {
+	position:absolute;
+	top:-20px;
+	bottom:-20px;
+	right:0;
+	width:25px;
+	content:'';
+}
+.ui-scroll__handle__inner {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background:#fff;
+}

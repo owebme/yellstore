@@ -1,0 +1,106 @@
+.YS__cloud__links {
+	position:fixed;
+	top:35px;
+	right:-101%;
+	padding-right:350px;
+	height: 100%;
+	width: 100%;
+	@include transform(translateX(-40px));
+	@include unselectable();
+	-webkit-transition: opacity 0.35s cubic-bezier(.645,.045,.355,1) 0s, right 0s 0.6s;
+	transition: opacity 0.35s cubic-bezier(.645,.045,.355,1) 0s, right 0s 0.6s;
+	opacity:0;
+	z-index:1001;
+}
+.d-mobile .YS__cloud__links {
+	@include transform(translateX(0px));
+	-webkit-transition: opacity 0.35s cubic-bezier(.215,.61,.355,1) 0s, right 0s 0.45s;
+	transition: opacity 0.35s cubic-bezier(.215,.61,.355,1) 0s, right 0s 0.45s;	
+}
+.YS__cloud__links__title {
+	color:#f2f2f2;
+	font-size:32px;
+	text-align:center;
+	white-space:nowrap;
+}
+.YS__cloud__links__tags {
+	position:absolute;
+	top:50%;
+	left:0;
+	width:100%;
+	height:390px;
+	margin-top:-268px;
+	padding-right:350px;
+}
+.YS__cloud__links__tag {
+	font-family:$museo;
+	font-weight:300;	
+	height:43px;
+}
+.YS__cloud__links__tag a {
+	display:inline-block;
+	color:#fff;
+	border-bottom:1px solid rgba(255,255,255,.3);
+	@include transition(all 0.3s cubic-bezier(.215,.61,.355,1));
+}
+.YS__cloud__links__tag a:hover {
+	opacity:1;
+	border-color:rgba(46,204,113,.75);
+	@include transform(scale(1.13));
+}
+.YS__cloud__links__tag__size1 {
+	font-size:24px;
+	opacity:0.7;
+	letter-spacing:0.15px;
+	font-weight:200;
+}
+.YS__cloud__links__tag__size2 {
+	font-size:28px;
+	opacity:0.7;
+	letter-spacing:0.25px;
+}
+.YS__cloud__links__tag__size3 {
+	font-size:30px;
+	opacity:0.87;
+	letter-spacing:0.5px;
+}
+.YS__cloud__links__tag_1 {
+	text-align:center;
+	margin-top:33px;
+}
+.YS__cloud__links__tag_2 {
+	margin-top:2%;
+	margin-left:28%;
+}
+.YS__cloud__links__tag_3 {
+	margin-top:0;
+	margin-left:60%;
+}
+.YS__cloud__links__tag_4 {
+	margin-top:2.4%;
+	margin-left:33%;
+}
+.YS__cloud__links__tag_5 {
+	margin-top:-3px;
+	margin-left:57%;
+}
+.YS__cloud__links__tag_6 {
+	margin-top:3.9%;
+	margin-left:30%;
+}
+.YS__cloud__links__tag_7 {
+	margin-top:0.9%;
+	margin-left:60%;
+}
+.d-mobile {
+	.YS__cloud__links__tag_2,
+	.YS__cloud__links__tag_4,
+	.YS__cloud__links__tag_6 {
+		@include transform(translateX(-120px));
+	}
+	.YS__cloud__links__tag_3,
+	.YS__cloud__links__tag_5,
+	.YS__cloud__links__tag_7 {
+		@include transform(translateX(-40px));
+	}	
+}

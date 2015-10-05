@@ -1,0 +1,77 @@
+.server__error {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	background:#fff;
+	cursor:default;
+	z-index:1050;
+}
+.server__error__screen {
+	position:absolute;
+	top:50%;
+	left:50%;
+    margin:-90px 0 0 -400px;
+	width:800px;
+}
+.server__error__title {
+	font-size:50px;
+	line-height:1.2;
+    margin-bottom:40px;
+}
+.server__error a {
+	color:#9d4abc;
+}
+.server__error a:hover {
+	color:#530878;
+}
+@media screen and (max-width:1300px) {
+	.server__error__screen {
+		width:920px;
+		margin-left:-460px;
+	}
+}
+@media screen and (max-width:1150px), screen and (max-height:760px) {
+	.server__error__screen {
+		width:800px;
+		margin-left:-400px;
+	}
+	.server__error__title {
+		font-size:50px;
+	}	
+}
+@media screen and (max-width:1000px) {
+	.server__error__screen {
+		width:600px;
+		margin-left:-300px;
+	}
+	.server__error__title{
+		font-size:45px;
+	}
+}
+@media screen and (max-width:767px) {
+	.server__error__screen {
+		height:auto;
+		min-height:100%;
+		box-sizing:border-box;
+		padding:100px 20px 70px;
+		position:static;
+		top:0;
+		left:0;
+		width:auto;
+		margin:0;
+	}
+	.server__error__title {
+		font-size:35px;
+	}
+}
+@media screen and (max-height:439px) {
+	.server__error__screen {
+		padding-top:80px
+	}
+	.server__error__title {
+		font-size:30px;
+	}
+}

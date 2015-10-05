@@ -1,0 +1,111 @@
+.state__openPageModal {
+	overflow-y:hidden;
+}
+.state__openPageModal .YS__panel {
+	@include transform(translateY(90px));
+}
+.state__openPage {
+	overflow-y:hidden;
+}
+.state__openPage .YS__page {
+	opacity:1;
+}
+.state__openProductQuick .YS__panel {
+	@include transform(translateY(90px));
+}
+.state__openProductQuick_active {
+	overflow-y:hidden;
+}
+.state__openProductQuick_active .product__preview__close {
+	@include transform(translateX(0));
+	opacity:1;
+	-webkit-transition:background 0.2s ease, opacity 0.2s ease, -webkit-transform 0s;
+	transition:background 0.2s ease, opacity 0.2s ease, transform 0s;
+}
+.d-mobile .state__openProductQuick_active .product__preview__close {
+	-webkit-transition:none;
+	transition:none;
+}
+.state__openProductQuick_active .product__widgets {
+	@include transform(translate3d(0, 0, 0));
+}
+.d-mobile .state__openProductQuick_active .product__widgets {
+	@include transition(none);
+}
+.state__openCart .YS__m-cart {
+	left:0;
+	opacity:1;
+	transition: opacity 0.35s cubic-bezier(.645,.045,.355,1) 0.3s;
+}
+.state__openCart .YS__m-cart__container {
+	transform:translate3d(0px, 0px, 0px);
+	transition:transform 0.5s cubic-bezier(0.57, 0.06, 0.05, 0.95) 0.3s;
+}
+.state__openFilter .YS__filter__apply--active {
+	left:50%;
+	opacity:1;
+	-webkit-transition:opacity 0.3s cubic-bezier(.215,.61,.355,1), color 0.1s ease, background 0.1s ease;		
+	transition:opacity 0.3s cubic-bezier(.215,.61,.355,1), color 0.1s ease, background 0.1s ease;		
+    animation: YS__pulseFilter_apply 1.5s linear infinite;
+    -webkit-animation: YS__pulseFilter_apply 1.5s linear infinite;		
+}
+.state__openMenu .YS__cloud__links {
+	right:0;
+	opacity: 1;
+	@include transition(opacity 0.35s cubic-bezier(.645,.045,.355,1) 0.395s);
+}
+.state__preloading .YS__panel:after {
+	height: 100%;
+	opacity: 1;
+	transition: opacity 0.65s cubic-bezier(.645,.045,.355,1) 0s;
+	width: 100%;
+}
+.state__openSearch .YS__m-search {
+	@include transform(translateX(0));
+}
+.state__activeSearch {
+	.YS__m-search {
+		height:94px;
+		@include background-gradient(rgba(87,84,96,.87), transparent);
+	}
+	.YS__m-search__value {
+		color:#fff;
+	}
+	.YS__panel {
+		@include transform(translateY(90px));
+	}
+	header {
+		@include transform(translateY(-85px));
+		margin-top:-57px;
+	}	
+}
+.state__openProductQuick .YS__m-search {
+	@include transform(translateY(-100px));
+	@include transition(transform 0.6s cubic-bezier(.215,.61,.355,1));
+}
+.YS__text-hidden {
+    position: absolute;
+    top: 200%;
+}
+.YS__hidden {
+	overflow:hidden;
+}
+.YS__opacity-hidden {
+    opacity:0;
+}
+.YS__text-left {
+	text-align:left;
+}
+.YS__text-right {
+	text-align:right;
+}
+.YS__text-center {
+	text-align:center;
+}
+.offTransition {
+	@include transition(none !important);
+}
+.offTransitionAll,
+.offTransitionAll * {
+	@include transition(none !important);
+}
