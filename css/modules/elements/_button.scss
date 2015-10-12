@@ -1,0 +1,96 @@
+.YS__element__btn {
+	position:relative;
+	display:inline-block;
+	border:1px solid transparent;
+	background:$nightGreen;
+	color:#fff;
+	font:bold 18.5px/20px $museo;
+	letter-spacing:-0.01em;
+	box-shadow:inset 0 -25px 0 rgba(2,160,133,.85);
+	border-radius:50px;
+	min-width: 130px;
+	height:57px;
+	padding: 15px 25px 17px;
+	vertical-align:middle;
+	line-height:normal;
+	cursor:pointer;
+	white-space:nowrap;
+	overflow:hidden;
+	outline:0;
+	-webkit-transition:-webkit-transform .12s cubic-bezier(.215,.61,.355,1), background 0.25s cubic-bezier(0.57, 0.06, 0.05, 0.95), color .12s cubic-bezier(.215,.61,.355,1), box-shadow 0.25s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+	transition:transform .12s cubic-bezier(.215,.61,.355,1), background 0.25s cubic-bezier(0.57, 0.06, 0.05, 0.95), color .12s cubic-bezier(.215,.61,.355,1), box-shadow 0.25s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+}
+.YS__element__btn:hover {
+	box-shadow:inset 0 -25px 0 #18967d;
+}
+.YS__element__btn:active {
+	@include transform(translateY(3px) scale(0.98));
+	box-shadow:inset 0 -25px 0 rgba(0,119,96,1);
+}
+.YS__element__btn--active {
+	background:#cd5018;
+	box-shadow:inset 0 -25px 0 #b1421d;
+}
+.YS__element__btn--active:hover {
+	box-shadow:inset 0 -25px 0 rgba(151,53,53,.9);
+}
+.YS__element__btn--yellow {
+	color:$nightBlue_dark;
+	background:#ffdd2e;
+	box-shadow:inset 0 -25px 0 #ffcd33;
+}
+.YS__element__btn--yellow:hover {
+	box-shadow:inset 0 -25px 0 rgba(233,188,47,.75);
+}
+.YS__element__btn--white {
+	background:linear-gradient(#fcfcfc, #e3e3e3);
+    border-bottom: 1px solid #e5e5e5;
+    border-left: 0 solid #fff;
+    border-right: 0 solid #fff;
+    border-top: 0 solid #fff;
+    box-shadow: 0 2px 4px #bbc5cc;
+    color: rgba(0, 80, 128, 0.75);
+	text-shadow: 0 1px 1px #fff;
+}
+.YS__element__btn--cart.YS__element__btn--white:after {
+	color:rgba(0, 80, 128, 0.5);
+}
+.YS__element__btn--white:hover {
+	color:rgba(#800, 0.75);
+	background:linear-gradient(#fcfcfc, #ccc);
+	box-shadow: 0 2px 4px #bbc5cc;
+}
+.YS__element__btn--white.YS__element__btn--active {
+	color:rgba(#800, 0.75);
+	background:linear-gradient(#fcfcfc, #e3e3e3);
+}
+.YS__element__btn--cart.YS__element__btn--white:hover:after,
+.YS__element__btn--white.YS__element__btn--active:after {
+	color:rgba(#800, 0.5) !important;
+}
+.YS__element__btn--cart {
+	padding-left:60px;
+}
+.YS__element__btn--cart:after {
+	content:"\f23d";
+	font-size:23px;
+	position:absolute;
+	top:13px;
+	left:23px;
+	color:rgba(255,255,255,.85);
+	font-family: FontAwesome;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;	
+	@include transition(color .12s cubic-bezier(.215,.61,.355,1));	
+}
+.YS__element__btn--cart:hover:after,
+.YS__element__btn--cart.YS__element__btn--active:after {
+	color:rgba(255,255,255,.95);
+}
+.YS__element__btn--cart.YS__element__btn--active:after {
+	content:"\f00c";
+	font-size:24px;
+	top:12px;
+	left:25px;
+}

@@ -15,7 +15,7 @@ site.views.search = (function(YS){
 				_this.input = _this.search.find(".YS__m-search__value");
 				
 				// Open Search
-				YS.ui.panel.search.on("click", function(){
+				YS.ui.panel.search.on(clickEvent, function(){
 					if (!this.className.match(/active/)){
 						_this.open();
 					}
@@ -32,7 +32,7 @@ site.views.search = (function(YS){
 				});
 				
 				// Close Search
-				_this.search.find(".YS__m-search__close").on("click", function(){
+				_this.search.find(".YS__m-search__close").on(clickEvent, function(){
 					_this.close();
 				});		
 				

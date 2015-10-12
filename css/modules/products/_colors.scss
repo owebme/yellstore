@@ -1,0 +1,18 @@
+.productt__item__colors__item {
+	position:relative;
+	display:inline-block;
+	width:18px;
+	height:18px;
+	margin:0 5px;
+	border-radius:50%;
+	overflow:hidden;
+}
+.productt__item__colors__item:after {
+	content:"";
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:50%;
+	background:rgba(0,0,0,.05);
+}

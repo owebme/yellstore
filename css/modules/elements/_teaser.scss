@@ -1,0 +1,25 @@
+.YS__element__teaser {
+	background:#a2a2a2;
+	min-height:66px;
+	text-align:center;
+	margin:20px 0;
+}
+.YS__element__teaser--pink {
+	background:#f08399;
+}
+.YS__element__teaser--red {
+	background:$ruby;
+}
+.YS__element__teaser--blue {
+	background:#80c9fe;
+}
+.YS__element__teaser__container {
+	width:960px;
+	padding:22px 20px;
+	color:#fff;
+	font:300 16.5px/22px $museo;
+	margin:0 auto;
+}
+.YS__element__teaser__container strong {
+	font-weight:bold;
+}

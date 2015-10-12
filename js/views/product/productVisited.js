@@ -115,7 +115,7 @@ site.views.productVisited = (function(YS){
 					_this.open();
 				}
 				else {
-					YS.app.productPage(this.getAttribute("data-item"), {action: "reload"});
+					YS.app.productPage({id: this.getAttribute("data-item"), action: "reload"});
 				}
 			});
 		},
@@ -131,7 +131,7 @@ site.views.productVisited = (function(YS){
 					_this.close(closeCallback);
 					
 					setTimeout(function(){
-						YS.app.productPage(elem.getAttribute("data-item"), {action: "reload"});
+						YS.app.productPage({id: elem.getAttribute("data-item"), action: "reload"});
 					}, (YS.device.isMobile ? 400 : 50));
 				});
 			},

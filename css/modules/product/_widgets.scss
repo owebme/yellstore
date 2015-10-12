@@ -65,7 +65,7 @@
 	line-height:42px;
 	background:rgba(30,30,30,.7);
 }
-.product__widgets__button__favorite:hover {
+.m-no-touch .product__widgets__button__favorite:hover {
 	background:rgba(30,30,30,.9);
 }
 .product__widgets__button__icon {
@@ -75,11 +75,11 @@
 	-webkit-transition:font-size 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), top 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), right 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), background 0.25s ease 0.05s;
 	transition:font-size 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), top 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), right 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), background 0.25s ease 0.05s;
 }
-.product__widgets__button__favorite:hover .product__widgets__button__icon,
-.product__widgets__button__cart:hover .product__widgets__button__icon {
+.m-no-touch .product__widgets__button__favorite:hover .product__widgets__button__icon,
+.m-no-touch .product__widgets__button__cart:hover .product__widgets__button__icon {
 	@include transform(translate3d(-18px, -18px, 0px) scale(0.4));
 }
-.product__widgets__button:hover .product__widgets__button__count {
+.m-no-touch .product__widgets__button:hover .product__widgets__button__count {
 	background:transparent;
 	font-size:33px;
 	font-weight:normal;
@@ -122,7 +122,7 @@
 	line-height:34px;
 	background:rgba(30,30,30,.7);
 }
-.product__widgets__button__cart:hover {
+.m-no-touch .product__widgets__button__cart:hover {
 	background:rgba(30,30,30,.9);
 }
 .product__widgets__button__cart__icon {

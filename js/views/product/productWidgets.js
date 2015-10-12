@@ -25,7 +25,7 @@ site.views.productWidgets = (function(YS){
 				YS.ui.favoriteWidget = $('<div class="YS__element__widget__favorite"><i class="YS__element__widget__favorite__icon fa fa-star-o"></i></div>');
 				YS.ui.favoriteWidgetCount = $('<span class="YS__element__widget__favorite__count">0</span>');
 				YS.ui.favoriteWidget.append(YS.ui.favoriteWidgetCount);
-				$root.append(YS.ui.favoriteWidget);
+				$body.append(YS.ui.favoriteWidget);
 				
 				// Widget Favorite products
 				var favCounts = YS.models.favorite.count();
@@ -37,50 +37,101 @@ site.views.productWidgets = (function(YS){
 					YS.ui.favoriteWidget.addClass("YS__element__widget__favorite--active");
 				}
 				
-				var openCallbackFavorite = function(_this, container){
-					container.find(".YS__m-products__item").on(clickEvent, function(){
-						var elem = this;
-						
-						_this.close();
-						
-						setTimeout(function(){
-							YS.app.productPage(elem.getAttribute("data-item"), {action: "load", elem: "center"});
-						}, 50);
-					});
-				}		
+				// Init faq button in product
+				_this.faqButton();
 				
-				YS.ui.favoriteWidget.on(clickEvent, function(){
-					YS.views.productsModal.open({
-						title: 'Отложенные товары в избранном',
-						data: YS.plugins.reverseArray(YS.models.favorite.get()),
-						openCallback: openCallbackFavorite
-					});
-				});
-				
-				var openCallbackFaq = function(){
-					YS.ui.productWidgetsFaq.addClass("product__widgets__button--active");
-					YS.ui.productWidgets.addClass("product__widgets--active");
-				}
-				var closeCallbackFaq = function(){
-					YS.ui.productWidgets.removeClass("product__widgets--active");
-					YS.ui.productWidgetsFaq.removeClass("product__widgets__button--active");					
-				}		
-				
-				// Open Modal Faq
-				YS.ui.productWidgetsFaq.on(clickEvent, function(){
-					if (!this.className.match(/active/)){
-						YS.app.faqPage("open", openCallbackFaq, closeCallbackFaq);
-					}
-					else {
-						YS.app.faqPage("close", openCallbackFaq, closeCallbackFaq);
-					}
-				});
+				// Init favorite button in product
+				_this.favoriteButton();				
 
+				// Init favorite button in category
+				_this.favoriteButtonCategory();
+				
 				// Arrow Down (exit)
 				YS.ui.productWidgetsExit.on(clickEvent, function(){
 					YS.views.productQuick.close("down");
 				});
 			}
+		},
+		faqButton: function(){
+		
+			var openCallbackFaq = function(){
+				YS.ui.productWidgetsFaq.addClass("product__widgets__button--active");
+				YS.ui.productWidgets.addClass("product__widgets--active");
+			}
+			var closeCallbackFaq = function(){
+				YS.ui.productWidgets.removeClass("product__widgets--active");
+				YS.ui.productWidgetsFaq.removeClass("product__widgets__button--active");					
+			}	
+			
+			// Open Modal Faq
+			YS.ui.productWidgetsFaq.on(clickEvent, function(){
+				if (!this.className.match(/active/)){
+					YS.app.faqPage("open", openCallbackFaq, closeCallbackFaq);
+				}
+				else {
+					YS.app.faqPage("close", openCallbackFaq, closeCallbackFaq);
+				}
+			});
+		},
+		favoriteButton: function(){
+		
+			var openCallbackFavorite = function(_this, container){
+				container.find(".YS__m-products__item").on(clickEvent, function(){
+					var elem = this;
+					
+					_this.close();
+					
+					setTimeout(function(){
+						YS.app.productPage({id: elem.getAttribute("data-item"), action: "reload"});
+					}, (YS.device.isMobile ? 400 : 50));
+				});
+			}
+			
+			YS.ui.productWidgetsFavorite.on(clickEvent, function(){
+				YS.views.productsModal.open({
+					title: 'Отложенные товары в избранном',
+					data: YS.plugins.reverseArray(YS.models.favorite.get()),
+					openCallback: openCallbackFavorite
+				});
+			});			
+		},
+		favoriteButtonCategory: function(){
+		
+			var openCallbackFavorite = function(_this, container){
+			
+				YS.ui.favoriteWidget.addClass("YS__element__widget__favorite--open");
+			
+				container.find(".YS__m-products__item").on(clickEvent, function(){
+					var elem = this;
+					
+					_this.close(function(){
+					
+						YS.status("openProductQuick", true);
+						
+						closeCallbackFavorite();
+						
+						YS.app.productPage({id: elem.getAttribute("data-item"), action: "load", elem: "slipCenter"});
+						
+					}, true);
+				});
+			},
+			closeCallbackFavorite = function(){
+				YS.ui.favoriteWidget.removeClass("YS__element__widget__favorite--open");				
+			};		
+			
+			YS.ui.favoriteWidget.on(clickEvent, function(){
+				if (!this.className.match(/open/)){
+					YS.views.productsModal.open({
+						title: 'Отложенные товары в избранном',
+						data: YS.plugins.reverseArray(YS.models.favorite.get()),
+						openCallback: openCallbackFavorite,
+						closeCallback: closeCallbackFavorite
+					});
+				}
+				else {
+					YS.views.productsModal.close(closeCallbackFavorite);
+				}
+			});
 		},
 		favoriteAnimate: function(count){
 			

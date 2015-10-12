@@ -45,7 +45,7 @@
 .b-product__label:after{
 	display:block;
 	position:absolute;
-	left:-17px;
+	left:-16px;
 	top:0;
 	content:"";
 	border-width:17px 0px 17px 17px;
@@ -54,7 +54,7 @@
 }
 .b-product__label__group__left .b-product__label:after{
 	left:auto;
-	right:-17px;
+	right:-16px;
 	transform: scale(-1, 1);
 }
 .b-product__label:before {

@@ -18,7 +18,8 @@
 	z-index:999;
 }
 .d-mobile .page:after {
-	background: rgba(66,66,66, .9);
+	background: -webkit-linear-gradient(-135deg, rgba(#5f5277, .95), rgba(#7e6b83, .95));
+	background: linear-gradient(-135deg, rgba(#5f5277, .95), rgba(#7e6b83, .95));
 }
 .page__wrapper {
 	-webkit-transition-property:-webkit-transform, opacity, background, filter, padding-top;
@@ -40,8 +41,8 @@
 	min-height:100%;
 }
 .d-mobile .page__wrapper {
-	-webkit-transition-duration:.5s;
-	transition-duration:.5s;
+	-webkit-transition-duration:.6s;
+	transition-duration:.6s;
 	-webkit-transition-timing-function:cubic-bezier(.215,.61,.355,1);
 	transition-timing-function:cubic-bezier(.215,.61,.355,1);
 	-webkit-transition-property:-webkit-transform;
@@ -99,7 +100,15 @@
 	transition: opacity 0.3s cubic-bezier(.645,.045,.355,1);
 	width: 100%;
 }
-.d-mobile .page_lightOverlay:before {
+.page_lightOverlay_4:before {
+	height: 100%;
+	opacity: 0.4;
+	-webkit-transition: opacity 0.3s cubic-bezier(.645,.045,.355,1);
+	transition: opacity 0.3s cubic-bezier(.645,.045,.355,1);
+	width: 100%;
+}
+.d-mobile .page_lightOverlay:before,
+.d-mobile .page_lightOverlay_4:before {
 	-webkit-transition: opacity 0.35s cubic-bezier(.215,.61,.355,1);
 	transition: opacity 0.35s cubic-bezier(.215,.61,.355,1);
 }

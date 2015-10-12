@@ -6,7 +6,8 @@
 	@include transform(translate3d(-40px, 80px, 0));
 	@include transition(transform 0.6s cubic-bezier(0.57, 0.06, 0.05, 0.95));
 }
-.d-mobile .product__preview__visited {
+.d-mobile .product__preview__visited,
+.d-mobile .product__preview__visited__item {
 	@include transition(none);
 }
 .product__preview__visited--active {
@@ -50,7 +51,7 @@
 	@include transform(scale(1));
 	margin-left:-10px;
 }
-.product__preview__visited--active:hover .product__preview__visited__item,
+.m-no-touch .product__preview__visited--active:hover .product__preview__visited__item,
 .product__preview__visited--active:hover .product__preview__visited__item__open {
 	@include transform(scale(1));
 	-webkit-transition:-webkit-transform 0.25s cubic-bezier(.215,.61,.355,1), margin 0.6s cubic-bezier(0.57, 0.06, 0.05, 0.95), opacity 0.25s cubic-bezier(.215,.61,.355,1), color 0.25s cubic-bezier(.215,.61,.355,1);
@@ -70,12 +71,12 @@
 	position:relative;
 	top:-7px;
 }
-.product__preview__visited--active .product__preview__visited__item:hover,
+.m-no-touch .product__preview__visited--active .product__preview__visited__item:hover,
 .product__preview__visited--active .product__preview__visited__item__open:hover {
 	opacity:1;
 	@include transform(translateY(-15px));
 	z-index:1;
 }
-.d-mobile .product__preview__visited--active .product__preview__visited__item:hover {
-	@include transform(translateY(0));
+.d-mobile .product__preview__visited__item__open {
+	display:none;
 }

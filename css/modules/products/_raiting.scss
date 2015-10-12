@@ -1,0 +1,76 @@
+.productt__item__ratings {
+	display:block;
+	position:relative;
+	height:15px;
+	margin:7px 0 -9px;
+	font-size:12px;
+	line-height:15px;
+	text-align:center;
+	white-space:nowrap;
+	overflow:hidden;
+}
+.productt__item__ratings:before {
+	content:"";
+	position:absolute;
+	top:8px;
+	left:50%;
+	margin-left:-111px;
+	background:#ececec;
+	height:1px;
+	width:57px;
+}
+.productt__item__ratings:after {
+	content:"";
+	position:absolute;
+	top:8px;
+	right:50%;
+	margin-right:-112px;
+	background:#ececec;
+	height:1px;
+	width:57px;
+}
+.productt__item__ratings__box {
+	display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    height: 12px;
+    line-height: 0;
+    overflow: hidden;
+    position: relative;
+    text-indent: -999em;
+    width: 69px;
+}
+.productt__item__ratings__box:before {
+    color: #c3c5c9;
+    content: "\f005\20\f005\20\f005\20\f005\20\f005";
+    display: block;
+	font-family: FontAwesome;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;	
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    width: 69px;
+}
+.productt__item__ratings__rate {
+    float: left;
+    height: 12px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+}
+.productt__item__ratings__rate:before {
+    color: #ffc600;
+    content: "\f005\20\f005\20\f005\20\f005\20\f005";
+    display: block;
+	font-family: FontAwesome;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;	
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    width: 69px;
+}

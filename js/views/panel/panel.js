@@ -4,6 +4,13 @@ site.views.panel = (function(YS){
 	
 		init: function(){
 		
+			if (filterBox){
+		
+				YS.views.filterBox.init();
+				
+				return false;
+			}
+		
 			YS.template.init("panel", function(){
 			
 				YS.ui.panel = {};

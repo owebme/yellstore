@@ -4,12 +4,14 @@ site.views.headerMenu = (function(YS){
 	
 		init: function(){
 
-			YS.ui.gender_menu = $(".header__gender__menu");
+			YS.ui.header = $root.find("header");
+			YS.ui.gender_menu = YS.ui.header.find(".header__gender__menu");
+			YS.ui.headerPagesMenu = $body.find(".header__pages__menu");
+			YS.ui.headerContainer = YS.ui.header.find(".header__container");
 				
 			var $menu = $(".header__menu"),
 				$parents = $menu.find(".header__menu__parents__list"),
-				$drop_menu = $menu.find(".header__menu__dropdown"),
-				hovers = {};
+				$drop_menu = $menu.find(".header__menu__dropdown");
 				
 			YS.ui.gender_menu.find("a").on(clickEvent, function(e){
 			
@@ -40,8 +42,30 @@ site.views.headerMenu = (function(YS){
 					YS.settings.headerMenu.callback(elem);
 				});
 			}
+			
+			if (YS.ui.headerPagesMenu) this.openPagesMenu();
+			
+			this.hoverCategories($menu, $parents, $drop_menu);
+			
+		},
+		openPagesMenu: function(){
+		
+			YS.ui.headerPagesMenu.on("mouseenter", function(){
+				YS.ui.headerPagesMenu.addClass("header__pages__menu--open");
+			});
+			
+			YS.ui.headerContainer.on("mouseenter", function(){
+				YS.ui.headerPagesMenu.removeClass("header__pages__menu--open");
+			});
+			
+		},
+		hoverCategories: function($menu, $parents, $drop_menu){
+		
+			var hovers = {}, timers = {};
 				
 			$parents.find("li").on("mouseenter", function(e){
+			
+				if (timers.index) clearTimeout(timers.index);
 			
 				var $elem = $(this),
 					$active = $drop_menu.find(".header__menu__dropdown__wrapper--active"),
@@ -51,7 +75,7 @@ site.views.headerMenu = (function(YS){
 					
 				if (YS.device.isMobile) delay = 0;
 			
-				setTimeout(function(){
+				timers.index = setTimeout(function(){
 				
 					if (hovers.index){
 				

@@ -11,6 +11,7 @@ site.views.productsModal = (function(YS){
 			data["path"] = YS.settings.products.path;
 			
 			YS.ui.productsModal = $(YS.template.productsModal(data));
+			YS.ui.productsModalClose = YS.ui.productsModal.find(".YS__m-products__close");
 			
 			$body.append(YS.ui.productsModal);
 		
@@ -23,7 +24,7 @@ site.views.productsModal = (function(YS){
 			YS.status("openProductsModal", true);
 					
 			// Close modal products visited
-			YS.ui.productsModal.find(".YS__m-products__close").on(clickEvent, function(e){
+			YS.ui.productsModalClose.on(clickEvent, function(e){
 				e.preventDefault();
 				_this.close(params.closeCallback);
 			});
@@ -38,22 +39,39 @@ site.views.productsModal = (function(YS){
 			if (params.openCallback && typeof params.openCallback === "function") params.openCallback(_this, YS.ui.productsModal);
 		
 		},
-		close: function(callback){
-	
+		close: function(callback, overlay){
+		
 			YS.ui.productsModal.addClass("YS__m-products--hide");
-			YS.plugins.overlay(false);
 			
-			if (YS.ui.containerProduct){
-				YS.ui.containerProduct.on(prefixed.transition + "end", function(){
-					YS.ui.containerProduct.off(prefixed.transition + "end");
-					YS.ui.productsModal.remove();
-				});
+			if (!overlay) {
+				
+				YS.plugins.overlay(false);
+				
+				if (YS.ui.containerProduct){
+					YS.ui.containerProduct.on(prefixed.transition + "end", function(){
+						YS.ui.containerProduct.off(prefixed.transition + "end");
+						YS.ui.productsModal.remove();
+					});
+				}
+				else {
+					$root.on(prefixed.transition + "end", function(){
+						$root.off(prefixed.transition + "end");
+						YS.ui.productsModal.remove();
+					});
+				}				
 			}
 			else {
-				$root.on(prefixed.transition + "end", function(){
-					$root.off(prefixed.transition + "end");
+				if (YS.device.isMobile){
 					YS.ui.productsModal.remove();
-				});				
+				}
+				else {
+					setTimeout(function(){
+						YS.ui.productsModalClose.on(prefixed.transition + "end", function(){
+							YS.ui.productsModalClose.off(prefixed.transition + "end");
+							YS.ui.productsModal.remove();
+						});
+					}, 33);
+				}
 			}
 			
 			YS.status("openProductsModal", false);

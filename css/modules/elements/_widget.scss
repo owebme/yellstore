@@ -1,0 +1,85 @@
+.YS__element__widget__favorite {
+	position:fixed;
+	top:45px;
+	right:-70px;
+	width:60px;
+	height:60px;
+	text-align:center;
+	cursor:pointer;
+	overflow:hidden;
+	padding-top:14px;
+	padding-left:3px;
+	line-height:40px;
+	background:rgba(30,30,30,.3);
+	border-radius:18px 0 0 18px;
+	box-shadow:0 5px 18px -10px rgba(0, 0, 0, 0.3);
+	@include transform(translateX(60px));
+	@include unselectable();
+	transition:-webkit-transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1), right 0s 0.4s;
+	transition:transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1), right 0s 0.4s;
+	z-index:100;
+}
+.d-firefox .YS__element__widget__favorite {
+	padding-top:13px;
+}
+.YS__element__widget__favorite__icon {
+	color:#fff;
+	font-size:32px;	
+	@include transition(transform 0.25s cubic-bezier(0.215, 0.61, 0.355, 1));
+}
+.YS__element__widget__favorite__count {
+    background: $lightBlue;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+	font-family:$lato;
+    height: 15px;
+    line-height: 16px;
+    margin: -16px 0 0;
+    position: absolute;
+    right: 6px;
+    text-align: center;
+    top: 46%;
+    width: 15px;
+	-webkit-transition:font-size 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), top 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), right 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), background 0.25s ease 0.05s;
+	transition:font-size 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), top 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), right 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), background 0.25s ease 0.05s;
+}
+.m-no-touch .YS__element__widget__favorite:hover .YS__element__widget__favorite__icon {
+	@include transform(translate3d(-18px, -18px, 0px) scale(0.4));
+}
+.m-no-touch .YS__element__widget__favorite:hover .YS__element__widget__favorite__count {
+	background:transparent;
+	font-size:33px;
+	font-weight:normal;
+	top:40px;
+	right:-2px;
+	width:100%;
+	text-align:center;
+	-webkit-transition:font-size 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), top 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), right 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), background 0s;
+	transition:font-size 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), top 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), right 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), background 0s;
+}
+.YS__element__widget__favorite--active {
+	right:0;
+	@include transform(translateX(0px));
+	background: -webkit-linear-gradient(140deg, rgba(#cd5018, .6), rgba(#dd622a, .7));
+	background: linear-gradient(310deg, rgba(#cd5018, .6), rgba(#dd622a, .7));
+	transition:-webkit-transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1), right 0s;
+	transition:transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1), right 0s;	
+}
+.YS__element__widget__favorite--active .YS__element__widget__favorite__count {
+	background:rgba(30,30,30, .5);
+}
+.YS__element__widget__favorite--animate .YS__element__widget__favorite__icon {
+	-webkit-animation: cartAnim .45s cubic-bezier(.645,.045,.355,1) forwards;
+	animation: cartAnim .45s cubic-bezier(.645,.045,.355,1) forwards;
+}
+.YS__element__widget__favorite--animate .YS__element__widget__favorite__count {
+	-webkit-animation: countAnim .45s cubic-bezier(.645,.045,.355,1) forwards;
+	animation: countAnim .45s cubic-bezier(.645,.045,.355,1) forwards;
+}
+.YS__element__widget__favorite--open {
+	background: -webkit-linear-gradient(140deg, rgba(#cd5018, .8), rgba(#dd622a, .9));
+	background: linear-gradient(310deg, rgba(#cd5018, .8), rgba(#dd622a, .9));
+	z-index:1005;
+}

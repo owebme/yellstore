@@ -143,7 +143,10 @@
 	/* --- Mobile --- */
 	device.isMobile = device.support.touch;
 	
-	if (debug_mode == "tablet") device.isMobile = true;
+	if (debug_mode == "tablet") {
+		device.isMobile = true;
+		$html.removeClass("m-no-touch").addClass("m-touch");
+	}
 	
 	$html.addClass(device.isMobile ? 'd-mobile' : 'd-no-mobile');
 
@@ -202,6 +205,6 @@
 		device.isLocalStorage = true;
 	}	
 	
-	clickEvent = (device.isMobile && !debug_mode ? "touchend" : "click");
+	clickEvent = (device.isMobile && !debug_mode ? "touchClick" : "click");
 
 })(site.device);

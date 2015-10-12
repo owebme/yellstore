@@ -13,7 +13,7 @@ site.views.productNavigation = (function(YS){
 						if (e.which == "39"){
 							if (startPress){
 								startPress = false;
-								YS.app.productPage("random", {action: "reload", direction: "left"});
+								YS.app.productPage({id: "random", action: "reload", direction: "left"});
 								setTimeout(function(){
 									startPress = true;
 								}, (YS.device.isFirefox ? 2000 : 1000));
@@ -23,7 +23,7 @@ site.views.productNavigation = (function(YS){
 						if (e.which == "37"){
 							if (startPress){
 								startPress = false;
-								YS.app.productPage("random", {action: "reload", direction: "right"});
+								YS.app.productPage({id: "random", action: "reload", direction: "right"});
 								setTimeout(function(){
 									startPress = true;
 								}, (YS.device.isFirefox ? 2000 : 1000));

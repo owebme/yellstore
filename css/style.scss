@@ -1,7 +1,6 @@
 /* base */
 @import "base/reset";
 @import "base/config";
-@import "modules/loader";
 @import "base/base";
 @import "base/fontawesome";
 @import "base/fonts";
@@ -15,13 +14,22 @@
 @import "layouts/layouts";
 @import "layouts/responsive";
 
-/* modules */
-@import "modules/elements";
-@import "modules/help";
-@import "modules/scroller";
-@import "modules/breadcrumbs";
-@import "modules/popup";
+/* elements */
+@import "modules/elements/loader";
+@import "modules/elements/help";
+@import "modules/elements/scroller";
+@import "modules/elements/breadcrumbs";
+@import "modules/elements/pigination";
+@import "modules/elements/popup";
+@import "modules/elements/menu";
+@import "modules/elements/button";
+@import "modules/elements/select";
+@import "modules/elements/teaser";
+@import "modules/elements/view";
+@import "modules/elements/widget";
+@import "modules/elements/popup";
 
+/* panel */
 @import "modules/panel/panel";
 @import "modules/panel/filter";
 @import "modules/panel/search";
@@ -29,20 +37,32 @@
 @import "modules/panel/menu";
 @import "modules/panel/links";
 @import "modules/panel/rangeslider";
+@import "modules/filter/filterBox";
 
+/* products */
 @import "modules/products/products";
 @import "modules/products/flickity";
 @import "modules/products/label";
 @import "modules/products/favorite";
+@import "modules/products/raiting";
+@import "modules/products/colors";
+@import "modules/products/items";
 @import "modules/product/product";
 @import "modules/product/visited";
 @import "modules/product/widgets";
 @import "modules/product/modal";
 @import "modules/product/gains";
 
+/* pages */
 @import "modules/pages/page";
 @import "modules/pages/modal";
 @import "modules/pages/faq";
+
+/* themes */
+@import "themes/products/items/boxed";
+@import "themes/products/items/slider";
+@import "themes/products/items/twirl";
+@import "themes/products/items/clean";
 
 /* states */
 @import "states/states";

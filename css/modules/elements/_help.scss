@@ -1,0 +1,193 @@
+.YS__help__modal {
+	position:fixed;
+	top:50%;
+	left:50%;
+	width:482px;
+	height:482px;
+	margin:-241px 0 0 -241px;
+	background: -webkit-linear-gradient(-135deg, rgba(#615365, .95), rgba(#423845, 1));
+	background: linear-gradient(-135deg, rgba(#615365, .95), rgba(#423845, 1));
+	border-radius:50%;
+	opacity:0;
+	z-index:1050;
+}
+.YS__help__modal--active {
+	-webkit-animation:YS__slipUp-open 0.65s forwards cubic-bezier(.645,.045,.355,1);
+	animation:YS__slipUp-open 0.65s forwards cubic-bezier(.645,.045,.355,1);
+}
+.YS__help__modal--active .YS__help {
+	-webkit-animation: 0.6s cubic-bezier(.645,.045,.355,1) 0s normal both 1 running YS__slipUp-elem-open;
+    animation: 0.6s cubic-bezier(.645,.045,.355,1) 0s normal both 1 running YS__slipUp-elem-open;
+}
+.YS__help__modal--close {
+	-webkit-animation:YS__slipUp-close 0.6s forwards cubic-bezier(0.7, 0, 0.3, 1);
+	animation:YS__slipUp-close 0.6s forwards cubic-bezier(0.7, 0, 0.3, 1);
+}
+.YS__help__modal--close .YS__help {
+	-webkit-animation: 0.6s cubic-bezier(0.7, 0, 0.3, 1) 0s normal both 1 running YS__slipUp-elem-close;
+    animation: 0.6s cubic-bezier(0.7, 0, 0.3, 1) 0s normal both 1 running YS__slipUp-elem-close;
+}
+.YS__help {
+	position:absolute;
+	width:570px;
+	height:50px;
+	bottom:65px;
+	margin-left:-285px;
+	left:50%;
+	color:#FFF;
+	-webkit-transform:translateZ(0);
+	transform:translateZ(0);
+	text-align:center;
+}
+.YS__help__modal .YS__help__text,
+.YS__help__modal .YS__help__keyboard {
+	float:none;
+}
+.YS__help__modal .YS__help__keyboard {
+	padding:45px 0 0 0;
+	margin:0;
+}
+.YS__help__modal .YS__help__keyboard:before {
+	width:100%;
+	height:1px;
+	bottom:auto;
+	top:15px;
+	left:0;
+	opacity:0.25;
+}
+.YS__help__modal .YS__help__keyboard__content {
+	width:80px;
+	margin:0 auto;
+}
+.YS__help__modal .YS__help {
+	bottom:50% !important;
+	margin-bottom:0px;
+}
+.YS__help__content {
+	display:inline-block;
+	text-align:left;
+}
+.YS__help__content:after {
+	display:block;
+	content:"";
+	height:0;
+	overflow:hidden;
+	clear:both;
+}
+.YS__help__area {
+	float:left;
+	position:relative;
+	width:150px;
+	height:50px;
+}
+.YS__help__icon {
+	position:absolute;
+	overflow:hidden;
+	top:0;
+	left:75%;
+	margin-left:-21px;
+	width:33px;
+	height:50px;
+}
+.YS__help--keyboard_only .YS__help__area,
+.YS__help--drag_only .YS__help__keyboard {
+	display:none;
+}
+.YS__help--drag_only .YS__help__area {
+	float:none;
+	margin:0 auto;
+}
+.YS__help__modal .YS__help__keyboard {
+	height:65px;
+}
+.YS__help__modal .YS__help,
+.YS__help__modal .YS__help__area {
+	height:60px;
+}
+.YS__help__modal .YS__help__keyboard__bg svg,
+.YS__help__modal .YS__help__keyboard__overlay svg {
+	width:80px;
+	height:54px;
+}
+.YS__help__modal .YS__help__text {
+	font-size:15px;
+}
+.YS__help__icon svg {
+	display:block;
+	position:relative;
+}
+.YS__help path {
+	fill:currentColor;
+}
+.YS__help__text {
+	float:left;
+	display:none;
+	padding:8px 0 0;
+	font-size:14px;
+	line-height:1.5;
+}
+.YS__help_vertical .YS__help__text_vertical,
+.YS__help_horizontal .YS__help__text_horizontal {
+	display:block;
+}
+.YS__help_vertical .YS__help__area {
+	width:60px;
+}
+.YS__help_vertical .YS__help__icon {
+	top:80%;
+	left:0;
+	margin:-22px 0 0;
+}
+.YS__help__keyboard {
+	float:left;
+	margin-left:43px;
+	padding-left:40px;
+	padding-right:50px;
+	position:relative;
+	height:45px;
+	padding-top:5px;
+}
+.YS__help_vertical .YS__help__keyboard,
+.m-touch .YS__help__keyboard {
+	display:none;
+}
+.YS__help__keyboard__content {
+	position:relative;
+}
+.YS__help__keyboard svg {
+	display:block;
+}
+.YS__help__keyboard path {
+	fill:currentColor;
+}
+.YS__help__keyboard__bg {
+	display:block;
+	opacity:.3;
+}
+.YS__help__keyboard:before {
+	position:absolute;
+	left:0;
+	top:-8px;
+	bottom:-12px;
+	width:1px;
+	background:currentColor;
+	opacity:.2;
+	content:'';
+}
+.YS__help__keyboard__overlay {
+	position:absolute;
+	top:0;
+	left:0;
+}
+.YS__help__keyboard__overlay .YS__help__keyboard__button {
+	display:none;
+}
+.YS__help__keyboard__overlay .YS__help__keyboard__button_right,
+.YS__help__keyboard__overlay .YS__help__keyboard__button_left,
+.works__item_inner .YS__help__keyboard__overlay .YS__help__keyboard__button_down {
+	display:block;
+}
+.works__item_first .YS__help__keyboard__overlay .YS__help__keyboard__button_left,
+.works__item_last .YS__help__keyboard__overlay .YS__help__keyboard__button_right {
+	display:none;
+}

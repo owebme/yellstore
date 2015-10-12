@@ -47,9 +47,16 @@ site.views.links = (function(YS){
 			$root.append(YS.ui.cloud_links);
 			
 			if (YS.settings.cloudLinks.ajax){
-				YS.ui.cloud_links.find("a").on("click", function(e){
+				YS.ui.cloud_links.find("a").on(clickEvent, function(e){
 					e.preventDefault();
-					YS.settings.cloudLinks.callback(this);
+					
+					var title = $(this).text(),
+						alias = YS.plugins.translit(title);
+					
+					YS.settings.cloudLinks.callback({
+						"title": title,
+						"alias": alias
+					});
 				});
 			}
 		}

@@ -7,7 +7,7 @@ site.models.visited = (function(YS){
 			var data;
 		
 			if (YS.device.isLocalStorage){
-				data = sessionStorage['YS__products__visited'];
+				data = localStorage['YS__products__visited'];
 			}
 			else {
 				data = $.cookie('YS__products__visited');
@@ -19,7 +19,7 @@ site.models.visited = (function(YS){
 		set: function(data){
 		
 			if (YS.device.isLocalStorage){
-				sessionStorage['YS__products__visited'] = JSON.stringify(data);
+				localStorage['YS__products__visited'] = JSON.stringify(data);
 			}
 			else {
 				$.cookie('YS__products__visited', JSON.stringify(data), {path: '/'})

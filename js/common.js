@@ -27,9 +27,17 @@ var $root = $('#root'),
     $window = $(window),
 	$page_wrapper = $root.find('.page__wrapper'),
 	$page_content = $page_wrapper.find('.page__content'),
-	clickEvent,
-	debug_mode = "";
-
+	debug_mode = false,
+	filterBox = false,
+	clickEvent;
+	
+var debug_mode = window.location.hash.match(/^#debug_mode=(.+?)$/);
+if (debug_mode && debug_mode[1]) {
+	debug_mode = debug_mode[1];
+}
+if (window.location.hash.match(/^#filterBox=true$/)){
+	filterBox = true;
+}
 
 /* --- Version --- */
 site.version = $root.data('version');

@@ -75,8 +75,8 @@ site.views.filter = (function(YS){
 									'<div class="YS__filter__range__slider" data-min="'+ min +'" data-max="'+ max +'"'+ (step?' data-step="'+ step +'"':'') +'></div>'+
 								'</div>'+
 							'</div>'+
-							'<input type="hidden" class="'+ name +'_from" name="'+ name +'[]" value="">'+
-							'<input type="hidden" class="'+ name +'_to" name="'+ name +'[]" value="">';
+							'<input type="hidden" class="YS__filter__'+ name +'_from" name="'+ name +'[]" value="">'+
+							'<input type="hidden" class="YS__filter__'+ name +'_to" name="'+ name +'[]" value="">';
 							
 					$filter.data("title", title).html(slider);
 					
@@ -97,8 +97,8 @@ site.views.filter = (function(YS){
 					$slider[0].noUiSlider.on('update', function(values, handle) {
 						$slider.find(".noUi-active").html(values[handle]);
 						$value.text(values[0] + " — " + values[1]);
-						$filter.find("."+ name +"_from").val(values[0].replace(/\s/, ""));
-						$filter.find("."+ name +"_to").val(values[1].replace(/\s/, ""));
+						$filter.find(".YS__filter__"+ name +"_from").val(values[0].replace(/\s/, ""));
+						$filter.find(".YS__filter__"+ name +"_to").val(values[1].replace(/\s/, ""));
 						$filter.addClass("YS__filter--selected");
 						YS.ui.panel.filter_apply.addClass("YS__filter__apply--active");
 						_this.resize();
@@ -243,12 +243,17 @@ site.views.filter = (function(YS){
 					$(this).removeClass("YS__filter__apply--active").attr("style", "");
 				});
 				
+				var data = JSON.stringify(form2js(YS.ui.panel.filter_container[0]));
+				
 				YS.ui.panel.filter.find(".YS__filter--active").removeClass("YS__filter--active");
-				YS.settings.filter.callback();
+				YS.ui.panel.filter.removeClass("YS__panel__filter--active");
+				YS.settings.filter.callback(data, function(){
+					_this.exit();
+				});
 			});
 			
-			// Loading Filter out Cookie
-			if (YS.settings.filter.cookie) _this.data();
+			// Loading Filter out memory
+			if (YS.settings.filter.memory) _this.data();
 			
 			setTimeout(function(){
 				_this.resize();

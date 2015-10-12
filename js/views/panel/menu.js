@@ -74,7 +74,7 @@ site.views.panelMenu = (function(YS){
 					'</div>'+
 				'</div>';
 			
-			for (id in objOpener) {
+			for (var id in objOpener) {
 			
 				var item = objOpener[id];
 					subMenu = _this.menu.querySelectorAll("#YS__menu_" + id + " > li"),
@@ -108,24 +108,33 @@ site.views.panelMenu = (function(YS){
 			$root.append(YS.ui.panel.menu.tree);
 			
 			YS.ui.panel.menu.container.find(".YS__scroller").each(function(){
+			
 				var scroll = new IScroll(this, {
 					mouseWheel: true
 				});
+				
 				if (YS.settings.panelMenu.ajax){
 					$(this).find("a:not(.YS__menu__opener)").on(clickEvent, function(e){
 						e.preventDefault();
-						var _link = this,
-						$level = $(_link).closest(".YS__menu__level");
+						
+						var $link = $(this),
+							title = $link.text(),
+							alias = YS.plugins.translit(title),
+							$level = $link.closest(".YS__menu__level");
+							
 						if (!$level[0].getAttribute("class").match(/overlay/)){
-							setTimeout(function(){
-								if (!YS.plugins.fixDragMenu.action){
-									YS.settings.panelMenu.callback(_link);
-								}
-							}, 5);
+							//setTimeout(function(){
+								//if (!YS.plugins.fixDragMenu.action){
+									YS.settings.panelMenu.callback({
+										"title": title,
+										"alias": alias
+									});
+								//}
+							//}, 5);
 						}
 					});
 				}
-				YS.plugins.fixDragMenu(this.firstElementChild);
+				//YS.plugins.fixDragMenu(this.firstElementChild);
 			});
 			
 			YS.ui.panel.menu.container.find(".YS__menu__parent__category__item").on(clickEvent, function(){

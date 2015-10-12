@@ -6,7 +6,12 @@ site.views.products = (function(YS){
 			var _this = this;
 			
 			if (!YS.ui.productsLoading){
+			
 				YS.ui.productsLoading = $('<div class="product__item__loading"></div>');
+				
+				if (YS.device.isMobile){
+					YS.ui.productsLoading.addClass("product__item__loading--slipCenter");
+				}
 				$body.append(YS.ui.productsLoading);
 			}
 			
@@ -15,7 +20,7 @@ site.views.products = (function(YS){
 			$("."+YS.settings.products.CS_container).find("."+YS.settings.products.CS_openLink).on(clickEvent, function(e){
 				e.preventDefault();
 				YS.address.beforeProduct = YS.app.getUri();
-				YS.app.productPage(this.getAttribute("data-item"), {action: "load", elem: this});
+				YS.app.productPage({id: this.getAttribute("data-item"), action: "load", elem: this});
 			});
 			
 		},
@@ -30,10 +35,12 @@ site.views.products = (function(YS){
 		},		
 		load: function(category, callback, memorize){
 			var _this = this;
-			
+
 			var loadingProducts = function(data){
+			
+				if (!$body[0].className.match(/activeSearch/)) YS.storage.productsMemory = data;
 				
-				YS.ui.containerProducts = YS.models.products.prepare(data);
+				YS.ui.containerProducts = YS.models.products.prepare(data["products"]);
 				
 				$page_content.append(YS.ui.containerProducts);
 				
@@ -65,6 +72,8 @@ site.views.products = (function(YS){
 					});
 				}
 				
+				YS.views.pigination.init(data["pages"], YS.storage.categoryPage);
+				
 				_this.lazyLoad(YS.settings.products.lazyLoad_limit);
 				
 				_this.init();
@@ -73,8 +82,12 @@ site.views.products = (function(YS){
 			};			
 			
 			if (!memorize) {
-				var data = YS.models.products.getProducts(category, 1, loadingProducts);
-				if (!$body[0].className.match(/activeSearch/)) YS.storage.productsMemory = data;
+				if (typeof category === "object"){
+					loadingProducts(category);
+				}
+				else {
+					YS.models.products.getProducts(category, YS.storage.categoryPage, loadingProducts);
+				}
 			}
 			else if (memorize && YS.storage.productsMemory) {
 				loadingProducts(YS.storage.productsMemory);
@@ -130,6 +143,7 @@ site.views.products = (function(YS){
 				
 					if (scroll > 800) duration = scroll * 0.2 + 640;
 					else if (scroll < 400) duration = 400;
+					if (duration < 400) duration = 400;
 					
 					scroll = top - 64;
 					

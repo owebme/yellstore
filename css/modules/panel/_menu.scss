@@ -16,7 +16,8 @@
 	z-index:1002;
 }
 .d-mobile .YS__menu__tree {
-	@include transition(all 0.45s cubic-bezier(.215,.61,.355,1));
+	display:none;
+	@include transition(all 0.595s cubic-bezier(.215,.61,.355,1));
 }
 .YS__menu__tree__container {
 	position:absolute;
@@ -96,15 +97,6 @@
 	text-align:right;
 	background:#fff;
 }
-.YS__menu__parent__category:after {
-	content:"";
-	position:absolute;
-	bottom:0;
-	right:0;
-	width:100%;
-	height:1px;
-	background:linear-gradient(to left, #f7f7f7, transparent) repeat;
-}
 .YS__menu__parent__category__item {
 	display:inline-block;
 	width:22%;
@@ -138,19 +130,19 @@
 	transition:width 0.75s cubic-bezier(.215,.61,.355,1);
 }
 .YS__menu__parent__category__item--active#for_woman {
-	background:rgba(#ff9dbe,.65);
+	background:rgba(#ff9dbe,.75);
 }
 .YS__menu__parent__category__item#for_woman:hover {
 	color:#ff9dbe;
 }
 .YS__menu__parent__category__item--active#for_man {
-	background:rgba(#9dd6ff,.65);
+	background:rgba(#9dd6ff,.75);
 }
 .YS__menu__parent__category__item#for_man:hover {
 	color:#9dd6ff;
 }
 .YS__menu__parent__category__item--active#for_child {
-	background:rgba(#ffc19d,.65);
+	background:rgba(#ffc19d,.75);
 }
 .YS__menu__parent__category__item#for_child:hover {
 	color:#ffc19d;

@@ -1,0 +1,188 @@
+.YS__popup {
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	transform:translateX(101%);
+	-webkit-transition: -webkit-transform 0s 0.4s;
+    transition: transform 0s 0.4s;
+	text-align:center;
+	z-index:1030;
+}
+.YS__popup:before {
+	content:"";
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background: -webkit-linear-gradient(140deg, rgba(#6d7767, .85), rgba(#7e6b83, .75));
+	background: linear-gradient(310deg, rgba(#6d7767, .85), rgba(#7e6b83, .75));
+	opacity:0;
+    transition: opacity 0.3s cubic-bezier(.645,.045,.355,1) 0.1s;	
+}
+.YS__popup__window {
+	position:relative;
+	display: inline-block;
+    vertical-align: middle;
+	opacity:0;
+	padding:22px 30px 30px;
+	background:#f8f8f8;
+	text-align:left;
+	max-width:75%;
+	max-height:100%;
+	border-radius: 4px;
+    box-shadow: 0 4px 4px 0 rgba(9, 63, 179, 0.06), 0 8px 18px 2px rgba(2, 11, 34, 0.08);	
+	-webkit-animation:YS__slipUp-close 0.55s forwards cubic-bezier(0.57, 0.06, 0.05, 0.95);
+	animation:YS__slipUp-close 0.55s forwards cubic-bezier(0.57, 0.06, 0.05, 0.95);	
+}
+.YS__popup__helper {
+	width:0px;
+	height:100%;
+	display: inline-block;
+    vertical-align: middle;	
+}
+.YS__popup__close {
+	position:absolute;
+	top:23px;
+	right:25px;
+}
+.YS__popup--active {
+	transform:translateX(0);
+	-webkit-transition:none;
+    transition:none;
+}
+.YS__popup--active .YS__popup__window {
+	-webkit-animation:YS__slipUp-open 0.55s forwards cubic-bezier(.645,.045,.355,1);
+	animation:YS__slipUp-open 0.55s forwards cubic-bezier(.645,.045,.355,1);
+}
+.YS__popup--active:before {
+	opacity:1;
+	transition: opacity 0.4s cubic-bezier(.645,.045,.355,1) 0s;
+}
+
+.YS__popup__phone {
+	background:url(/images/phone_bg.png) top center no-repeat #f7f7f7;
+	padding:74px 150px 100px 147px;
+	width:850px;
+}
+.YS__popup__phone__title {
+	position:relative;
+    color: #333;
+    font:300 24px/30px $museo;
+    margin: 0 0 17px 0;
+    padding: 0 0 5px 100px;
+    text-align: left;
+    text-transform: none;
+    width: 100%;
+	letter-spacing:-0.2px;
+}
+.YS__popup__phone__title:before {
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+	width:77px;
+	height:77px;
+	background: url(/images/phone_bg-clock.png) no-repeat;
+	opacity:0.95;
+} 
+.YS__popup__phone__title_top {
+	font:300 28px/36px $museo;
+	margin-bottom:10px;
+	letter-spacing:-0.25px;
+	white-space:nowrap;
+}
+.YS__popup__phone__title_gray {
+	color: $nightGray;
+}
+.YS__popup__phone__title_green {
+	color: $nightGreen;
+	font-weight:500;
+}
+.YS__popup__phone__form {
+	padding: 0 0 23px 100px;
+	width:500px;
+}
+.YS__popup__phone__form:after {
+	content: "";
+	clear: both;
+    display: block;
+}
+.YS__popup__phone__value {
+    color: #8b8b8b;
+    float: left;
+    font: 20px/100% $arial;
+    height: 38px;
+    margin: 0 10px 0 0;
+    padding: 0 9px;
+    width: 202px;
+	background: #fff;
+    border-color: rgba(0, 0, 0, 0.38) rgba(0, 0, 0, 0.27) rgba(0, 0, 0, 0.16);
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+	outline:none;
+	border-radius:2px;
+	transition: all 0.3s ease;
+}
+.YS__popup__phone__value:focus { 
+	border-color:rgba(94,76,2,.42);
+	border-top-color:rgba(78,62,2,.515);
+	border-bottom-color:rgba(117,93,0,.335);
+	box-shadow:0 0 6px 2px rgba(255,204,0,.7),0 1px 0 rgba(255,255,255,.2), inset 0 1px 1px rgba(0,0,0,.1);
+}
+.YS__popup__phone__button {
+	border: none;
+    cursor: pointer;
+    float: left;
+    height: 40px;
+    margin: -1px 0 0;
+    overflow: hidden;
+    padding: 0;
+    width: 169px;
+	outline:none;
+	background:$nightGreen;
+	color:#fff;
+	font:500 18px/100% $museo;
+	box-shadow:inset 0 -4px 0 rgba(2,160,133,.7);
+	padding:9px 0 2px 0;
+	border-radius:4px;
+	text-align:center;	
+	-webkit-transition:-webkit-transform .12s cubic-bezier(.215,.61,.355,1), background 0.25s cubic-bezier(0.57, 0.06, 0.05, 0.95), box-shadow 0.25s cubic-bezier(0.57, 0.06, 0.05, 0.95);
+	transition:transform .12s cubic-bezier(.215,.61,.355,1), background 0.25s cubic-bezier(0.57, 0.06, 0.05, 0.95), box-shadow 0.25s cubic-bezier(0.57, 0.06, 0.05, 0.95);	
+	@include unselectable();
+}
+.YS__popup__phone__button:hover {
+	box-shadow:inset 0 -4px 0 #18967d;
+}
+.YS__popup__phone__button:active {
+	@include transform(translateY(3px));
+	background:$nightGreen_dark;
+}
+.YS__popup__phone__text {
+	position:relative;
+	padding-left:100px;
+	font-size:17px;
+	line-height:26px;
+}
+.YS__popup__phone__text:before {
+	content:"";
+	position:absolute;
+	top:-24px;
+	left:-51px;
+	width:128px;
+	height:128px;
+	background: url(/images/phone_bg-dress.svg) no-repeat;
+	background-size:cover;
+	opacity:0.95;
+}
+
+@media screen and (max-width: 1024px) {
+	.YS__popup__phone {
+		width:84%;
+		max-width:84%;
+	}
+}

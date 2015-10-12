@@ -6,8 +6,8 @@ site.models.products = (function(YS){
 		
 			if (gender){
 			
-				gender = gender.replace(/\//g, "");
-			
+				gender = String(gender).replace(/\//g, "");
+
 				if (YS.device.isLocalStorage){
 					sessionStorage["YS__gender"] = gender;
 				}
@@ -53,31 +53,71 @@ site.models.products = (function(YS){
 		},		
 		getProducts: function(category, page, callback){
 		
-			var items = this.items(),
-				size = items.length,
-				gender = this.getGender(),
-				data = [],	
-				limit = 28;
-				
-			for (var i = 0; i < size; i++) {
-				if (items[i].gender == gender) {
-					items[i]["alias"] = YS.plugins.translit(items[i]["title"]);
-					items[i]["price"] = YS.plugins.convertPrice(items[i]["price"]);
-					items[i]["price_old"] = YS.plugins.convertPrice(items[i]["price_old"]);
-					data.push(items[i]);
+			var id = category;
+		
+			if (!category) category = "/c/woman/3427/zhenskaya-odezhda";
+		
+			var data = {
+					products: [],
+					pages: []
+				},
+				limit = YS.settings.products.itemsPage;
+			
+			if (category && category == YS.storage.category){
+				data["products"] = YS.storage.products;
+				data["pages"] = YS.storage.categoryPages;
+				console.log("Loading is cache category: " + category);
+			}
+			else {
+				var items = this.items(),
+					gender = this.getGender();
+					
+				for (var i = 0, item; item = items[i++];) {
+					if (item.gender == gender) {
+						item["alias"] = YS.plugins.translit(item["title"]);
+						item["price"] = YS.plugins.convertPrice(item["price"]);
+						item["price_old"] = YS.plugins.convertPrice(item["price_old"]);
+						data["products"].push(item);
+					}
 				}
+				
+				if (category != "/c/woman/" && category != "/c/man/" && category != "/c/child/"){
+					data["pages"] = this.getPages(category, Math.ceil((data["products"].length / limit)));
+				}
+				
+				YS.storage.category = category;
+				YS.storage.categoryPages = data["pages"];
+				YS.storage.products = data["products"];
+				console.log("Cached category: " + category);
+				console.log("Loading category: " + category);
 			}
 			
-			if (category){
-				data = _.shuffle(data);
+			if (id){
+				data["products"] = _.shuffle(data["products"]);
 			}
-			data = _.first(data, limit);
+			if (page > 1){
+				data["products"] = data["products"].slice(((page - 1) * limit), (page * limit));
+			}
+			else {
+				data["products"] = data["products"].slice(0, limit);
+			}
 			
 			if (callback && typeof callback === "function") {
 				callback(data);
 			}
-			return data;
 		},	
+		getPages: function(alias, count){
+		
+			var pages = [];
+		
+			for (var i = 0; i < count; i++) {
+				pages.push({
+					"page": (i + 1),
+					"alias": alias + (i > 0 ? '/page/' + (i + 1) : '')
+				});
+			}
+			return pages;
+		},		
 		cachedImages: function(id, url){
 
 			if (YS.device.isLocalStorage){

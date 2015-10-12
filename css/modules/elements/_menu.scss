@@ -1,0 +1,122 @@
+.YS__element_menu {
+	position:relative;
+	width:40px;
+	height:26px;
+	cursor:pointer;
+}
+.YS__element_menu-md {
+	@include transform(scale(0.85));
+}
+.YS__element_menu-xs {
+	@include transform(scale(0.7));
+}
+.YS__element_menu-xxs {
+	@include transform(scale(0.5));
+}
+.YS__element_menu__line {
+    background: #f9f9f9;
+    height: 4px;
+    margin-bottom:7px;
+    position: relative;
+	@include transition(width 0.3s cubic-bezier(0.77, 0, 0.175, 1));
+    width: 100%;
+}
+.YS__element_menu__line_1 {
+	transition-delay:.3s;
+}
+.YS__element_menu__line_2 {
+	transition-delay:.4s;
+}
+.YS__element_menu__line_3 {
+	transition-delay:.5s;
+}
+.YS__element_menu--close .YS__element_menu__line {
+	width:0;
+}
+.YS__element_menu--close .YS__element_menu__close::before {
+    transition-delay: 0.35s;
+	@include transform(scaleX(1));
+}
+.YS__element_menu--close .YS__element_menu__close::after {
+    transition-delay: 0.5s;
+	@include transform(scaleY(1));
+}
+.YS__element_menu__close::before,
+.YS__element_menu__close_bg::before {
+    height: 3px;
+    margin: -2px 0 0 -19px;
+    @include transform(scaleX(0));
+    transform-origin: 0 50% 0;
+    width: 38px;
+}
+.YS__element_menu__close::after,
+.YS__element_menu__close_bg::after {
+    height: 38px;
+    margin: -19px 0 0 -2px;
+    @include transform(scaleY(0));
+    transform-origin: 50% 100% 0;
+    transition-delay: 0.15s;
+    width: 3px;
+}
+.YS__element_menu__close::before,
+.YS__element_menu__close::after,
+.YS__element_menu__close_bg::before,
+.YS__element_menu__close_bg::after {
+    background: #fff;
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+	@include transition(transform 0.3s cubic-bezier(0.77, 0, 0.175, 1));
+}
+.YS__element_menu__close::before,
+.YS__element_menu__close::after {
+	opacity:0.7;
+}
+.YS__element_menu__close--light::before,
+.YS__element_menu__close--light::after {
+	opacity:0.85;
+}
+.YS__element_menu__close--dark::before,
+.YS__element_menu__close--dark::after {
+	opacity:0.3;
+}
+.YS__element_menu__close--dark::before,
+.YS__element_menu__close--dark::after,
+.YS__element_menu__close--dark .YS__element_menu__close_bg::before,
+.YS__element_menu__close--dark .YS__element_menu__close_bg::after {
+	background: #222;
+}
+.YS__element_menu__close_bg::before,
+.YS__element_menu__close_bg::after {
+	opacity:0.95;
+}
+.YS__element_menu__close,
+.YS__element_menu__close_bg {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    @include transform(rotate(45deg));
+    width: 100%;
+}
+.YS__element_menu__close_bg {
+    @include transform(rotate(0deg));
+}
+.YS__element_menu__close_bg::before {
+	width:0;
+	@include transform(scaleX(1));
+	@include transition(width 0.35s cubic-bezier(0.215, 0.61, 0.355, 1) 0s);
+}
+.YS__element_menu__close_bg::after {
+	height:0;
+	@include transform(scaleY(1));
+	@include transition(height 0.35s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s);
+}
+.YS__element_menu--close:hover .YS__element_menu__close_bg::before {
+	width: 38px;
+}
+.YS__element_menu--close:hover .YS__element_menu__close_bg::after {
+	height: 38px;
+}

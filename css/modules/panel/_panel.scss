@@ -38,6 +38,10 @@
 	transition: opacity 0.65s cubic-bezier(.645,.045,.355,1) 0s;
 	width: 100%;
 }
+.d-mobile .YS__panel,
+.d-mobile .YS__panel:after {
+	@include transition(none);
+}
 .YS__panel__container {
 	display:table;
 	width:100%;

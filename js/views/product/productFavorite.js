@@ -5,7 +5,7 @@ site.views.productFavorite = (function(YS){
 		init: function(container){
 			var _this = this;
 			
-			var id = container.data("item"),
+			var id = container.attr("data-item"),
 				$favorite_button = container.find("."+YS.settings.productQuick.CS_addFavorite);
 				
 			if (YS.models.favorite.has(id)){

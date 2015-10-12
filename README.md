@@ -1,1 +1,1 @@
-YellStore beta 0.4
+YellStore beta 0.5

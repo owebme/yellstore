@@ -161,7 +161,7 @@ site.plugins.scrollWithEmbeds = function(scroll){
 
 };
 
-site.plugins.scrollable = function($block){
+site.plugins.scrollable = function($block, light){
 
 	// blocks and vars
 	var scroll = new IScroll($block[0], {
@@ -178,8 +178,10 @@ site.plugins.scrollable = function($block){
 
 	if (!site.device.isMobile){
 		// attach plugins
-		site.plugins.keyboardScroll(scroll);
-		site.plugins.scrollWithEmbeds(scroll);
+		if (!light){
+			site.plugins.keyboardScroll(scroll);
+			site.plugins.scrollWithEmbeds(scroll);
+		}
 	}
 	
 	return scroll;
@@ -300,7 +302,7 @@ site.plugins.flickity = function($block, params, callback){
 		}
 	};
 	
-	if (callback) callback(flkties[0]);
+	if (callback && typeof callback === "function") callback(flkties);
 };
 
 site.plugins.isotope = function($block){
@@ -444,13 +446,6 @@ site.plugins.onEndAnimation = function(elem, callback){
 	else {
 		onEndCallbackFn();
 	}
-};
-
-site.plugins.pageError = function(error){
-
-	var template = Handlebars.compile(document.getElementById('server-error').innerHTML);
-
-	$body.append(template({error: error}));
 };
 
 site.plugins.frozeScroll = function(){

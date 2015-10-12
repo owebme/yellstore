@@ -24,10 +24,6 @@
 	-webkit-transition:background 0.2s ease, opacity 0.2s ease, -webkit-transform 0s;
 	transition:background 0.2s ease, opacity 0.2s ease, transform 0s;
 }
-.d-mobile .state__openProductQuick_active .product__preview__close {
-	-webkit-transition:none;
-	transition:none;
-}
 .state__openProductQuick_active .product__widgets {
 	@include transform(translate3d(0, 0, 0));
 }
@@ -66,6 +62,10 @@
 	@include transform(translateX(0));
 }
 .state__activeSearch {
+	header {
+		@include transform(translateY(-85px));
+		margin-top:-57px;
+	}
 	.YS__m-search {
 		height:94px;
 		@include background-gradient(rgba(87,84,96,.87), transparent);
@@ -79,10 +79,9 @@
 	.YS__element__widget__favorite {
 		@include transform(translateX(60px));
 	}
-	header {
-		@include transform(translateY(-85px));
-		margin-top:-57px;
-	}	
+	.YS__pigination {
+		height:0;
+	}
 }
 .state__openProductQuick .YS__m-search {
 	@include transform(translateY(-100px));

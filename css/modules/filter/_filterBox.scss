@@ -1,0 +1,277 @@
+.YS__filterBox {
+	opacity:0;
+	margin-left:-999em;
+	width:222px;
+	padding:18px 15px;
+	background:#fff;
+	border-radius:7px;
+	box-shadow:0 1px 4px -1px rgba(0,0,0,.18);
+	transform:translateY(10px);
+	transition:transform 0.35s cubic-bezier(.215,.61,.355,1), opacity 0.35s cubic-bezier(.215,.61,.355,1), margin-left 0s 0.35s;
+	@include unselectable();
+	z-index:1010;
+}
+.YS__filterBox:before {
+	content: "";
+	position:absolute;
+	left: 0;
+	top: 0;
+	width:100%;
+	height:100%;
+	border-radius:7px;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.007), 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+}
+.YS__filterBox:after {
+	content: "";
+	position:absolute;
+	left: -20%;
+	top: 0;
+	width:140%;
+	height:100%;
+	border-radius:7px;
+	cursor:default;
+}
+.YS__filterBox--active {
+	opacity:1;
+	margin-left:0;
+	transform:translateY(0px);
+	transition:transform 0.3s cubic-bezier(.215,.61,.355,1), opacity 0.3s cubic-bezier(.215,.61,.355,1), margin-left 0s;
+}
+.YS__filterBox__title {
+	color:#adadad;
+	font:12px/15px $arial;
+	text-transform:uppercase;
+	margin-bottom:7px;
+}
+.YS__filterBox__container {
+	position:relative;
+	margin-bottom:15px;
+	font-size:0;
+	z-index:1;
+}
+.YS__filterBox__container__colors {
+	margin-left:-4px;
+	margin-bottom:12px;
+}
+.YS__filterBox__item__color {
+	position:relative;
+	display:inline-block;
+	width:20px;
+	height:20px;
+	border-radius:4px;
+	margin:0 4px 8px 4px;
+	border:1px solid transparent;
+	box-shadow:0 0 1px 0 rgba(0,0,0,.3);
+	cursor:pointer;
+	@include transition(box-shadow 0.1s ease-out);
+}
+.YS__filterBox__item__color:after {
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	border-radius:4px;
+	@include transition(box-shadow 0.1s ease-out);
+}
+.YS__filterBox__item__color:hover,
+.YS__filterBox__item__color:active,
+.YS__filterBox__item__color--active {
+	border-color:#dad0b9;
+	box-shadow:0 0 0 1px rgba(255,215,119,.75);
+	outline-offset:-2px;
+}
+.YS__filterBox__item__color--active,
+.YS__filterBox__item__color--active:hover {
+	box-shadow:0 0 3px 1px rgba(255,215,119,1);
+}
+.YS__filterBox__item__color--active:after {
+	box-shadow:0 0 1px rgba(255,215,119,.75);
+}
+.YS__filterBox__scroller {
+	position:relative;
+	width:100%;
+	height:110px;
+	overflow:hidden;
+	
+	.iScrollVerticalScrollbar {
+		background:#e5e5e5;
+		border-radius:50px;
+		width:4px;
+		&:hover {
+			width:8px;
+		}
+	}
+}
+.YS__filterBox__item__select {
+	font:11.5px/16px $arial;
+	padding:2.5px 5px;
+	margin-right:12px;
+	margin-bottom:1px;
+	cursor:pointer;
+	text-transform:uppercase;
+	border-radius:4px;
+	max-width:100%;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;	
+	@include transition(color 0.1s ease-out);
+}
+.YS__filterBox__item__select:hover {
+	color:#ea2c58;
+}
+.YS__filterBox__item__select--active,
+.YS__filterBox__item__select--active:hover {
+	color:#fff;
+	background:#ea2c58;
+}
+.YS__filterBox__item__size {
+	position:relative;
+	display:inline-block;
+	width:42px;
+	height:36px;
+	border-radius:4px;
+	margin:0 4px 8px 4px;
+	border:1px solid #e5e5e5;
+	cursor:pointer;
+	color:#333;
+	font:300 14px/35px $museo;
+	text-align:center;
+	vertical-align:middle;
+	@include transition(all 0.1s cubic-bezier(.215,.61,.355,1));
+}
+.YS__filterBox__item__size:before {
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:#ea2c58;
+	@include transform(scale(0));
+	@include transition(transform 0.1s cubic-bezier(.215,.61,.355,1));
+	z-index:-1;
+}
+.YS__filterBox__item__size:hover {
+	color:#ea2c58;
+	background:rgba(#ea2c58,.04);
+	border-color:rgba(#ea2c58,.4);
+}
+.YS__filterBox__item__size--active,
+.YS__filterBox__item__size--active:hover {
+	color:#fff;
+	border-color:#ea2c58;
+}
+.YS__filterBox__item__size--active:before {
+	@include transform(scale(1));
+}
+.YS__filterBox__container__sizes {
+	margin-left:-6px;
+	margin-right:-5px;
+	margin-bottom:12px;
+}
+.YS__filterBox__item__checkbox {
+	position:relative;
+	font:11.5px/16px $arial;
+	padding:2.5px 5px 2.5px 22px;
+	margin-right:12px;
+	margin-bottom:1px;
+	cursor:pointer;
+	text-transform:uppercase;
+	border-radius:4px;
+	max-width:100%;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;	
+	@include transition(color 0.1s ease-out);
+}
+.YS__filterBox__item__checkbox:before {
+	content:"";
+	position:absolute;
+	top:4px;
+	left:2px;
+	width:13px;
+	height:13px;
+	border:1px solid silver;
+	border-radius:1px;
+}
+.YS__filterBox__item__checkbox:after {
+	content:"";
+	position:absolute;
+	top:6px;
+	left:4px;
+	width:9px;
+	height:9px;
+	background:#ea2c58;
+	border-radius:1px;
+	@include transition(transform 0.1s cubic-bezier(.215,.61,.355,1));
+	@include transform(scale(0));
+}
+.YS__filterBox__item__checkbox--active {
+	color:#ea2c58;
+}
+.YS__filterBox__item__checkbox--active:after {
+	@include transform(scale(1));
+}
+.YS__filterBox__item__checkbox:hover {
+	color:#ea2c58;
+}
+.YS__filterBox__slider {
+	background:#e5e5e5;
+	height:2px;
+	margin-bottom:10px;
+}
+.YS__filterBox__slider__range {
+	position:absolute;
+	background:#ea2c58;
+	height:2px;
+}
+.YS__filterBox__slider__handle {
+	position:absolute;
+	outline:none;
+}
+.m-touch .YS__filterBox__slider__handle {
+	width:30px;
+	height:30px;
+	cursor:pointer;	
+}
+.YS__filterBox__slider__handle:after {
+	content:"";
+	position:absolute;
+	top:-6px;
+	cursor:pointer;
+	border-top: 7px solid #ea2c58;
+	border-left: 7px solid #ea2c58;
+	border-bottom: 7px solid transparent;
+	border-right: 7px solid transparent;
+}
+.YS__filterBox__slider__handle__from:after {
+	left:-16px;
+	@include transform(rotate(45deg) scaleX(-1));
+}
+.YS__filterBox__slider__handle__to:after {
+	left:3px;
+	@include transform(rotate(-45deg));
+}
+.YS__filterBox__slider__from {
+	float:left;
+	font:300 13px $museo;
+	margin-left:-3px;
+}
+.YS__filterBox__slider__to {
+	float:right;
+	font:300 13px $museo;
+	margin-right:-5px;
+}
+.YS__filterBox__container__slider {
+	margin:10px 10px 15px 9px;
+}
+.YS__filterBox__container__slider:after {
+	content:"";
+	display:block;
+	clear:both;
+}
+.YS__filterBox__filter select {
+	display:none;
+}
