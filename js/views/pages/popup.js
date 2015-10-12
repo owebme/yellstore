@@ -15,13 +15,13 @@ site.views.popup = (function(YS){
 				YS.ui.popupWindow.append(params.html);
 				YS.ui.popupWindow.append(YS.ui.popupClose);
 				
-				YS.ui.popupWindow.css("width", params.width + "px");
+				if (params.width) YS.ui.popupWindow.css("width", params.width + "px");
 				
 				$body.append(YS.ui.popup);
 				
 				setTimeout(function(){
 					YS.ui.popup.addClass("YS__popup--active");
-				}, 5);
+				}, 20);
 				
 				YS.ui.popupClose.on(clickEvent, function(){
 					_this.close();
@@ -32,20 +32,20 @@ site.views.popup = (function(YS){
 						_this.close();
 					}
 				});
+				
+				YS.status("openPopup", true);
 			}
 		},
 		close: function(){
 			
 			YS.ui.popup.removeClass("YS__popup--active");
 			
-			setTimeout(function(){
-				YS.ui.popup.on(prefixed.transition + "end", function(){
-					YS.ui.popup.off(prefixed.transition + "end");
-					setTimeout(function(){
-						YS.ui.popup.remove();
-					}, 200);
-				});
-			}, 100);
+			YS.ui.popupWindow.on(prefixed.animation + "end", function(){
+				YS.ui.popupWindow.off(prefixed.animation + "end");
+				YS.ui.popup.remove();
+			});
+			
+			YS.status("openPopup", false);
 		}
 	};
 	

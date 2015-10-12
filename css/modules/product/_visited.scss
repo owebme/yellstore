@@ -8,7 +8,6 @@
 }
 .d-mobile .product__preview__visited {
 	@include transition(none);
-	@include transform(none);
 }
 .product__preview__visited--active {
 	@include transform(translate3d(0, 0, 0));
@@ -76,4 +75,7 @@
 	opacity:1;
 	@include transform(translateY(-15px));
 	z-index:1;
+}
+.d-mobile .product__preview__visited--active .product__preview__visited__item:hover {
+	@include transform(translateY(0));
 }

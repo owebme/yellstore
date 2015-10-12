@@ -1,5 +1,5 @@
 /*!
- * imagesLoaded v3.1.8
+ * imagesLoaded v3.1.8 (fix background-image loaded)
  * JavaScript is all like "You images are done yet or what?"
  * MIT License
  */
@@ -136,6 +136,11 @@ function makeArray( obj ) {
       if ( elem.nodeName === 'IMG' ) {
         this.addImage( elem );
       }
+	  // background-image loaded
+	  else if ( elem.style.backgroundImage ) {
+		var image = elem.style.backgroundImage.replace(/"|'/g, '').replace(/url\(|\)$/ig, '');
+		this.addImage( $('<img>').attr('src', image)[0] );
+	  }	  
       // find children
       // no non-element nodes, #143
       var nodeType = elem.nodeType;

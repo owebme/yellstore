@@ -44,7 +44,7 @@
 	}
 }
 .product__item__loading {
-	position:absolute;
+	position:fixed;
 	top:0;
 	left:-200%;
 	z-index:1000;
@@ -289,6 +289,6 @@
 		width: 33.333%;
 	}
 	.product__item__wrapper {
-		height:433px;
+		height:390px;
 	}
 }

@@ -21,9 +21,10 @@ site.views.pagesModal = (function(YS){
 				YS.ui.pagesModal.addClass("YS__modal--active");
 			}, 20);
 			
-			setTimeout(function(){
+			YS.ui.pagesModal.on(prefixed.transition + "end", function(){
+				YS.ui.pagesModal.off(prefixed.transition + "end");
 				YS.plugins.scrollable(YS.ui.pagesModal.children());
-			}, 400);
+			});
 			
 			// Close Modal Faq
 			YS.ui.pagesModal.find(".YS__modal__close").on(clickEvent, function(){
@@ -54,10 +55,18 @@ site.views.pagesModal = (function(YS){
 			
 			if (callback) callback();
 			
-			setTimeout(function(){
-				YS.ui.pagesModal.remove();
-				$body.off("keyup.pagesModal");
-			}, 400);
+			if (YS.ui.containerProduct){
+				YS.ui.containerProduct.on(prefixed.transition + "end", function(){
+					YS.ui.containerProduct.off(prefixed.transition + "end");
+					YS.ui.pagesModal.remove();
+				});
+			}
+			else {
+				$root.on(prefixed.transition + "end", function(){
+					$root.off(prefixed.transition + "end");
+					YS.ui.pagesModal.remove();
+				});				
+			}
 			
 			if (YS.address.beforeModal) {
 				if (YS.address.beforeModal == YS.app.getUri()){
@@ -69,7 +78,9 @@ site.views.pagesModal = (function(YS){
 			}
 			else {
 				YS.app.setUri();
-			}			
+			}
+			
+			$body.off("keyup.pagesModal");
 		}
 	};
 	

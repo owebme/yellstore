@@ -5,13 +5,14 @@
 	-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.57, 0.06, 0.05, 0.95);
 	transition: transform 0.6s cubic-bezier(0.57, 0.06, 0.05, 0.95);
 	@include transform(translate3d(110%, 60px, 0));
+	@include unselectable();
 	z-index:1003;
+}
+.d-mobile .product__widgets {
+	@include transition(none);
 }
 .product__widgets--active {
 	z-index:1021;
-}
-.product__widgets {
-	@include unselectable();
 }
 .product__widgets__button {
 	position:relative;
@@ -207,4 +208,9 @@
 }
 .product__widgets--active .product__widgets__exit {
 	@include transform(translateY(44px));
+}
+@media screen and (max-width: 1024px) {
+	.product__widgets__exit {
+		display:none;
+	}
 }

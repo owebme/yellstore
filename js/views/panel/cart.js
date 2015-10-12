@@ -6,7 +6,7 @@ site.views.cart = (function(YS){
 			var _this = this;
 			
 			// Open Cart
-			YS.ui.panel.cart.on("click", function(){
+			YS.ui.panel.cart.on(clickEvent, function(){
 				if (!this.className.match(/active/)){
 					YS.views.cart.open();
 				}
@@ -20,9 +20,9 @@ site.views.cart = (function(YS){
 		build: function(){
 			var _this = this;
 			
-			if (!YS.template.cart) YS.template.cart = document.getElementById(YS.settings.cart.template).innerHTML;
+			if (!YS.template.cart) YS.template.cart = Handlebars.compile(document.getElementById(YS.settings.cart.template).innerHTML);
 			
-			var $YS_cart = $(YS.template.cart);
+			var $YS_cart = $(YS.template.cart({path: YS.settings.products.path}));
 			
 			$root.append($YS_cart);
 			
@@ -43,12 +43,12 @@ site.views.cart = (function(YS){
 			}, 100);			
 			
 			// Close Cart
-			$YS_cart.find(".YS__m-cart__close").on("click", function(){
+			$YS_cart.find(".YS__m-cart__close").on(clickEvent, function(){
 				_this.close();
 			});			
 			
 			// Remove Cart Item
-			$YS_cart.find(".YS__element_menu--close").on("click", function(){
+			$YS_cart.find(".YS__element_menu--close").on(clickEvent, function(){
 				
 				var $item = $(this).closest(".YS__m-cart__item");
 				

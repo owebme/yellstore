@@ -1,20 +1,20 @@
 /* --- Basic : plugin --- */
 site.plugins.basic = function(){
 
-	if (site.device.isMobile){
+	if (site.device.isMobile && !debug_mode){
 		// Prevent default events
-		$document.on('touchmove MSPointerMove', function(e){
-			e.preventDefault();
-		});
-		$window.on('mousewheel', function(e){
-			e.preventDefault();
-		});
-		$document.on('dragstart selectstart', function() {
-			return false;
-		});
-		$window.on('scroll', function(){
-			$html.add($body).scrollTop(0);
-		});
+		//$document.on('touchmove MSPointerMove', function(e){
+		//	e.preventDefault();
+		//});
+		//$window.on('mousewheel', function(e){
+		//	e.preventDefault();
+		//});
+		//$document.on('dragstart selectstart', function() {
+		//	return false;
+		//});
+		//$window.on('scroll', function(){
+		//	$html.add($body).scrollTop(0);
+		//});
 	}
 };
 
@@ -305,14 +305,14 @@ site.plugins.flickity = function($block, params, callback){
 
 site.plugins.isotope = function($block){
 
-	site.ui.productsSection = new Isotope( $block, {
+	site.ui.isotopeProducts = new Isotope( $block, {
 		isResizeBound: false,
 		itemSelector: '.product__item',
 		percentPosition: true,
 		masonry: {
 			columnWidth: '.product__sizer'
 		},
-		transitionDuration: '0.6s'
+		transitionDuration: '0.75s'
 	});
 	
 	site.plugins.isotope.resize = false;
@@ -321,15 +321,21 @@ site.plugins.isotope = function($block){
 	$window.on("resize.isotope", function(){
 		if (!site.plugins.isotope.resize){
 			site.plugins.isotope.resize = true;
-			site.ui.containerCategory.addClass(site.settings.products.CS_review);
+			site.ui.containerProducts.addClass(site.settings.products.CS_review);
 			setTimeout(function(){
-				site.ui.productsSection.layout();
+				site.ui.isotopeProducts.layout();
 			}, 20);
 			setTimeout(function(){
-				site.ui.containerCategory.removeClass(site.settings.products.CS_review);
+				site.ui.containerProducts.removeClass(site.settings.products.CS_review);
 				site.plugins.isotope.resize = false;
 			}, 1200);
 		}
+	});
+	
+	site.ui.isotopeProducts.on('layoutComplete', function(){
+		setTimeout(function(){
+			site.ui.containerProducts.removeClass(site.settings.products.CS_review);
+		}, 100);
 	});
 };
 
@@ -465,16 +471,20 @@ site.plugins.fixDragMove = function(container){
 
 	if (site.device.isMobile){
 	
-		var touchstart, touchend;
+		var touchstart;
 		
-		$(container).on("touchstart touchend", function(e){
-			if (e.type == "touchstart") touchstart = this.style.WebkitTransform || this.style.transform;
-			else if (e.type == "touchend") touchend = this.style.WebkitTransform || this.style.transform;
-			if (touchstart !== touchend){
-				site.plugins.fixDragMove.action = true;
-			}
-			else {
-				site.plugins.fixDragMove.action = false;
+		$(container).on("touchstart touchmove", function(e){
+			var _this = this;
+			if (e.type == "touchstart") touchstart = _this.style.WebkitTransform || _this.style.transform;
+			else if (e.type == "touchmove") {
+				$(e.target).on("touchend.disable", function(e){
+					if (e.target !== _this && touchstart !== (_this.style.WebkitTransform || _this.style.transform)){
+						e.stopImmediatePropagation();
+						e.stopPropagation();
+						e.preventDefault();
+						$(e.target).off("touchend.disable");
+					}
+				});
 			}
 		});	
 	}

@@ -21,8 +21,8 @@ site.views.products = (function(YS){
 		},
 		components: function(){
 		
-			YS.views.productsFavorite($("."+YS.settings.products.CS_favorite));
-			YS.views.productQuick.components.widgets();
+			YS.views.productsFavorite.init($("."+YS.settings.products.CS_product), YS.settings.products.CS_favorite);
+			YS.views.productWidgets.init();
 		},
 		library: function(){
 		
@@ -33,9 +33,9 @@ site.views.products = (function(YS){
 			
 			var loadingProducts = function(data){
 				
-				YS.ui.containerCategory = YS.models.products.prepare(data);
+				YS.ui.containerProducts = YS.models.products.prepare(data);
 				
-				$page_content.append(YS.ui.containerCategory);
+				$page_content.append(YS.ui.containerProducts);
 				
 				var gender = YS.models.products.getGender();
 				
@@ -43,7 +43,7 @@ site.views.products = (function(YS){
 				
 					var item = 0, productsView = YS.models.products.getView();
 					
-					YS.ui.containerCategory.find("." + YS.settings.products.CS_product).each(function(){
+					YS.ui.containerProducts.find("." + YS.settings.products.CS_product).each(function(){
 
 						item++;
 						
@@ -89,9 +89,9 @@ site.views.products = (function(YS){
 			
 			setTimeout(function(){
 			
-				$page_content.css("height", YS.ui.containerCategory.height() + "px");
+				$page_content.css("height", YS.ui.containerProducts.height() + "px");
 				
-				YS.ui.containerCategory.remove();
+				YS.ui.containerProducts.remove();
 				
 				_this.load(category, function(){
 				
@@ -122,8 +122,8 @@ site.views.products = (function(YS){
 			
 			setTimeout(function(){
 			
-				var scroll = $body.scrollTop(),
-					top = YS.ui.containerCategory.offset().top,
+				var scroll = window.pageYOffset,
+					top = YS.ui.containerProducts.offset().top,
 					duration = 0;
 				
 				if (scroll > top + 20){
@@ -137,7 +137,12 @@ site.views.products = (function(YS){
 						scroll = 0; if (duration < 600) duration = 600;
 					}
 					
-					$body.animate({scrollTop: scroll}, duration);
+					if (YS.device.isFirefox){
+						$html.animate({scrollTop: scroll}, duration);
+					}
+					else {
+						$body.animate({scrollTop: scroll}, duration);
+					}
 				}
 				
 			}, 20);
@@ -149,7 +154,7 @@ site.views.products = (function(YS){
 		
 			var count = 0, loaded = 0;
 			
-			YS.ui.containerCategory.find("." + YS.settings.products.CS_product_loadable).each(function(){
+			YS.ui.containerProducts.find("." + YS.settings.products.CS_product_loadable).each(function(){
 				var $item = $(this),
 					$img = $item.find(".product__item__image"),
 					id = this.getAttribute("data-item"),
@@ -197,7 +202,7 @@ site.views.products = (function(YS){
 		},
 		scrollLoad: function(limit){
 			var _this = this,
-				$loadable = YS.ui.containerCategory.find("." + YS.settings.products.CS_product_loadable + ":first");
+				$loadable = YS.ui.containerProducts.find("." + YS.settings.products.CS_product_loadable + ":first");
 			
 			if ($loadable.length){
 			
@@ -217,7 +222,7 @@ site.views.products = (function(YS){
 					});
 				}
 			}
-		},
+		}
 	};
 
 })(site);

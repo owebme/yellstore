@@ -1,20 +1,22 @@
 .state__openPageModal {
 	overflow-y:hidden;
 }
-.state__openPageModal .YS__panel {
-	@include transform(translateY(90px));
-}
 .state__openPage {
 	overflow-y:hidden;
 }
 .state__openPage .YS__page {
 	opacity:1;
 }
-.state__openProductQuick .YS__panel {
+.state__openProductQuick .YS__panel,
+.state__openProductsModal .YS__panel,
+.state__openPageModal .YS__panel {
 	@include transform(translateY(90px));
 }
 .state__openProductQuick_active {
 	overflow-y:hidden;
+}
+.d-mobile .state__openProductQuick_active {
+	overflow-y:scroll;
 }
 .state__openProductQuick_active .product__preview__close {
 	@include transform(translateX(0));
@@ -73,6 +75,9 @@
 	}
 	.YS__panel {
 		@include transform(translateY(90px));
+	}
+	.YS__element__widget__favorite {
+		@include transform(translateX(60px));
 	}
 	header {
 		@include transform(translateY(-85px));

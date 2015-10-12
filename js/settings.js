@@ -142,7 +142,8 @@
 		CS_favorite: "b-product__favorite",
 		lazyLoad_limit: 15, 
 		isotope: true,
-		path: "http://yellstore.uplecms.ru/images/products"
+		path: "http://yellstore.uplecms.ru/images/products",
+		img_lite: "img2"
 	};
 	
 	// ProductQuick Settings
@@ -150,6 +151,7 @@
 		
 		CS_container: "product__preview",
 		CS_container_close: "product__preview__close",
+		CS_products: "product__preview__product",
 		CS_openLink_prod_recomend: "product__preview__product__recomend",
 		CS_openLink_prod_more: "product__quick-look",
 		CS_addCart: "YS__element__btn--cart",
@@ -160,7 +162,7 @@
 		flickity_products: true,
 		visited_limit: 5,
 		visited_memory: true,
-		img_lite: "img2"
+		progress: true
 	};	
 	
 	// Filter Settings

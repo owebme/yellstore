@@ -21,6 +21,7 @@
 	position:fixed;
 	top:55px;
 	right:45px;
+	z-index:1;
 }
 .YS__m-cart__close .YS__element_menu__close::after,
 .YS__m-cart__close .YS__element_menu__close::before {
@@ -194,4 +195,15 @@
 .YS__m-cart__string__total {
 	display:inline-block;
 	font:bold 20px $lato;
+}
+
+@media screen and (max-width: 1024px) {
+	.YS__m-cart__wrapper {
+		width:90%;
+		margin-left:-45%;
+	}
+	.YS__m-cart__close {
+		right:45px;
+		top:43px;
+	}	
 }

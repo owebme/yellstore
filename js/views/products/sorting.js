@@ -6,59 +6,13 @@ site.views.sorting = (function(YS){
 		
 			YS.template.init("productsSorting", function(){
 
-				YS.ui.productsSort = $(YS.template.productsSorting);
-				YS.ui.productsView = YS.ui.productsSort.find(".YS__element__select__views");
+				YS.ui.productsPanel = $(YS.template.productsSorting);
 				
-				var productsView = YS.models.products.getView(),
-					$form = YS.ui.productsSort.find("form");
+				var $form = YS.ui.productsPanel.find("form");
 					
-				YS.ui.productsView.find(".YS__element__select__view__sort").each(function(){
-					if (this.getAttribute("data-view") == productsView){
-						$(this).addClass("YS__element__select__view__sort--active");
-					}
-					else {
-						$(this).removeClass("YS__element__select__view__sort--active");
-					}
-				});
-					
-				$page_content.before(YS.ui.productsSort);
+				$page_content.before(YS.ui.productsPanel);
 				
-				YS.ui.productsView.find(".YS__element__select__view__sort").on(clickEvent, function(e){
-					if (!this.className.match(/active/)){
-					
-						$(this).parent().find(".YS__element__select__view__sort--active").removeClass("YS__element__select__view__sort--active");
-						$(this).addClass("YS__element__select__view__sort--active");
-						
-						var view = this.getAttribute("data-view"),
-							gender = YS.models.products.getGender();
-						
-						YS.models.products.setView(this.getAttribute("data-view"));
-						
-						if (YS.settings.products.isotope && !YS.device.mobile){
-						
-							YS.ui.containerCategory.addClass(YS.settings.products.CS_review).attr("id", view);
-							
-							YS.ui.containerCategory.find("." + YS.settings.products.CS_product_large).each(function(){
-								var id = this.getAttribute("data-item");
-								$(this).addClass(YS.settings.products.CS_product_loadable);
-								$(this).find("img:first")
-								.attr("data-lazy", YS.settings.products.path + (gender ? "/" + gender : "") + "/" + id + "_" + (view == "view1" ? "1" : "2") + ".jpg")
-								.attr("data-rollover", YS.settings.products.path + (gender ? "/" + gender : "") + "/" + id + "_" + (view == "view1" ? "2" : "3") + ".jpg");
-							});
-							
-							setTimeout(function(){
-								YS.ui.productsSection.layout();
-								YS.views.products.lazyLoad();
-							}, 20);
-							
-							setTimeout(function(){
-								YS.ui.containerCategory.removeClass(YS.settings.products.CS_review);
-							}, 1200);
-						}
-					}
-				});
-				
-				YS.ui.productsSort.find(".YS__element__select__value").on(clickEvent, function(e){
+				YS.ui.productsPanel.find(".YS__element__select__value").on(clickEvent, function(e){
 					var $value = $(this),
 						$select = $value.parent(),
 						targetElement = e.target,

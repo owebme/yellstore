@@ -1,0 +1,67 @@
+@mixin transition($transitions) {
+	-webkit-transition: $transitions;
+    transition: $transitions;
+}
+
+@mixin transitionPrefix($property, $values) {
+	-webkit-transition: -webkit-#{$property} #{$values};
+    transition: #{$property} #{$values};	
+}
+
+@mixin background-gradient($from, $to) {
+	background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, $from), color-stop(100%,  $to));
+	background: -webkit-linear-gradient($from, $to);
+	background: -moz-linear-gradient($from, $to);
+	background: -o-linear-gradient($from, $to);
+	background: linear-gradient($from, $to);
+}
+
+@mixin transform ($transforms) {
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}
+
+@mixin transform-origin ($values) {
+	-webkit-transform-origin: $values;
+	transform-origin: $values;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}  
+}
+
+@mixin animation($animations) {
+	-webkit-animation: $animations;
+	animation: $animations;
+}
+
+@mixin animationDelay($value) {
+	-webkit-animation-delay: $value;
+	animation-delay: $value;
+}
+
+@mixin animationDuration($value) {
+	-webkit-animation-duration: $value;
+	animation-duration: $value;
+}
+
+@mixin unselectable {
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;user-select:none;
+}
+
+@mixin keyFrame($name) {
+	@-webkit-keyframes $name{
+		@content
+	}
+	@keyframes $name{
+		@content
+	}
+}
+

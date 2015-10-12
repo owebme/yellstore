@@ -25,3 +25,9 @@
 	color:#f7f7f7;
 	font:18px/25px $openSans;
 }
+
+@media screen and (max-width: 1024px) {
+	.YS__modal__faq__title {
+		margin-bottom:56px;
+	}
+}

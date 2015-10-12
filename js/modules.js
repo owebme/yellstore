@@ -142,6 +142,9 @@
 
 	/* --- Mobile --- */
 	device.isMobile = device.support.touch;
+	
+	if (debug_mode == "tablet") device.isMobile = true;
+	
 	$html.addClass(device.isMobile ? 'd-mobile' : 'd-no-mobile');
 
 	/* --- Retina --- */
@@ -199,6 +202,6 @@
 		device.isLocalStorage = true;
 	}	
 	
-	clickEvent = (device.isMobile ? "touchend" : "click");
+	clickEvent = (device.isMobile && !debug_mode ? "touchend" : "click");
 
 })(site.device);

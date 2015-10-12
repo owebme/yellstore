@@ -1,7 +1,7 @@
 .YS__cloud__links {
 	position:fixed;
 	top:35px;
-	right:-101%;
+	right:-111%;
 	padding-right:350px;
 	height: 100%;
 	width: 100%;
@@ -13,7 +13,6 @@
 	z-index:1001;
 }
 .d-mobile .YS__cloud__links {
-	@include transform(translateX(0px));
 	-webkit-transition: opacity 0.35s cubic-bezier(.215,.61,.355,1) 0s, right 0s 0.45s;
 	transition: opacity 0.35s cubic-bezier(.215,.61,.355,1) 0s, right 0s 0.45s;	
 }
@@ -92,7 +91,14 @@
 	margin-top:0.9%;
 	margin-left:60%;
 }
-.d-mobile {
+
+@media screen and (max-width: 1024px) {
+	.YS__cloud__links {
+		@include transform(translateX(0px));
+	}
+	.YS__cloud__links__title {
+		font-size:30px;
+	}
 	.YS__cloud__links__tag_2,
 	.YS__cloud__links__tag_4,
 	.YS__cloud__links__tag_6 {
@@ -102,5 +108,8 @@
 	.YS__cloud__links__tag_5,
 	.YS__cloud__links__tag_7 {
 		@include transform(translateX(-40px));
-	}	
+	}
+	.YS__cloud__links__tag {
+		height:50px;
+	}
 }

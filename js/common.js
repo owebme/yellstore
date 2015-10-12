@@ -27,7 +27,8 @@ var $root = $('#root'),
     $window = $(window),
 	$page_wrapper = $root.find('.page__wrapper'),
 	$page_content = $page_wrapper.find('.page__content'),
-	clickEvent;
+	clickEvent,
+	debug_mode = "";
 
 
 /* --- Version --- */
@@ -36,6 +37,7 @@ site.version = $root.data('version');
 
 /* --- Prefixed styles --- */
 var prefixed = {
+	'animation': Modernizr.prefixed('animation'),
 	'transform': Modernizr.prefixed('transform'),
 	'transform-origin': Modernizr.prefixed('transformOrigin'),
 	'transition': Modernizr.prefixed('transition')

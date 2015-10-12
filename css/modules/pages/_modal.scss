@@ -97,3 +97,18 @@
 	padding-left:23px;
 	font:17px/21px $openSans;
 }
+
+@media screen and (max-width: 1024px) {
+	.YS__modal__close {
+		right:45px;
+		top:43px;
+	}
+	.YS__modal__content {
+		width:97.8%;
+		padding:102px 0 0;
+	}
+	.YS__modal__phone__call {
+		top:32px;
+		margin-right:-104px;
+	}	
+}

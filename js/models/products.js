@@ -102,6 +102,7 @@ site.models.products = (function(YS){
 				return $(YS.template.products({
 					"path": YS.settings.products.path,
 					"view": _this.getView(),
+					"mobile": (YS.device.isMobile ? "1" : ""),
 					"product": data
 				}));
 			}

@@ -54,7 +54,7 @@ site.views.breadcrumbs = (function(YS){
 		},
 		path: function(){
 			if (YS.settings.breadcrumbsMenu.ajax){
-				YS.ui.breadcrumbsPath.find(".breadcrumbs__item__link:not(.breadcrumbs__item__home__link)").on("click", function(e){
+				YS.ui.breadcrumbsPath.find(".breadcrumbs__item__link:not(.breadcrumbs__item__home__link)").on(clickEvent, function(e){
 					e.preventDefault();
 					
 					var $link = $(this),

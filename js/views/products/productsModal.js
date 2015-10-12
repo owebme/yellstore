@@ -2,12 +2,12 @@ site.views.productsModal = (function(YS){
 
     return {
 	
-		open: function(title, array, openCallback, closeCallback){
+		open: function(params){
 		
 			var _this = this, data = {};
 		
-			data["title"] = title;
-			data["products"] = array;
+			data["title"] = params.title;
+			data["products"] = params.data;
 			data["path"] = YS.settings.products.path;
 			
 			YS.ui.productsModal = $(YS.template.productsModal(data));
@@ -23,19 +23,19 @@ site.views.productsModal = (function(YS){
 			YS.status("openProductsModal", true);
 					
 			// Close modal products visited
-			YS.ui.productsModal.find(".YS__m-products__close").on("click", function(e){
+			YS.ui.productsModal.find(".YS__m-products__close").on(clickEvent, function(e){
 				e.preventDefault();
-				_this.close(closeCallback);
+				_this.close(params.closeCallback);
 			});
 			
 			// Close (key esc)
 			$body.on("keyup.productsModal", function(e){
 				if (e.which == "27"){
-					_this.close(closeCallback);
+					_this.close(params.closeCallback);
 				}
 			});		
 		
-			if (openCallback && typeof openCallback === "function") openCallback();
+			if (params.openCallback && typeof params.openCallback === "function") params.openCallback(_this, YS.ui.productsModal);
 		
 		},
 		close: function(callback){
@@ -43,9 +43,18 @@ site.views.productsModal = (function(YS){
 			YS.ui.productsModal.addClass("YS__m-products--hide");
 			YS.plugins.overlay(false);
 			
-			setTimeout(function(){
-				YS.ui.productsModal.remove();
-			}, 1000);
+			if (YS.ui.containerProduct){
+				YS.ui.containerProduct.on(prefixed.transition + "end", function(){
+					YS.ui.containerProduct.off(prefixed.transition + "end");
+					YS.ui.productsModal.remove();
+				});
+			}
+			else {
+				$root.on(prefixed.transition + "end", function(){
+					$root.off(prefixed.transition + "end");
+					YS.ui.productsModal.remove();
+				});				
+			}
 			
 			YS.status("openProductsModal", false);
 

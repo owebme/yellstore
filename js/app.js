@@ -21,9 +21,11 @@ site.app = (function(YS){
 				YS.views.products.load(data, function(){
 					YS.views.headerMenu.init();
 					YS.views.sorting.init();
+					YS.views.viewing.init();
 					YS.views.breadcrumbs.init();
 					YS.views.panel.init();
 					YS.views.products.library();
+					YS.template.init("productsModal");
 					YS.loading();
 				});
 			});
@@ -36,7 +38,7 @@ site.app = (function(YS){
 			YS.models.products.setGender(gender);
 			this.catalog(category);
 		},		
-		productPage: function(id, params, container){
+		productPage: function(id, params){
 			var _this = this;
 		
 			if (id == "random") id = _.first(_.shuffle(YS.models.products.items()), 1)[0].id;
@@ -46,8 +48,8 @@ site.app = (function(YS){
 			YS.models.product.getProduct(id);
 			
 			// Change current product
-			if (params.action == "reload" && container){
-				YS.views.productQuick.reload(container, id, params.direction, function(alias){
+			if (params.action == "reload"){
+				YS.views.productQuick.reload(id, params.direction, function(alias){
 					_this.setUri("p/" + id + "/" + alias);
 				});
 			}

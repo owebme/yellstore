@@ -31,7 +31,6 @@ site.views.phone = (function(YS){
 		open: function(data){
 			YS.views.popup.open({
 				popup: "phone",
-				width: 850,
 				html: YS.ui.popupPhone
 			});				
 		},

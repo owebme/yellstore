@@ -221,6 +221,10 @@ site.views.filter = (function(YS){
 				if (!$body[0].className.match(/openFilter/)){
 					_this.open();
 				}
+				if (!YS.ui.panel.self[0].className.match(/active/)){
+					YS.ui.panel.filter.addClass("YS__panel__filter--active");
+					YS.ui.panel.self.addClass("YS__panel--active");	
+				}
 				
 				_this.resize();
 			});			
@@ -406,9 +410,15 @@ site.views.filter = (function(YS){
 			var _this = this;
 		
 			$root.removeClass("page_lightOverlay");
+			
 			YS.ui.panel.self.removeClass("YS__panel--active");
-			YS.ui.panel.filter.removeClass("YS__panel__filter--active");		
-			$root.off("click");
+			
+			YS.ui.panel.self.on(prefixed.transition + "end", function(){
+				YS.ui.panel.self.off(prefixed.transition + "end");
+				YS.ui.panel.filter.removeClass("YS__panel__filter--active");
+			});
+			
+			$root.off(clickEvent);
 			
 			YS.plugins.unFrozeScroll();
 			

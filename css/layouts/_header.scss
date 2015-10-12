@@ -11,11 +11,6 @@ header {
 	text-align:center;
 	min-height:90px;
 }
-@media screen and (max-width: 1024px) {
-	.header__container {
-		width:960px;
-	}
-}
 .header__logo {
 	display:inline-block;
 	margin-top:12px;
@@ -191,11 +186,6 @@ header {
 	font-size:0;
 	white-space:nowrap;
 }
-@media screen and (max-width: 1024px) {
-	.header__menu__dropdown__container {
-		width:960px;
-	}
-}
 .header__menu__dropdown__title {
 	color:#aaa;
     font:300 43px/48px $museo;
@@ -245,3 +235,14 @@ header {
 	width:100%;
 }
 
+@media screen and (max-width: 1024px) {
+	.header__container {
+		width:940px;
+	}
+	.header__left__menu {
+		left:30px;
+	}
+	.header__menu__dropdown__container {
+		width:940px;
+	}
+}

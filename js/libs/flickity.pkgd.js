@@ -5084,7 +5084,7 @@ function makeArray( obj ) {
 	  // background-image loaded
 	  else if ( elem.style.backgroundImage ) {
 		var image = elem.style.backgroundImage.replace(/"|'/g, '').replace(/url\(|\)$/ig, '');
-		this.addImage( $('<img>').attr('src', image) );
+		this.addImage( $('<img>').attr('src', image)[0] );
 	  }
       // find children
       // no non-element nodes, #143
